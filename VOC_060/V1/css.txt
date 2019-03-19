@@ -1,0 +1,12 @@
+.is-purple .card-button-wrapper {
+    padding: 0 0 !important;
+}
+
+.card-footer 
+{
+    padding: 0 0 !important;
+}
+
+.is-purple .card-footer {
+  background-color:inherit !important;
+}

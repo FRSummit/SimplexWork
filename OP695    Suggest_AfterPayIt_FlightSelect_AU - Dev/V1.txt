@@ -1,0 +1,323 @@
+<div id="afterpayPanel" class="afterpay-panel">
+<div class="afterpay-banner-section medium-4">
+   <div class="afterpay-image"><img src="#$(ContentManager:afterpay_image.png)!" alt="AfterPay"/></div> 
+   <div class="afterpay-text"><p>Fly Now. <span class="pay-text">Pay Later.</span> <a class="MoreInfo">More info</a></p></div> 
+</div> 
+</div>
+<div id="afterpayModal" class="afterpay-modal">
+  <div class="afterpay-modal-content">
+    <span class="afterpay-close">&times;</span>
+    <div class="moreinfo-modal-section">
+    <div class="row">
+		<div class="medium-12 columns">
+		   <div class="moreinfo-jetstar-image"></div> 
+		   <div class="moreinfo-afterpay-image"></div> 
+		</div>
+	</div>
+    <div class="row">
+		<div class="medium-12 columns">
+		   <div class="heading-title">What is it?</div> 
+		   <div class="moreinfo-text"><p>Afterpay lets you buy what you want today and pay for it over four equal fortnightly instalments. Just use your debit or credit card, subject to Afterpay approval and let Afterpay do the rest - they will schedule your repayments, remind you when they're due and automatically process them for you. There is a 1.5% payment free and late fees apply. Only for bookings that don't exceed $1,200 including the payment fee.</p></div> 
+		</div>
+	</div>
+    <div class="row">
+		<div class="medium-12 columns">
+		   <div class="heading-title heading-title2">How it works</div> 
+		</div>
+	</div>
+    <div class="row">
+		<div class="medium-4 columns">
+		   <div class="subtitle-image"><img src="#$(ContentManager:modal_choose.png)!" alt="Choose"/></div> 
+		   <div class="heading-subtitle">Choose</div>
+                   <p class="subtitle-text">Afterpay as a payment method</p>		   
+		</div>
+		<div class="medium-4 columns">
+		   <div class="subtitle-image"><img src="#$(ContentManager:modal_complete.png)!" alt="Complete"/></div> 
+		   <div class="heading-subtitle">Complete</div> 
+		   <p class="subtitle-text">Your checkout in seconds with instant approval</p>
+		</div>
+		<div class="medium-4 columns">
+		   <div class="subtitle-image"><img src="#$(ContentManager:modal_pay.png)!" alt="Pay"/></div> 
+		   <div class="heading-subtitle">Pay</div> 
+		   <p class="subtitle-text">Over four interest-free fortnightlyrepayments</p>
+		</div>
+	</div>
+       <div class="row">
+		<div class="medium-12 columns">
+		   <div class="moreinfo-conditions"><a href="https://www.jetstar.com/au/en/terms-and-conditions" target="_blank">Terms and Conditions</a> apply.</div> 
+		</div>
+       </div>
+       <div class="row">
+		<div class="medium-12 columns">
+		   <div class="moreinfo-btn-section"><button class="gotit-btn">Got it!</button></div> 
+		</div>
+       </div>		 		
+</div>
+  </div>
+</div>
+
+<style type="text/css">
+/*.OP695 .afterpay-banner-section{padding: 9px 12px 10px 12px; background-color: #f4f4f4; margin: 0 auto; text-align: center; margin-top: 11px; width: 30%;}*/
+.OP695 .afterpay-banner-section{padding: 9px 12px 10px 12px; background-color: #f4f4f4; margin: 0 auto; text-align: center; margin-top: -22px; width: 34%; margin-bottom: 18px;}
+.OP695 .afterpay-image{float: left; margin-right: 10px; /*margin-right: 8px;*/}
+.OP695 .afterpay-text{/*display: inline-block;*/ color: #444; padding-top: 1px;} 
+.OP695 .afterpay-text p {margin-bottom: 0px; font-size: 14px; line-height: 24px; text-align: left;} 
+.OP695 .pay-text{font-weight: bold;}
+.OP695 .afterpay-text a {font-size: 14px; line-height: 24px; color: #0792fc;font-weight: bold;}
+
+.OP695 .afterpay-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    /*height: 100%;*/ 
+    height: auto;
+    
+overflow: auto; 
+    background-color: rgba(0,0,0,.7);
+    background: radial-gradient(ellipse farthest-corner,rgba(0,0,0,.5) 0,rgba(0,0,0,.7) 100%);
+    bottom: 0;
+    
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+
+    /*
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: scroll;*/
+}
+
+.OP695 .afterpay-panel {
+    /*display: block; 
+    position: fixed; 
+    z-index: 998; 
+    padding-top: 235px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,.7);
+    background: radial-gradient(ellipse farthest-corner,rgba(0,0,0,.5) 0,rgba(0,0,0,.7) 100%);
+    bottom: 0;
+    height: auto;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: scroll;*/
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+
+}
+
+.OP695 .afterpay-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    /*width: 80%;*/
+    width: 60%;
+}
+
+
+.OP695 .afterpay-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    /*font-weight: bold;*/
+    margin-top: -8px;
+    font-weight: normal;
+}
+
+.OP695 .afterpay-close:hover,
+.OP695 .afterpay-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.OP695 .moreinfo-afterpay-image{
+    background-image: url('#$(ContentManager:modal_afterpay.png)!'); 
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+.OP695 .moreinfo-modal-section{
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 36px;
+}
+
+.OP695 .heading-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222222;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+.OP695 .heading-title2{
+    margin-bottom: 36px;
+}
+.OP695 .moreinfo-text p{text-align: center; font-size: 14px; line-height: 24px;}
+.OP695 .subtitle-image {
+    text-align: center;
+    padding-bottom: 24px;
+}
+.OP695 .subtitle-image img {
+    max-height: 36px;
+}
+.OP695 .heading-subtitle {
+    text-align: center;
+    color: #222222;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+.OP695 .subtitle-text {
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+}
+.OP695 .moreinfo-conditions {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 24px;
+    padding-bottom: 48px;
+}
+.OP695 .moreinfo-conditions a{color: #007ddb;}
+.OP695 .moreinfo-btn-section{text-align: center;}
+.OP695 .moreinfo-btn-section .gotit-btn {
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.4;
+    padding: 12px 80px;
+    font-size: 1rem;
+    background-color: #ff5115;
+    border: 1px solid #ff5115;
+    color: #fff;
+}
+.OP695 .flight-schedule__selected-currency.bookingcurrencycode{
+ text-align: right;
+}
+
+@media only screen and (max-width: 767px)
+{
+  .OP695 .afterpay-banner-section{width: 100%; margin-bottom: 12px;}
+  .OP695 .afterpay-modal-content { padding: 20px 4px; width: 100%;}
+  .OP695 .moreinfo-modal-section {padding-left: 0;padding-right: 0;padding-bottom: 0px;}
+  .OP695 .afterpay-image{float: none; text-align: center;}
+  .OP695 .afterpay-panel { padding-top: 2px; padding-left: 5px; padding-right: 5px;}
+  .OP695 .moreinfo-jetstar-image{
+    background-image: url('#$(ContentManager:jetstar-icon.png)!');    
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -32px;
+    width: auto;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+  .OP695 .afterpay-close {margin-top: -20px;}
+  .OP695 .moreinfo-afterpay-image{ 
+    background-image: url('#$(ContentManager:modal_afterpay_mobile.png)!'); 
+    height: 30px;
+    margin-top: 24px;margin-bottom: 22px;
+}
+  .OP695 .heading-title {font-size: 16px; margin-top: 14px;}
+  .OP695 .moreinfo-text p {font-size: 12px; line-height: 20px;}
+  .OP695 .heading-title2 {margin-bottom: 27px;}
+  .OP695 .subtitle-image {padding-bottom: 18px;}
+  .OP695 .heading-subtitle {font-size: 14px;line-height: 20px;}
+  .OP695 .subtitle-text {margin-bottom: 24px; font-size: 12px; line-height: 20px;}
+  .OP695 .moreinfo-conditions {font-size: 12px;padding-top: 8px;padding-bottom: 31px; line-height: 20px;}
+  .OP695 .moreinfo-btn-section .gotit-btn {border-radius: 6px; width: 100%;display: block; padding: 12px;margin-bottom: 2px;}
+  .OP695 .afterpay-text p {text-align: center;}
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+  dom.addCss(css);
+
+  window.jetstarOptimisation = window.jetstarOptimisation || {};
+  window.jetstarOptimisation.AfterPayIt_FlightSelect_AU = (function(window, document) {
+
+    var panel = document.getElementById('afterpayPanel'),
+    modal = document.getElementById('afterpayModal'), 
+    init = function () {
+      addBodyClass();
+      AfterPayFlightSelect();
+      bindModal();
+    },
+
+    addBodyClass = function addBodyClass() {
+      jQuery('body').addClass('OP695');
+    },
+
+    bindModal = function bindModal() {
+        //panel = document.getElementById('afterpayPanel'),
+        modal = document.getElementById('afterpayModal');
+        $('.MoreInfo').click(function() { 
+            if(!$(modal).hasClass('ismodal')){ 
+                modal.style.display = "block";
+                $(modal).addClass('ismodal');
+            }
+            else{
+                modal.style.display = "none";
+                $(modal).removeClass('ismodal');
+            }
+        });
+
+        $('.afterpay-close').click(function() {
+            modal.style.display = "none";
+            $(modal).removeClass('ismodal');
+        });
+
+        $('.gotit-btn').click(function() {
+            modal.style.display = "none";
+            $(modal).removeClass('ismodal');
+        });
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                $(modal).removeClass('ismodal');
+            }
+
+            if (event.target == panel) {
+                panel.style.display = "none";
+            }
+
+        }
+    },
+
+    AfterPayFlightSelect = function AfterPayFlightSelect() {
+       jQuery('#maincontent.container .row.page-header').prepend(jQuery(html)[0]);
+       //jQuery('.progress-bar.container .header__progress').append(jQuery(html)[0]);
+       //jQuery('body').append(jQuery(html)[0]);
+       jQuery('body').append(jQuery(html)[2]);
+    };
+
+    return {
+      init: init
+    };
+
+  }(window, document));
+
+  window.jetstarOptimisation.AfterPayIt_FlightSelect_AU.init();
+
+</script>

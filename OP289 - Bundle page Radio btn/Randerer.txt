@@ -1,0 +1,18 @@
+renderer
+	.when(site.scope.targeting.isReady(), site.scope.campaignCore.jqueryReady())
+	.done(function() {
+		if (
+			site.scope.targeting.isCultureEnAu()
+			&& !site.scope.targeting.isOneWayflight()
+			&& !site.scope.targeting.isAgentHub()
+		) {
+			site.scope.campaignCore.setup(campaign);
+			renderer.runVariantJs();
+		}
+	})
+	.fail(function() {
+		console.error('OP289 - failure');
+	});
+/*
+	NOTE: OPT586 V4 must be included in this test as a base to create radio buttons as toggles
+*/

@@ -1,0 +1,337 @@
+<div class="row new-banner">
+	<div class="columns">
+		<div class="PriceWatch-offer flight-card-wrapper js-fare-row has-alert">
+			<div class="large-9 medium-9 small-12 columns PriceWatch-Padding">
+				<div class="PriceWatch-img columns"></div>
+				<div class="PriceWatch-title large-4 medium-8 small-12 columns">Flexible with your dates?</div>
+				<div class="PriceWatchSubmit-img"></div>
+				<div class="PriceWatch-alt large-8 medium-12 small-12 show-for-medium-up columns">
+					Turn on Price Watch to get low fare alerts for the closest available dates.
+				</div>
+				<div class="PriceWatch-alt large-8 medium-12 small-12 show-for-small-only columns">
+					Get low fare alerts for the next available dates.
+				</div>
+			</div>
+			<div class="large-3 medium-3 small-12 columns submit-form">
+				<div class="PriceWatch-btn-section column add-email">
+					<div class="small-12 columns priceAlert-btn">
+						<div class="price-alert" role="button" >
+							<span>Set price alert</span>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+
+.OP570 .PriceWatch-offer {
+	background-color: #fff;
+	overflow: hidden;
+	border-radius: 0px;
+	margin-bottom: 3rem;
+	padding: 16px 0px 16px 0px;
+}
+
+.OP570 .priceAlert-btn{
+	text-align: right;
+	right: 0;
+	top: 5px;
+	padding-right: 0;
+}
+  
+.OP570 .PriceWatch-offer, .OP570 .PriceWatch-offer:hover {
+	box-shadow: none !important;
+}
+
+
+.OP570 .price-alert{
+	border-radius: 40px;
+	font-weight: 700;
+	display: inline-block;
+	line-height: 1.5;
+	padding: 7px 23px;
+	font-size: 14px;
+	background-color: transparent;
+	border: 2px solid #e4dede;
+	color: #0692fc;
+	cursor:pointer;
+}
+
+.OP570 .display-hide {
+	display: none;
+}
+
+.OP570 .PriceWatchSubmit-img{
+  display:none;   
+  margin: auto;
+  height: 40px;
+  text-align: center;
+  width: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxwYXRoIGQ9Ik0wIDBoNDh2NDhIMHoiLz4gICAgICAgIDxnIGZpbGw9IiMwMEMyNDkiPiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNCA2QzE0LjA1OSA2IDYgMTQuMDYgNiAyNHM4LjA1OSAxOCAxOCAxOCAxOC04LjA2IDE4LTE4UzMzLjk0MSA2IDI0IDZtMCAzYzguMjcxIDAgMTUgNi43MjkgMTUgMTUgMCA4LjI3LTYuNzI5IDE1LTE1IDE1UzkgMzIuMjcgOSAyNCAxNS43MjkgOSAyNCA5Ii8+ICAgICAgICAgICAgPHBhdGggZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMjAuMzQgMzEuNjFjLjcwMS44MzggMi4wMjMuODU2IDIuNzQ4LjAzNkwzMy4zMjQgMjAuMDhhMS42NzIgMS42NzIgMCAwIDAtLjIwMi0yLjQyIDEuODMzIDEuODMzIDAgMCAwLTIuNTE1LjE5NWwtOC44MzggOS45ODktMy41OTUtNC4yOThjLS42MTgtLjczOC0xLjc0LS44NTUtMi41MDgtLjI2YTEuNjcyIDEuNjcyIDAgMCAwLS4yNzIgMi40MTJsNC45NDYgNS45MTN6Ii8+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=);
+  margin-top: 6px;
+}
+
+.OP570 .Confirm-btn{
+	display: inline-block;
+	height: 54px;
+	padding: 15px 40px;
+	text-align: center;
+	background: #0692fc;
+	border-radius: 4px;
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.OP570 .btn-txt{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: normal;
+	color: #ffffff;
+	text-align: center;
+	user-select: none;
+}
+
+
+.OP570 .Add-email{
+	font-size: 16px;
+	color:#222;
+}
+
+.OP570 .PriceWatch-btn{
+	margin: 30px 0px;
+	width:40%;
+}
+
+.OP570 .watch-price-btn.button-ghost {
+	display: none;
+}
+
+.OP570 .PriceWatch-title{
+	font-family: "Jetstar Happy",sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	padding-top: 10px;
+	padding-left: 6px;
+	padding-bottom: 8px;
+}
+
+.OP570 .PriceWatch-alt{
+	font-size: 14px;
+	color: #767676;
+	font-weight: lighter;
+	top: 7px;
+	padding-top: 10px;
+	padding-left: 0px;
+	float:left !important;
+	font-family: "Jetstar Happy",sans-serif;
+}
+
+.success-message {
+	font-size: 18px !important;
+    font-weight: initial !important;
+    color: #444 !important;
+    font-family: "Jetstar Happy",sans-serif !important;
+    line-height: 1.5rem !important;
+    padding-top: 12px !important;
+    padding-left: 5px !important;
+    text-align: center !important;
+    top: 0 !important;
+}
+.OP570 .flight-schedule{margin-top: 32px;}
+.OP570 .tabs-content>.content{padding-top: 7px;}
+
+
+@media only screen and (max-width : 481px){
+	.OP570 .price-alert{width:100%; padding: 4px 23px !important;}
+	.OP570 .priceAlert-btn{text-align: center;right:0;top: 12px; padding-bottom: 8px;}
+	.OP570 .PriceWatch-title {padding-top: 0px !important;padding-bottom: 0px !important; font-weight: bold;}
+	.OP570 .PriceWatch-alt { font-size: 12px !important; line-height:1rem; top: 0px !important;
+		padding-top: 0px !important; padding-left: 6px !important;}
+		.OP570 .PriceWatch-offer {padding-top: 9px !important;}
+		.OP570 .btn-txt{margin-left:0 !important;}
+		.OP570 .text-section{border-bottom: 1px solid #eee; padding-bottom: 8px;}
+		.OP570 .columns.medium-2{ padding-left: 0 !important}
+		.OP570 .large-9.medium-9.small-12.columns.PriceWatch-Padding { margin-bottom: 6px; }
+		.OP570 .large-3.medium-3.small-12.columns.submit-form { border-top: 1px solid #eee;}
+
+  /*.OP570 .Confirm-btn {margin-left: unset !important;margin-top:0px !important; margin-bottom:15px;height: 32px; padding: 4px 16px;}
+  .OP570 .toggle-terms {margin-left: unset !important;}*/   
+  .OP570 .PriceWatch-alt-left {margin-left: 0px;}
+
+}
+
+@media only screen and (min-width:482px) and (max-width : 557px){
+	.OP570 .price-alert{width:100%; padding: 4px 23px !important;}
+	.OP570 .priceAlert-btn{text-align: center;right:0;top: 10px; padding-bottom: 8px;}
+	.OP570 .PriceWatch-title {font-size: 18px !important; padding: 0px 6px !important;}
+	.OP570 .PriceWatch-alt { font-size: 12px !important; height: auto !important; line-height:1rem; top: 0px !important;
+		padding-top: 0px !important; padding-left: 6px !important;}
+		.OP570 .PriceWatch-offer {padding-top: 9px !important;}
+		.OP570 .btn-txt{margin-left:0 !important;}
+		.OP570 .text-section{border-bottom: 1px solid #eee; padding-bottom: 8px; width: 100% !important;}
+		.OP570 .priceAlert-btn{width: 100% !important;}
+		.OP570 .PriceWatch-alt-left {margin-left: 0px;}
+	}
+
+	@media only screen and (min-width:482px) and (max-width : 768px){
+		.OP570 .PriceWatch-alt { font-size: 14px; height: 25px; overflow: hidden;float: left !important; top: 0; padding: 0px 10px 2px 10px;}
+		.OP570 .priceAlert-btn{ top: 10px;}
+		.OP570 .text-section{width: 70%;}
+		.OP570 .PriceWatch-title{padding: 2px 10px;}
+		.OP570 .PriceWatch-alt-left {margin-left: 0px;}
+	}
+
+
+	@media only screen and (min-width:767px) and (max-width : 1072px){
+		.OP570 .PriceWatch-title{padding: 2px 10px;}
+		.OP570 .PriceWatch-alt{top: 0; padding: 0px 10px 2px 10px;}
+		.OP570 .success-message {font-size: 16px !important; padding-top: 2px !important;}
+
+	}
+	@media only screen and (min-width:960px) and (max-width : 1072px){
+		.OP570 .PriceWatch-title{width: 100%;}
+		.OP570 .PriceWatch-alt{width: 100%;}
+	}
+	@media only screen and (min-width:1120px) and (max-width : 1159px){
+		/*.OP570 .PriceWatch-alt{left: -10px;}*/
+	}
+	@media only screen and (min-width:1160px) and (max-width : 1219px){
+		/*.OP570 .PriceWatch-alt{left: -24px;}*/
+	}
+	@media only screen and (min-width:1220px){
+		/*.OP570 .PriceWatch-alt{left: -36px;}*/
+	}
+
+	.OP570 .PriceWatch-alt-left {margin-left: -110px;}
+
+
+
+@media only screen and (min-width:768px) and (max-width : 1024px) {
+ 	.OP570 .PriceWatch-title {
+    	font-size: 18px;
+  	}
+}
+@media only screen and (max-width : 481px){
+	.OP570 .PriceWatch-title {
+		font-size: 14px;
+	}
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+	dom.addCss(css);
+
+	window.jetstarOptimisation = window.jetstarOptimisation || {};
+
+	window.jetstarOptimisation.PWSignup_SessionExpiry_TH = (function(window, document) { 
+
+		var $depart = jQuery('.tabs-content.flight-schedule:eq(0)'),
+		$return = jQuery('.tabs-content.flight-schedule:eq(1)'),
+		init = function () {                   
+			addBodyClass();  
+			runLoop();
+			actionTracking();
+      //FaresGuaranteedHide();
+  }, 
+
+  addBodyClass = function addBodyClass() {   
+  	jQuery('body').addClass('OP570');
+  },
+
+  runLoop = function runLoop() {
+  	jQuery('.content.js-tab-content:visible').each(function(index, element){
+  		addOffer(element);
+  	});
+
+  	jQuery('.row.new-banner').each(function(index, element){
+  		flexDate(index, element)
+  	})
+  },
+
+  addOffer = function addOffer(element){
+  	var availableFlights = jQuery(element).find('.flight-card-wrapper:not(.sold-out)').find('.button-toggle').length;
+  	console.log(availableFlights)
+  	if (availableFlights == 0) {
+  		jQuery(element).closest('.tabs-content.flight-schedule.js-journey').after(html);
+  	}
+  },
+
+  FaresGuaranteedHide = function FaresGuaranteedHide(){
+  	jQuery($return).next().addClass('Fares-guaranteed-text');
+  	jQuery('.Fares-guaranteed-text').hide();
+  },
+
+  priceWatchSuccess = function priceWatchSuccess(e) {
+  	if(typeof(window.Jumpseat) == 'object' || window.Jumpseat !== undefined){
+  		window.Jumpseat.run('addListener', {  
+  			eventName: 'subscriptionCreated',  
+  			listener: onSubscriptionCreated  
+  		})
+  		function onSubscriptionCreated() { 
+  			actions.send('Deals_PriceWatch', '1');
+  			var $content = $(e).parents('.new-banner');
+	          // $content.find('.PriceWatch-title').text("You're all set.");
+	          // $content.find('.PriceWatch-alt').text("We'll send you an email if fares drop for next available dates.");
+	          // //$content.find('.PriceWatch-alt').addClass("PriceWatch-alt-left");
+	          // $content.find('.toggleSwitch').hide();
+	          // $content.find('.price-alert').hide();
+
+	          $content.find(".submit-form").hide();
+	          $content.find(".legal-copy").hide();
+	          $content.find('.PriceWatch-title').remove();
+	          $content.find(".PriceWatch-alt").text("Thanks for signing up! We'll start sending you great prices.");
+	          $content.find(".PriceWatch-alt").removeClass('large-8');
+	          $content.find(".PriceWatch-alt").addClass('success-message large-12');
+	          $content.find(".PriceWatchSubmit-img").css("display","block");
+	          $content.find(".form-text").css("padding-top","5px");
+	          $content.find(".PriceWatch-Padding").css("width","100%");
+	      }
+	  }
+	},
+
+	actionTracking = function actionTracking() {
+      if(typeof(window.Jumpseat) == 'object' || window.Jumpseat !== undefined){
+        window.Jumpseat.run('addListener', {  
+          eventName: 'subscriptionCreated',  
+          listener: onSubscriptionCreated  
+        })
+
+        function onSubscriptionCreated() {  
+          actions.send('Deals_PriceWatch', '1');
+        }
+      }
+    },
+
+	flexDate = function flexDate(index, element){
+		$(element).find('.priceAlert-btn').click(function(){
+			priceWatchSuccess(this);
+			$('.js-watch-price-btn').eq(index).click();
+		});
+	};
+
+
+	return {      
+		init: init
+	};
+
+}(window, document));
+
+	window.jetstarOptimisation.PWSignup_SessionExpiry_TH.init();
+
+</script>

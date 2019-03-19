@@ -1,0 +1,33 @@
+var utils = window.optimizely.get('utils'),
+    $ = window.optimizely.get('jquery'),
+    cardElementCSS = 'li.mobile-plans__contract',
+    minCostElementCSS = 'div.mobile-plans__min-cost.mt-0.mb-2.d1',
+    twlMonth_mobPlanOne = '.mobile-plans__contract-container:nth-child(1) li.mobile-plans__contract:nth-child(1)',
+    twlMonth_mobPlanTwo = '.mobile-plans__contract-container:nth-child(1) li.mobile-plans__contract:nth-child(2)',
+    twlMonth_mobPlanThird = '.mobile-plans__contract-container:nth-child(1) li.mobile-plans__contract:nth-child(3)',
+    monthToMonth_mobPlanOne = '.mobile-plans__contract-container:nth-child(2) li.mobile-plans__contract:nth-child(1)',
+    monthToMonth_mobPlanTwo = '.mobile-plans__contract-container:nth-child(2) li.mobile-plans__contract:nth-child(2)',
+    monthToMonth_mobPlanThird = '.mobile-plans__contract-container:nth-child(2) li.mobile-plans__contract:nth-child(3)',
+    mov_img = '<img src="//cdn.optimizely.com/img/7766623933/282c48e6409b49ca855b46c25b6c403f.png" alt="mov_img" typeof="foaf:Image" class="d-block img-fluid">',
+    smallCard = 'dodo-feature-selection-card:nth-of-type(1) div.card-header.ng-star-inserted:nth-child(1)',
+    //mediumCard = 'dodo-feature-selection-card:nth-of-type(2) div.card-header.ng-star-inserted:nth-child(1)',
+    //largeCard = 'dodo-feature-selection-card:nth-of-type(3) div.card-header.ng-star-inserted:nth-child(1)',
+    
+    htmlSmall = '<div class="perple-text-section"><p class="perple-text">Small</p></div>',
+    htmlMedium = '<div class="perple-text-section"><p class="perple-text">Medium</p></div>',
+    htmlLarge = '<div class="perple-text-section"><p class="perple-text">Large</p></div>';
+
+utils.waitForElement('.mobile-plans__contract-container.js-mobile-plans__year.counter1').then( function(){
+  
+    $(twlMonth_mobPlanThird).insertBefore(twlMonth_mobPlanOne);
+    $(twlMonth_mobPlanThird).insertBefore(twlMonth_mobPlanTwo);
+    $(monthToMonth_mobPlanThird).insertBefore(monthToMonth_mobPlanOne);
+    $(monthToMonth_mobPlanThird).insertBefore(monthToMonth_mobPlanTwo);
+    $('.field--name-field-image.field--type-entity-reference.field--label-hidden.field__item div').html(mov_img);
+  
+    $(htmlSmall).insertBefore('li.mobile-plans__contract:nth-child(1) .mobile-plans__data.p-2');
+    $(htmlMedium).insertBefore('li.mobile-plans__contract:nth-child(2) .mobile-plans__data.p-2');
+    $(htmlLarge).insertBefore('li.mobile-plans__contract:nth-child(3) .mobile-plans__data.p-2');
+});
+
+

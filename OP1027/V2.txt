@@ -1,0 +1,68 @@
+<style>
+    .OP1027 .seat-confirm-tip__footer {
+        padding-top: 22px;
+        border: none;
+    }
+    .OP1027 .seat-confirm-tip__button.small {
+        display: none;
+    }
+
+    @media screen and (max-width:650px) {
+        .OP1027 .seat-confirm-tip.upfront-seat {
+            left: 24px !important;
+            right: 0 !important;
+        }
+    }
+</style>
+
+<script type="text/javascript">
+    (function(window,document,$){
+        var isMutationObserverCreated = false,
+        init = function init(){
+            addBodyClass();
+            dom.addCss(css);
+            observerChange();
+        },
+
+        addBodyClass = function addBodyClass(){
+            $('body').addClass('OP1027');
+        },
+
+        observerChange = function observerChange(){
+            $('.seat-minimap-card.js-seat-minimap-card.js-seat-panel').click(function(){
+               if(!isMutationObserverCreated){ 
+                isMutationObserverCreated = true;
+	        var targetNode = document.getElementById('seatmap');
+            var observer = new MutationObserver(function pricePanelChange(){
+			    if($('.seat-confirm-tip__button.button-outline.small.js-seat-confirm-tip__button').length > 0)
+			    {
+                    var pricePopup = $('.seat-confirm-tip.upfront-seat.js-seat-confirm-tip.show');
+                    if(pricePopup.length == 0)
+                        pricePopup = $('.seat-confirm-tip.standard-seat.js-seat-confirm-tip.show');
+                    if(pricePopup.length == 0)
+                        pricePopup = $('.seat-confirm-tip.extralegroom-seat.js-seat-confirm-tip.show');
+
+				    var pricePopupClone = pricePopup.clone();
+				    pricePopupClone.find('.seat-confirm-tip__button.button-outline.small.js-seat-confirm-tip__button').remove();
+				
+				    $('.seat-confirm-tip__button.button-outline.small.js-seat-confirm-tip__button').click();
+				    $('#seatmap .seatmap').append(pricePopupClone);
+
+                    setInterval(function(){
+                        pricePopupClone.remove();
+                    }, 2000);
+                                
+				
+			    }
+            });
+            observer.observe(targetNode, {
+                attributes: true,
+                childList: true, subtree: true
+            });
+           }
+          });
+        };
+
+        init();
+    }(window,document,jQuery));
+</script>

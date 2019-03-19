@@ -1,0 +1,21 @@
+
+
+
+renderer
+    .when(site.scope.targeting.isReady(), site.scope.campaignCore.jqueryReady())
+    .done(function() {
+        renderer.waitForElement('.grid_11')
+        .done(function () {
+            if (site.scope.nonDataLayer.isCultureEnAu()) {                      
+                site.scope.campaignCore.setup(campaign);
+                var v = $('.assigned-seat').text().split(" ");
+                if($('.assigned-seat').text().split(" ").indexOf('-')){
+                    renderer.runVariantJs();
+                }
+                
+            }
+        })
+    })
+    .fail(function() {
+        console.log('OP957 - failure');
+    });

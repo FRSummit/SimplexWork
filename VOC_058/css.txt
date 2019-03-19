@@ -1,0 +1,86 @@
+.card-button-wrapper .mat-raised-button .mat-button-wrapper .content{
+  font-weight: bold !important;
+}
+
+.is-purple .card-footer {
+  background-color:inherit !important;
+}
+
+.card-footer__link.ng-star-inserted{
+    font-size: 13px !important;
+    text-decoration: underline;
+}
+
+
+
+.card-header__badge {
+    display:none;
+}
+.perple-text-section{
+    background: #470C68;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 8px 0;
+}
+p.perple-text{
+    color: #FFFFFF !important;
+    font-size: 16px !important;
+}
+dodo-feature-selection-card .is-purple br {
+    display: none;
+}
+dodo-feature-selection-card div.title-part.part-2 hr{
+    margin: 17px -72px  !important;
+}
+
+.is-purple{
+    background: #F7F8FA;
+}
+
+.is-purple .card-header {
+    padding-top: 13px;
+}
+.is-purple .multi-line-2-part-title .title-part.part-1 .sub {
+    display: none;
+}
+.card-body__content.ng-star-inserted {
+    margin-top: -8px !important;
+}
+.is-purple .min-cost{
+    font-size: 14px !important;
+}
+.is-purple hr{
+    margin: 19px -22px !important;
+}
+.is-purple .multi-line-2-part-title .title-part.part-2 .main-part{
+    margin-top: 20px !important;
+}
+
+.card-content-button-wrapper .card-content-wrapper .card-body__content p{
+	padding: 0 0 !important;
+}
+
+img.dodo-bird-image{
+  display: none;
+}
+
+div.title-section-blurb{
+  display: none;
+}
+
+.plans-heading .title-section-container.header{
+  text-align:center;
+}
+
+dodo-title-section .title-section-container img {
+    margin-bottom: 1.5rem !important;
+}
+
+.mobile-selection-container {
+    margin-bottom: 25px !important;
+}
+
+.is-selected .card-button-wrapper{
+		background: #f5f2fc !important;  
+}
+

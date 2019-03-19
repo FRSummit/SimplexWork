@@ -1,0 +1,427 @@
+<style type="text/css">
+    .OP1004 .inclusionbutton {
+        margin: 0 auto;
+        font-family: "Helvetica Neue",Roboto,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        text-align: right;
+        color: #0692fc;
+        display: table;
+        cursor: pointer;
+        padding-bottom: 35px;
+    }
+    .OP1004 .bundle__fare-row .bundle__fare-content.active, .bundle__sub-header .bundle__fare-content.active {
+        border-left: .125rem solid #00c249;
+        border-right: .125rem solid #00c249;
+    }
+    .OP1004 .bundle-container {
+        padding: 12px 0px;
+    }
+    .OP1004 .button-toggle,
+    .OP1004 .button-toggle.expand,
+    .OP1004 .button-toggle.active {
+        width: 25px !important;
+        height: 25px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: inline-block;
+        vertical-align: top;
+        color: transparent;
+        border: 2px solid #dedede;
+    }
+    .OP1004 .button-toggle:focus,
+    .OP1004 .button-toggle:hover,
+    .OP1004 .button-toggle:active,
+    .OP1004 .button-toggle.is-fill {
+        color: transparent;
+        background-color: #ffffff;
+    }
+    .OP1004 .button-toggle.active:focus,
+    .OP1004 .button-toggle.active:hover,
+    .OP1004 .button-toggle.active:active,
+    .OP1004 .button-toggle.active.is-fill {
+        background-color: transparent;
+        color: transparent;
+    }
+    .OP1004 .button-toggle.active {
+        border: 2px solid #00c249;
+    }
+    .OP1004 .button-toggle span {
+        width: 0;
+        height: 0;
+        margin: 0;
+        display: block;
+    }
+    .OP1004 .button-toggle.active .button-toggle__label--off {
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border-radius: 50px;
+        margin: 3px;
+        background-color: #00c249;
+    }
+    .OP1004 .pricepoint-wrapper{
+        display: block;
+        text-align: right;
+    }
+    .OP1004 .pricepoint-wrapper .pricepoint{
+        justify-content: flex-end;
+    }
+    .OP1004 .bundle-added {
+        display: none;
+        margin-bottom: 1.5rem;
+    }
+    .OP1004 .bundle-added .button {
+        padding: 0.5rem 1.5rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+    .OP1004 .bundle-added .box {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.125rem 1.75rem;
+        margin: 0 0 2rem;
+    }
+    .OP1004 .bundle-added .box > * + * {
+        margin-left: 1.75rem;
+    }
+    .OP1004 .bundle-added .selection.box {
+        border: 2px solid #00c249;
+        padding: calc(1.125rem - 2px) calc(1.75rem - 2px);
+        position: relative;
+    }
+    .OP1004 .inclusionbutton::after {
+        content: "";
+        height: 10px;
+        width: 12px;
+        background: url('#$(ContentManager:blueArrow.png)!') no-repeat;
+        position: absolute;
+        margin-left: 6px;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+    .OP1004 .bundle-added .selection.box:after {
+        background-image: url('/Images/Icons/round-tick--s2.svg');
+        content: "";
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        right: -.5rem;
+        top: -.5rem;
+        opacity: 0;
+    }
+    .OP1004 .bundle-added .selection.box .section-heading,
+    .OP1004 .bundle-added .selection.box .bundle-name {
+        flex-grow: 1;
+        flex-basis: 65%;
+    }
+    .OP1004 .bundle-added .selection.box .bundle-name {
+        flex-basis: 35%;
+    }
+    .OP1004 .bundle-added .prompt.box .banner-img {
+        min-width: 232px;
+        width: 232px;
+        height: 129px;
+        margin: -1.125rem 0 -1.125rem -1.75rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('#$(ContentManager:max.png)!');
+    }
+    .OP1004 .bundle-added .prompt.box .h5 {
+        flex-grow: 1;
+    }
+    .OP1004 .js-bundle-container[data-bundle-bundleselected] .selection.box {
+        animation: shake-animate-frames .3s 1;
+    }
+    .OP1004 .js-bundle-container[data-bundle-bundleselected] .selection.box:after {
+        animation: green-tick-animate-frames .1s 1;
+        animation-delay: .3s;
+        animation-fill-mode: forwards;
+    }
+    .OP1004 .js-bundle-container[data-bundle-bundleselected^="Flex"] .prompt.box .banner-img {
+        background-image: url('#$(ContentManager:FlexiBiz_Image.png)!');
+    }
+    .OP1004 .js-bundle-container[data-bundle-bundleselected="Plus"] .prompt.box .banner-img {
+        background-image: url('#$(ContentManager:plus.png)!');
+    }
+    .OP1004 .js-bundle-container[data-bundle-bundleselected] .bundle-added {
+        display: block !important;
+    }
+    .OP1004 .js-bundle-container[data-bundle-bundleselected] .bundle-start,
+    .OP1004 .js-bundle-container.bundle-otherBundleSelected .prompt.box,
+    .OP1004 .js-bundle-container.bundle-otherBundleUnavailable .prompt.box {
+        display: none !important;
+    }
+
+</style>
+
+<div class="row bundle-added">
+    <div class="columns large-12">
+        <div class="selection box">
+            <div class="h4 bundle-name"><span class="selectedBundle"></span> Bundle</div>
+            <button type="button" class="button secondary-button-outline removeBtn">Remove bundle</button>
+        </div>
+        <div class="prompt box">
+            <div class="banner-img"></div>
+            <div class="h5">Would you like to add a <span class="selectedBundle"></span> bundle to your <span class="return-or-departing">return</span> flight also?</div>
+            <button type="button" class="button button-outline addOtherBtn">Add <span class="selectedBundle"></span> bundle</button>
+        </div>
+    </div>
+</div>
+<div class="toggle-added">
+    <label for="standard-footer-input" class="button button-toggle expand js-select-button qa-standard active" role="button">
+        <span class="button-toggle__label button-toggle__label--on"></span>
+        <span class="button-toggle__label button-toggle__label--off"></span>
+    </label>
+    <div class="addBundle">Standard inclusion</div>
+</div>
+
+<script type="text/javascript">
+
+(function(window, document, $) {
+    var $journeys = $(".js-bundle-container"),
+        unselectedName = $(".bundle__header:not(.subfooter) .bundle__fare-content:nth-of-type(2) .bundle__heading").first().text(),
+        init = function() {
+            addBodyClass();
+            dom.addCss(css);
+            setTimeout(function(){
+                appendHtml();
+                if ($(".bundle__sub-header .bundle__fare-content:nth-of-type(2) .button-toggle").length < 1) Collapse_V1();
+                bundleTargetClickEvent();
+                removeBtnClickEvent();
+                addOtherBtnClickEvent();
+            },100);
+        },
+
+        Collapse_V1 = function Collapse_V1(){
+            (function(window, document, $){
+                var init2 = function () {
+                    addRadioButtons();
+                    defaultBundle();
+                    bundleClick();
+                    bundleUnselect();
+                    removeButtonText();
+                    addText();
+                },
+
+                addText = function addText() {
+                    $(".js-bundle-container:eq(1)").addClass('tableDelete');
+                    $(".js-bundle-container.tableDelete .bundle__fare-row").css("display","none");
+                    $(".js-bundle-container.tableDelete .bundle__footer.js-bundle-footer:eq(1)").css("display","none");
+                    $(".bundle__sub-footer:eq(1)").css("display","none");
+                    $(".bundle__footer.js-bundle-footer:eq(1)").css("display","none");
+                    $(".bundle.bundle--modifier:eq(1)").css("border-bottom","1px solid #dedede");
+                    $(".bundle__terms").before("<span class='inclusionbutton'>Show bundle inclusions</span>");
+                    $(".inclusionbutton").click(function(){
+                        $(".js-bundle-container.tableDelete .bundle__fare-row").css("display", "block");
+                        $(".bundle__footer.js-bundle-footer:eq(1)").css("display","block");
+                        $(".bundle__sub-footer:eq(1)").css("display", "block");
+                        $(".bundle.bundle--modifier:eq(1)").css("border-bottom","none");
+                        $(".inclusionbutton").css("display","none");
+                        $(".js-bundle-container.tableDelete .bundle__fare-row .bundle__fare-content.active, .bundle__sub-header .bundle__fare-content.active:eq(1)").css("border-bottom","none");
+                    });
+                    $(".inclusionbutton:eq(0)").css("display","none");
+                    $(".js-bundle-container.tableDelete .bundle__header, .bundle__sub-header:eq(1)").css("float","left");
+                    $(".js-bundle-container.tableDelete .bundle__fare-row .bundle__fare-content.active, .bundle__sub-header .bundle__fare-content.active:eq(1)").css("border-bottom",".125rem solid #00c249");
+                    $("label.button.button-toggle.small.expand.text-center.js-select-button.js-bundle__option--individual-P-ADL-AVV.qa-depart-plus.bundle-target").click(function() {
+                        $(".js-bundle-container.tableDelete .bundle__fare-row").css("display", "block");
+                        $(".bundle__footer.js-bundle-footer:eq(1)").css("display","block");
+                        $(".bundle__sub-footer:eq(1)").css("display", "block");
+                        $(".bundle.bundle--modifier:eq(1)").css("border-bottom","none");
+                        $(".inclusionbutton").css("display","none");
+                        $(".js-bundle-container.tableDelete .bundle__fare-row .bundle__fare-content.active, .bundle__sub-header .bundle__fare-content.active:eq(1)").css("border-bottom","none");
+                    });
+                },
+                      
+                addRadioButtons = function addRadioButtons() {
+                    $('.bundle__sub-header, .bundle__sub-footer').each(function (index, element) {
+                        var $starterCell = $('.bundle__fare-content[data-product-class="S"]',this),
+                            cellColIndex = $starterCell.index()+1,
+                            $starterInput = $('input', $starterCell),
+                            starterId = $starterInput.attr('id'),
+                            $newStarterLabel = $('<label data-price="00.000000" tabindex="0" role="button" class="button button-toggle small expand text-center js-select-button js-'+starterId+' " />'),
+                            $newOnOffSpans = $('label.button-toggle:first > span',this).clone(),
+                            $otherLabels = $('label[class*="js-bundle__option--individual"]:not([class*="js-bundle__option--individual-S"])',this),
+                            $allColCells = $(this).closest('.bundle-container').find('.bundle__fare-content:nth-child('+cellColIndex+'):not(.js-'+starterId+')');
+                        $newStarterLabel.insertBefore($starterInput);
+                        $starterInput
+                            .after('<div class="addBundle">Standard inclusion</div>')
+                            .prependTo($newStarterLabel)
+                            .closest('div').contents().filter(function() { return this.nodeType == 3 }).remove();
+                        $starterCell
+                            .addClass('js-bundle-content js-bundle-option js-aa-key-click-input js-'+starterId)
+                            .removeClass('text-left')
+                            .attr('role','radio')
+                            .attr('tabindex', '0');
+                        $newStarterLabel
+                            .attr('for', starterId)
+                            .attr('data-journey-key', $('[data-journey-key]:first',this).attr('data-journey-key') )
+                            .attr('data-flight-key', $starterInput.val() )
+                            .addClass( (index==0) ? 'qa-depart-standard' : 'qa-return-standard' );
+                        $newOnOffSpans.prependTo($newStarterLabel);
+                        $otherLabels.after('<div class="addBundle">Add bundle</div>');
+                        $allColCells.addClass('js-'+starterId);
+                    });
+                    $(".row.bundle-start .bundle__sub-header .button-toggle:not(.bundle-target), .row.bundle-start .bundle__sub-footer .button-toggle:not(.bundle-target)",this).addClass("bundle-target");
+                },
+              
+                defaultBundle = function defaultBundle() {
+                    $('.bundle-container').each(function (index, element) {
+                        if (!$(element).find('.bundle__header [id^="individual"]').hasClass('active')) {
+                            $(element).find('.s-bundle__content').addClass('active');
+                            $(element).find('.s-bundle__header').addClass('active');
+                            $(element).find('[class*="js-bundle__option--individual-S"]').addClass('active');
+                            $(element).find('label[class*="standard"]').addClass('active');
+                        }
+                    })
+                },
+
+                bundleUnselect = function bundleUnselect() {
+                    $('.js-bundle-container:visible').each(function (index, element) {
+                        $(element).find('.button-toggle:not(label[class*="standard"])').on('click', function () {
+                            if ($(element).find('label[class*="js-bundle__option--individual"]').hasClass('active')) {
+                                $(element).find('[class*="js-bundle__option--individual-S"]').removeClass('active');
+                                $(element).find('[class*="js-bundle__option--individual-S"]').removeClass('active');
+                            } else {
+                                $(element).find('[class*="js-bundle__option--individual-S"]').addClass('active');
+                                $(element).find('[class*="js-bundle__option--individual-S"]').addClass('active');
+                                $(element).find('.s-bundle__header').addClass('active');
+                                $(element).find('label[class*="standard"]').addClass('active');
+                            }
+                        })
+                    })
+                },
+
+                bundleClick = function bundleClick() {
+                    $('.js-bundle-container:visible').each(function (index, element) {
+                        $(element).find('label[class*="standard"]').on('click', function () {
+                            $(element).find('.button-toggle.active:not(label[class*="standard"]) input').first().trigger('click');
+                        })
+                    })
+                },
+
+                removeButtonText = function removeButtonText() {
+                    $('.button-toggle__label--on').html('');
+                    $('.button-toggle__label--off').html('');
+                };
+                init2();
+            }(window, document, jQuery));
+        },
+
+        addBodyClass = function addBodyClass() {
+            $("body").addClass("OP1004");
+        },
+
+        appendHtml = function appendHtml() {
+            $journeys.append( $(html).filter(".bundle-added") ).each(function(i){
+                $(this).children(":not(.bundle-added)").addClass("bundle-start");
+                $(".section-heading",this).clone().prependTo( $(".bundle-added .selection.box",this) ).find("h3").addClass("h4");
+                if (i==1) $(".bundle-added .return-or-departing",this).text("departing");
+                $(".row.bundle-start .bundle__sub-header .button-toggle, .row.bundle-start .bundle__sub-footer .button-toggle",this).addClass("bundle-target");
+            });
+        },
+
+        getJourneyBundleNames = function getJourneyBundleNames(journey, getSelected) {
+            var result = [],
+                $query;
+            if (getSelected) {
+                $query = $(".row.bundle-start .bundle__header:not(.subfooter) .bundle__fare-content.active .bundle__heading", journey);
+                if ($query.length == 0) {
+                    $query = $(".row.bundle-start .bundle__header:not(.subfooter) .bundle__fare-content:nth-of-type(2) .bundle__heading", journey);
+                }
+                result = $query.first().text();
+            } else {
+                result = [];
+                $query = $(".row.bundle-start .bundle__header:not(.subfooter) .bundle__heading", journey);
+                $query.each(function(){
+                    result.push($(this).text());
+                });
+            }
+            return result;
+        },
+
+        $getJourneyBundleTargets = function $getJourneyBundleTargets(journey, getSelected) {
+            var $result;
+            if (getSelected) {
+                $result = $(".row.bundle-start .bundle__sub-header .bundle__fare-content.active .bundle-target", journey);
+                if ($result.length == 0) {
+                    $result = $(".row.bundle-start .bundle__sub-header .bundle__fare-content:nth-of-type(2) .bundle-target", journey);
+                }
+            } else {
+                $result = $(".row.bundle-start .bundle__sub-header .bundle-target", journey);
+            }
+            return $result;
+        },
+
+        $getJourneyBundleTargetByName = function $getJourneyBundleTargetByName(journey, bundleName) {
+            var $header = $(".row.bundle-start .bundle__header:not(.subfooter) .bundle__fare-content .bundle__heading:contains("+bundleName+")",journey),
+                headerCellIdx = $header.closest(".bundle__fare-content").index(),
+                $subHeaderCell = $(".row.bundle-start .bundle__sub-header .bundle__fare-content:nth-child("+(headerCellIdx+1)+")",journey);
+            return $(".bundle-target",$subHeaderCell);
+        },
+
+        selectBundle = function selectBundle(journey, bundleName) {
+            var oldScrollTop = $(window).scrollTop();
+            $(journey).attr("data-bundle-bundleselected", bundleName).removeClass("bundle-otherBundleUnavailable").find(".bundle-added .selectedBundle").text(bundleName);
+            var otherJourney = $journeys.not(journey)[0];
+            $(otherJourney).addClass("bundle-otherBundleSelected");
+            if (getJourneyBundleNames(otherJourney).indexOf(getJourneyBundleNames(journey,true)) < 0) {
+                $(journey).addClass("bundle-otherBundleUnavailable");
+            }
+            $("html,body").scrollTop(oldScrollTop);
+            var $elementToView = $(".selection.box",journey);
+            var elementTop = $elementToView.offset().top;
+            var elementBottom = elementTop + $elementToView.outerHeight();
+            var viewportTop = $(window).scrollTop() + $(".site-header").height() + 30;
+            var viewportBottom = viewportTop + $(window).height() - 30;
+            if ( elementBottom > viewportBottom ) {
+                $("html,body").scrollTop( $elementToView.offset().top - $(window).height() + $elementToView.height() + 30 );
+            } else if ( elementTop < viewportTop ) {
+                $("html,body").scrollTop( $elementToView.offset().top - $(".site-header").height() - 30 );
+            }
+        },
+
+        unselectBundle = function unselectBundle(journey) {
+            $(journey).removeAttr("data-bundle-bundleselected").removeClass("bundle-otherBundleUnavailable");
+            $journeys.not(journey).removeClass(".bundle-otherBundleSelected");
+        },
+
+        bundleTargetClickEvent = function bundleTargetClickEvent() {
+            $(".bundle-target").on("click",function(){
+                var journey = $(this).closest($journeys)[0],
+                    bundleName = getJourneyBundleNames(journey,true);
+                if (bundleName && bundleName != unselectedName) selectBundle(journey, bundleName);
+                else unselectBundle(journey);
+                if($(".inclusionbutton").length > 0) $(".inclusionbutton").click();
+            });
+        },
+
+        removeBtnClickEvent = function removeBtnClickEvent() {
+            $(".bundle-added .removeBtn").on("click",function(){
+                var journey = $(this).closest($journeys)[0];
+                $getJourneyBundleTargets(journey).first()[0].click();
+            });
+        },
+
+        addOtherBtnClickEvent = function addOtherBtnClickEvent() {
+            $(".bundle-added .addOtherBtn").on("click",function(){
+                var journey = $(this).closest($journeys)[0];
+                var otherJourney = $journeys.not(journey)[0];
+                $getJourneyBundleTargetByName(otherJourney, $(this).find(".selectedBundle").text() )[0].click();
+                
+            });
+        };
+        
+    init();
+}(window, document, jQuery));
+
+</script>

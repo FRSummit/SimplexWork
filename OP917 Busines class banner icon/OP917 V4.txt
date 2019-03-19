@@ -1,0 +1,920 @@
+<style type="text/css">
+.OP-917 .business-banner{margin-bottom: 15px;}
+.OP-917 .bg-color{
+     background-color: #fff;
+     border: 2px solid #eee;
+}
+.OP-917 .business-banner-left.active{
+     border-color: #00C249;
+}
+.OP-917 .business-banner-right.active{
+     border-color: #00C249;
+}
+.OP-917 .business-banner-left.active:after{
+    background-image: url(/Images/Icons/round-tick--s2.svg);
+    background-size: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0;
+    -webkit-animation: green-tick-animate-frames .1s 1;
+    animation: green-tick-animate-frames .1s 1;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.OP-917 .business-banner-right.active:after {
+    background-image: url(/Images/Icons/round-tick--s2.svg);
+    background-size: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0;
+    -webkit-animation: green-tick-animate-frames .1s 1;
+    animation: green-tick-animate-frames .1s 1;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.OP-917 .business-header{
+    padding: 20px 20px 5px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-family: "Jetstar Happy",sans-serif;
+}
+
+.OP-917 .bussiness-banner-list{
+    padding: 0px 20px;
+}
+.OP-917 .bussiness-banner-list li{
+    list-style: none;
+    padding: 6px 0px;
+}
+.OP-917 .icon-bags {
+    background-image: url('#$(ContentManager:bags.png)!');
+}
+.OP-917 .icon-leather-seat {
+    background-image: url('#$(ContentManager:leather-seat.png)!');
+}
+.OP-917 .icon-checked-baggage {
+    background-image: url('#$(ContentManager:checked-baggage.png)!');
+    height: 16px;
+    margin-top: -3px;
+}
+.OP-917 .icon-entertainment {
+    background-image: url('#$(ContentManager:entertainment.png)!');
+}
+.OP-917 .icon-no-fees {
+    background-image: url('#$(ContentManager:no-fees.png)!');
+}
+.OP-917 .icon-meals {
+    background-image: url('#$(ContentManager:meals.png)!');
+}
+.OP-917 .icon-seat {
+    background-image: url('#$(ContentManager:seat.png)!');
+}
+.OP-917 .icon-headphone {
+    background-image: url('#$(ContentManager:headphone.png)!');
+}
+
+.OP-917 .icon-cross {
+    background-image: url('#$(ContentManager:cross.png)!');
+    width: 14px;
+    height: 14px;
+    margin-right: 18px;
+}
+.OP-917 .grey-section {
+    color: #ccc;
+}
+
+.OP-917 .icon-point {
+    background-image: url('#$(ContentManager:points.png)!');
+}
+.OP-917 .icon-lounges {
+    background-image: url('#$(ContentManager:lounge.png)!');
+}
+.OP-917 .icon-refundables {
+    background-image: url('#$(ContentManager:refundable.png)!');
+}
+.OP-917 .pricepoint__middle_passenger {
+    font-size: 10px;
+    margin-left: 26px;
+}
+.OP-917 .plus-sign {
+    height: 14px;
+    margin-top: 3px;
+    margin-right: 12px;
+}
+.OP-917 .pricepoint-prs {
+    font-size: 30px !important;
+    display: flex;
+}
+.OP-917 .pricepoint-wrapper-price {
+    margin-left: 22px;
+    margin-top: 48px;
+    margin-bottom: 18px;
+}
+.OP-917 .select-card-footer-text {
+    font-size: 14px;
+}
+.OP-917 .select-card-footer-text-bold {
+    font-weight: bold;
+    color: #767676;
+}
+.OP-917 .select-card-btn-text-section {
+    text-align: center;
+}
+		.OP-917 .select-card-btn-text-section .radio
+		{
+			display: block;
+			margin: 0.5em auto 0;
+			border: 2px solid #dddddd;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+                        cursor: pointer;
+		}
+		.OP-917 .select-card-btn-text-section .radio::before
+		{
+			content: '';
+			display: block;
+			margin: 3px 0 0 3px;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+		}
+		.OP-917 .select-card-btn-text-section.active .radio
+		{
+			border-color: #00C249;
+		}
+		.OP-917 .select-card-btn-text-section.active .radio::before
+		{
+			background-color: #00C249;
+		}
+
+.OP-917 .pricepoint-wrapper .pricepoint__decimal {
+    font-size: 50%;
+    margin-top: 1.4px;
+}
+
+.OP-917 .desktop-view{display:block;}
+.OP-917 .mobile-view {display:none;}
+.OP-917 .desktop-view .pricepoint__decimal{display:none;}
+
+/*..........mobile- view.......*/
+
+
+@media only screen and (max-width: 47.9375em){
+.OP-917 .mobile-view .bundle-content {
+     display: inline-block;
+     vertical-align: middle;
+}
+.OP-917 .mobile-view .select-card__footer {
+    padding: .75rem 1rem;
+}
+
+.OP-917 .mobile-view .business-header{
+    padding: 15px 20px 14px;
+}
+.OP-917 .mobile-view .button-toggle {
+    padding: 5px 22px;
+    font-size: 14px;
+}
+
+/*   tab-section   */
+.OP-917 .business-banner-container .tabs{border-bottom: 1px solid #dedede; text-align: center; padding-bottom: 8px; display: block;}
+.OP-917 .business-banner-container .tabs .tab-title{display: inline-block; float: none; margin-right: 30px;}
+.OP-917 .business-banner-container .tabs .tab-title:last-child{margin-right: 0px;}
+.OP-917 .business-banner-container .tabs .tab-title a {padding: 20px 4px 0px 4px;}
+.OP-917 .business-banner-container .tabs .tabs-content>.content {display: none;float: left;padding: 0;}
+.OP-917 .business-banner-container .tabs .tabs-content {margin-bottom: 0;}
+.OP-917 .business-banner-container .tabs-content>.content.active {
+    display: block;
+    float: none;
+}
+.OP-917 .business-banner-container .tabs-content>.content {
+    display: none;
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+.OP-917 .business-banner-container .tabs-content {
+    margin-bottom: 0;
+}
+.OP-917 .business-banner-container .tabs .tab-title a:focus, 
+.OP-917 .business-banner-container .tabs .tab-title a:hover {
+    background: none;
+}
+.OP-917 .business-banner-container .tabs .tab-title:hover {
+       border-bottom: 4px solid #ff5115;
+}
+
+/*   tab-section   */
+
+.OP-917 .desktop-view{display:none;}
+.OP-917 .mobile-view {display:block;}
+
+.OP-917 .business-banner-left.active:after {
+    height: 1.5rem;
+    width: 1.5rem;
+    top: -.28rem;
+    right: .1rem;
+}
+
+}
+
+/*..........mobile- view.......*/
+
+
+
+@media only screen and (min-width: 48em){
+.OP-917 .business-banner-left.active:after {
+    height: 2rem;
+    width: 2rem;
+    top: -.5rem;
+    right: .56rem;
+}
+.OP-917 .business-banner-right.active:after {
+    height: 2rem;
+    width: 2rem;
+    top: -.5rem;
+    right: .56rem;
+}
+
+
+}
+
+@media only screen and (max-width: 1289px) and (min-width: 768px){
+
+.OP-917 .business-banner-left.active:after {right: .0rem;}
+.OP-917 .business-banner-right.active:after {right: .0rem;}
+
+}
+
+</style>
+<div class="business-banner">
+        <div class="row desktop-view">
+            <div class="medium-6 small-10 columns">
+                <div class="business-banner-left bg-color">
+                    <div class="business-container">
+                        <div class="business-header">
+                            <strong>Business fare</strong>
+                        </div>
+
+                        <ul class="bussiness-banner-list business">
+                            <li>
+                                <i class="icon icon--lg icon-bags bundle-icon"></i>
+                                <span class="bundle-content">
+                                    2 x carry-on bags (max 7kg each)
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-leather-seat bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Wide leather seat
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-checked-baggage bundle-icon"></i>
+                                <span class="bundle-content">
+                                    30kg checked baggage allowance
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-entertainment bundle-icon"></i>
+                                <span class="bundle-content">
+                                    In-flight entertainment
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-no-fees bundle-icon"></i>
+                                <span class="bundle-content">
+                                    No change fees
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-meals bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Meals, drinks and snacks on request
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-seat bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Seat selection
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-headphone bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Comfort pack and noise cancelling headphones
+                                </span>
+                            </li>
+                         <li>
+                                <i class="icon icon--lg icon-cross bundle-icon"></i>
+                                <span class="bundle-content grey-section">
+                                    Qantas Status Credits / Points or a Jetstar Rewards Voucher
+                                </span>
+                            </li>
+                          <li class="lounge">
+                                <i class="icon icon--lg icon-cross bundle-icon"></i>
+                                <span class="bundle-content grey-section">
+                                    Lounge access
+                                </span>
+                        </li>
+                            <li class="refundable">
+                                <i class="icon icon--lg icon-cross bundle-icon"></i>
+                               <span class="bundle-content grey-section">
+                                Flight cancellation (fee applies)
+                               </span>
+                          </li>
+                            
+                        </ul>
+                    </div>
+
+                                 <div class="select-card__column select-card__column--vcenter select-card__column--fill select-card__footer-price" >
+                                    <div class="pricepoint-wrapper pricepoint-wrapper--orange pricepoint-wrapper-price">
+                                        <div class="pricepoint-prs">
+                                            <span class="pricepoint__symbol" style="font-size: 50%;line-height: 1.4;">$</span><span class="pricepoint__middle js-price">200</span><span class="pricepoint__decimal">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                    <div class="select-card__footer select-card__footer--padding">
+                        <div class="select-card-btn-text-section">
+                            <div class="radio"></div>
+                            <div class="text"><span class="select-card-footer-text">Included in your business fare</span></div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="medium-6 small-10 columns">
+                <div class="business-banner-right bg-color">
+                    <div class="business-container">
+                        <div class="business-header">
+                            <strong>Business Max fare</strong>
+                        </div>
+
+                        <ul class="bussiness-banner-list business-max">
+                            <li>
+                                <i class="icon icon--lg icon-bags bundle-icon"></i>
+                                <span class="bundle-content">
+                                    2 x carry-on bags (max 7kg each)
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-leather-seat bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Wide leather seat
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-checked-baggage bundle-icon"></i>
+                                <span class="bundle-content">
+                                    30kg checked baggage allowance
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-entertainment bundle-icon"></i>
+                                <span class="bundle-content">
+                                    In-flight entertainment
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-no-fees bundle-icon"></i>
+                                <span class="bundle-content">
+                                    No change fees
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-meals bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Meals, drinks and snacks on request
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-seat bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Seat selection
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon icon--lg icon-headphone bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Comfort pack and noise cancelling headphones
+                                </span>
+                            </li>
+                             <li>
+                                <i class="icon icon--lg icon-point bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Qantas Status Credits / Points or a Jetstar Rewards Voucher
+                                </span>
+                            </li>
+                            
+                       <li class="lounge">
+
+                                <i class="icon icon--lg icon-lounges bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Lounge access
+                                </span>
+                        </li>
+                         <li class="refundable">
+                            <i class="icon icon--lg icon-refundables bundle-icon"></i>
+                            <span class="bundle-content">
+                                Flight cancellation (fee applies)
+                            </span>
+                        </li>
+                            
+                        </ul>
+                    </div>
+                                 
+
+                  <div class="select-card__column select-card__column--vcenter select-card__column--fill select-card__footer-price">
+                                    <div class="pricepoint-wrapper pricepoint-wrapper--orange pricepoint-wrapper-price">
+                                        <div class="pricepoint-prs pricepoint">
+                                            <span class="pricepoint__symbol">$</span><span class="pricepoint__middle js-price" data-amount="200.00000">200</span><span class="pricepoint__decimal">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                    <div class="select-card__footer select-card__footer--padding">
+                        <div class="select-card-btn-text-section">
+                            <div class="radio"></div>
+                            <div class="text"><span class="select-card-footer-text">Get the <span class="select-card-footer-text-bold">Business Max</span> fare</span></div>
+                       </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+  <!--   Mobile-view  -->
+        <div class="row mobile-view">
+            <div class="small-12 columns">
+                <div class="business-banner-left bg-color">
+                    <div class="business-banner-container">
+                        <ul class="tabs" id="compare-tabs" data-tab>
+                            <li class="tab-title mob active" id="business"><a>Business fare</a></li>
+                            <li class="tab-title mob" id="business-max"><a>Business Max fare</a></li>
+                        </ul>
+                        <div class="tabs-content">
+                            <div class="content mob active" id="business-section">
+                                <ul class="bussiness-banner-list business">
+                                    <li>
+                                        <i class="icon icon--lg icon-bags bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            2 x carry-on bags
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-leather-seat bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Wide leather seat
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-checked-baggage bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            30kg checked baggage
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-entertainment bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            In-flight entertainment
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-no-fees bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            No change fees
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-meals bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Meals, drinks and snacks
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-seat bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Seat selection
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-headphone bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Comfort pack and headphones
+                                        </span>
+                                    </li>
+                         <li>
+                                <i class="icon icon--lg icon-cross bundle-icon"></i>
+                                <span class="bundle-content grey-section">
+                                    QFF Credits / Points
+                                </span>
+                            </li>
+                          <li class="lounge">
+                                <i class="icon icon--lg icon-cross bundle-icon"></i>
+                                <span class="bundle-content grey-section">
+                                    Lounge access
+                                </span>
+                        </li>
+                            <li class="refundable">
+                                <i class="icon icon--lg icon-cross bundle-icon"></i>
+                               <span class="bundle-content grey-section">
+                                Flight cancellation (fee applies)
+                               </span>
+                          </li>
+                                    
+                                </ul>
+                                <div class="select-card__footer select-card__footer--padding" >
+                                    <div class="pricepoint-wrapper pricepoint-wrapper--orange">
+                                        <div class="pricepoint-prs pricepoint">
+                                            <span class="pricepoint__symbol">$</span><span class="pricepoint__middle js-price">859</span><span class="pricepoint__decimal">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content mob" id="business-max-section">
+                                <ul class="bussiness-banner-list business-max">
+                                    <li>
+                                        <i class="icon icon--lg icon-bags bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            2 x carry-on bags
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-leather-seat bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Wide leather seat
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-checked-baggage bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            30kg checked baggage
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-entertainment bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            In-flight entertainment
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-no-fees bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            No change fees
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-meals bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Meals, drinks and snacks
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-seat bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Seat selection
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon--lg icon-headphone bundle-icon"></i>
+                                        <span class="bundle-content">
+                                            Comfort pack and headphones
+                                        </span>
+                                    </li>
+                                    <li>
+                                <i class="icon icon--lg icon-point bundle-icon"></i>
+                                <span class="bundle-content">
+                                    QFF Credits / Points
+                                </span>
+                            </li>
+                            
+                       <li class="lounge">
+
+                                <i class="icon icon--lg icon-lounges bundle-icon"></i>
+                                <span class="bundle-content">
+                                    Lounge access
+                                </span>
+                        </li>
+                         <li class="refundable">
+                            <i class="icon icon--lg icon-refundables bundle-icon"></i>
+                            <span class="bundle-content">
+                                Flight cancellation (fee applies)
+                            </span>
+                        </li>
+                                    
+                                </ul>
+                                <div class="select-card__footer select-card__footer--padding">
+                                    <div class="select-card__column select-card__column--vcenter select-card__column--grow">
+                                        <div class="select-card__column select-card__column--vcenter select-card__column--fill select-card__footer-price">
+                                         <div class="pricepoint-wrapper pricepoint-wrapper--orange">
+                                            <div class="pricepoint">
+                                                    <span class="pricepoint__symbol">$</span><span class="pricepoint__middle js-price">308</span><span class="pricepoint__decimal">.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right select-card__column select-card__column--vcenter select-card__column--fill">
+                                            <div id="toggleButton" class="button button-toggle text-center js-business-bundle-button mob" tabindex="0" role="button">
+                                                <span class="button-toggle__label button-toggle__label--on">
+                                                    Choose Max
+                                                </span>
+
+                                                <span class="button-toggle__label button-toggle__label--off">
+                                                    Remove Max
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <!--   Mobile-view-end  -->
+
+    </div>
+
+
+
+<script type="text/javascript">
+dom.addCss(css);
+window.jetstarOptimisation = window.jetstarOptimisation || {};
+window.jetstarOptimisation.Bundles_BusinessMaxUptake_Removing_black_box_AU = (function(window,document,$){
+	var $outBound = jQuery('.tabs-content.flight-schedule.js-journey:eq(0) [data-cabintype="business"] .js-outbound'),
+            $inBound = jQuery('.tabs-content.flight-schedule.js-journey:eq(1) [data-cabintype="business"] .js-inbound'),
+            //tick = false,
+        init = function init(){
+	    addBodyClass();
+            hideBusinessBanner();
+            
+            addBundleInHTML($outBound);
+            showBusinessBanner($outBound);
+            
+            addBundleInHTML($inBound)
+            showBusinessBanner($inBound);
+	},
+
+	addBodyClass = function addBodyClass(){
+	    jQuery('body').addClass('OP-917');
+
+	},
+
+        hideDefaultMaxPanel = function hideDefaultMaxPanel(boundObj) {
+            jQuery('.js-business-bundle-panel.business-bundle-panel', boundObj).hide();
+        },
+
+        addBundleInHTML = function addBundleInHTML(boundObj) {
+            if ($('.js-cabin-tabs-0, .js-cabin-tabs-1').length < 1) return;
+
+            if(jQuery('.flight-card-wrapper.js-fare-row.active', boundObj).length > 0) {
+
+                hideDefaultMaxPanel(boundObj); 
+
+                if(jQuery('.business-banner', boundObj).length == 0){
+                    var htmlObj = jQuery(html).clone();
+                    //$(htmlObj).insertBefore('.js-tab-content[id*=business] .js-general-legend-info',boundObj).css('margin-bottom','15px');
+                    jQuery('.js-general-legend-info', boundObj).before(htmlObj).css('margin-bottom','15px');
+                }
+
+                updatePriceInMaxPanel(boundObj);
+                //addBanner(boundObj);
+                jQuery('.business-banner', boundObj).show();
+                
+                createEvent(boundObj);
+                executeEvent(boundObj);
+
+            }
+
+            
+        },
+        
+	
+
+	hideBusinessBanner = function hideBusinessBanner() {
+	    $('.js-outbound .business-inclusions').hide();
+	    $('.js-outbound .business-reminder-msg').hide();
+            $('.js-inbound .business-inclusions').hide();
+	    $('.js-inbound .business-reminder-msg').hide();	
+	},
+
+
+        addBanner = function addBanner(boundObj) {
+            
+            var lishObj = [];
+            jQuery('.flight-card-wrapper.js-fare-row.active',boundObj).next('.js-business-bundle-panel.business-bundle-panel').find('.bussiness-bundle-list li').each(function(){
+                lishObj.push(jQuery(this).clone());
+            });
+
+            jQuery.each(lishObj, function(index, item) {
+               jQuery('.business-banner .bussiness-banner-list.business', boundObj).append(jQuery(item).clone().find('.icon').hide().parent().prepend('<i class="icon icon--lg icon-cross bundle-icon"></i>'));
+               jQuery('.business-banner .bussiness-banner-list.business-max', boundObj).append(jQuery(item).clone());
+            });
+
+
+        },
+
+        selectedBundle = function selectedBundle(boundObj){
+            var $selectedFlight = jQuery('.flight-card-wrapper.js-fare-row.active',boundObj).next('.js-business-bundle-panel.business-bundle-panel');
+
+            jQuery('.button.button-toggle.button-toggle--large.text-center.js-widget-trigger.js-business-bundle-button.active',$selectedFlight).click();
+            jQuery('.button.button-toggle.button-toggle--large.text-center.js-widget-trigger.js-business-bundle-button',$selectedFlight).click();
+
+        },
+
+        unselectedBundle = function unselectedBundle(boundObj){
+            var $selectedFlight = jQuery('.flight-card-wrapper.js-fare-row.active',boundObj).next('.js-business-bundle-panel.business-bundle-panel');
+            jQuery('.button.button-toggle.button-toggle--large.text-center.js-widget-trigger.js-business-bundle-button.active',$selectedFlight).click();
+        },
+
+        isBundlePanelSelected = function isBundlePanelSelected(boundObj){
+            return jQuery('.flight-card-wrapper.js-fare-row.active',boundObj).next('.js-business-bundle-panel.business-bundle-panel.active').length > 0 ? true : false;
+        },
+
+        createEvent = function createEvent(boundObj) {
+            
+            jQuery('.business-banner-left .select-card-btn-text-section', boundObj).click(function(){
+                unselectedBundle(boundObj);
+
+                jQuery('.business-banner-left .select-card-btn-text-section', boundObj).addClass('active');
+                jQuery('.business-banner-left',boundObj).addClass('active');   
+
+                jQuery('.business-banner-right .select-card-btn-text-section', boundObj).removeClass('active');
+                jQuery('.business-banner-right', boundObj).removeClass('active');
+                
+            });
+
+            jQuery('.business-banner-right .select-card-btn-text-section', boundObj).click(function(){
+                selectedBundle(boundObj);
+
+                jQuery('.business-banner-right .select-card-btn-text-section',boundObj).addClass('active');
+                jQuery('.business-banner-right',boundObj).addClass('active');   
+
+                jQuery('.business-banner-left .select-card-btn-text-section', boundObj).removeClass('active');
+                jQuery('.business-banner-left', boundObj).removeClass('active');
+            });
+
+            jQuery('#business',boundObj).click(function(){
+                jQuery('.tab-title.mob',boundObj).removeClass('active');
+                jQuery(this).addClass('active'); 
+
+                jQuery('.content.mob',boundObj).removeClass('active');
+                jQuery('#business-section',boundObj).addClass('active'); 
+                
+                if(!isBundlePanelSelected(boundObj))
+                {
+                    jQuery('.mobile-view .business-banner-left.bg-color').addClass('active');
+                }
+                else
+                {
+                    jQuery('.mobile-view .business-banner-left.bg-color').removeClass('active');
+                }
+
+            });
+
+            jQuery('#business-max',boundObj).click(function(){
+                jQuery('tab-title.mob',boundObj).removeClass('active');
+                jQuery(this).addClass('active'); 
+                jQuery('#business',boundObj).removeClass('active');
+
+                jQuery('.content.mob',boundObj).removeClass('active');
+                jQuery('#business-max-section',boundObj).addClass('active');
+
+                if(isBundlePanelSelected(boundObj))
+                {
+                    jQuery('.mobile-view .business-banner-left.bg-color').addClass('active');
+                }
+                else
+                {
+                    jQuery('.mobile-view .business-banner-left.bg-color').removeClass('active');
+                }
+
+
+            });
+
+            jQuery('#toggleButton',boundObj).click(function(){
+                if(document.body.clientWidth < 768){
+                    if(!jQuery(this).hasClass('active')){
+                        selectedBundle(boundObj);
+                        jQuery(this).addClass('active');
+                        //tick = true;
+                        jQuery('.mobile-view .business-banner-left.bg-color').addClass('active');
+                    }
+                    else{
+                        unselectedBundle(boundObj);
+                        jQuery(this).removeClass('active');
+                        //tick = false;
+                        jQuery('.mobile-view .business-banner-left.bg-color').removeClass('active');
+                    }
+                }
+                
+            });
+            
+
+        },
+
+        updatePriceInMaxPanel = function updatePriceInMaxPanel(boundObj){
+            
+            var flightPrice = jQuery('.flight-card-wrapper.js-fare-row.active',boundObj).find('.pricepoint-wrapper .pricepoint .pricepoint__middle.js-price').data("amount");
+
+            var flightPricePoint = parseFloat(flightPrice).toString().split('.')[0]
+            var flightPriceDecimal = parseFloat(flightPrice).toString().split('.')[1];
+            flightPriceDecimal = flightPriceDecimal == undefined ? '.00' : ('.'+flightPriceDecimal);
+
+
+
+            var $selectedFlight = jQuery('.flight-card-wrapper.js-fare-row.active',boundObj).next('.js-business-bundle-panel.business-bundle-panel');
+
+            var bundlePrice = jQuery('.pricepoint-wrapper .pricepoint .pricepoint__middle.js-price',$selectedFlight).text();
+
+            var bundlePricePoint = parseFloat(bundlePrice).toString().split('.')[0]
+            var bundlePriceDecimal = parseFloat(bundlePrice).toString().split('.')[1];
+            bundlePriceDecimal = bundlePriceDecimal == undefined ? '.00' : ('.'+bundlePriceDecimal);
+
+            var totalPricePoint = (parseFloat(flightPrice) + parseFloat(bundlePrice )).toString().split('.')[0];
+            var totalPriceDecimal = (parseFloat(flightPrice) + parseFloat(bundlePrice )).toString().split('.')[1];
+            totalPriceDecimal = totalPriceDecimal == undefined ? '.00' : ('.'+totalPriceDecimal);
+
+            jQuery('.business-banner-right .pricepoint-wrapper .pricepoint-prs .pricepoint__middle.js-price',boundObj).text(totalPricePoint);
+            jQuery('.business-banner-right .pricepoint-wrapper .pricepoint-prs .pricepoint__decimal',boundObj).text(totalPriceDecimal.length == 2 ? (totalPriceDecimal+'0') : totalPriceDecimal);
+
+            jQuery('.business-banner-left .pricepoint-wrapper .pricepoint-prs .pricepoint__middle.js-price',boundObj).text(flightPricePoint);
+            jQuery('.business-banner-left .pricepoint-wrapper .pricepoint-prs .pricepoint__decimal',boundObj).text(flightPriceDecimal.length == 2 ? (flightPriceDecimal+'0') : flightPriceDecimal);
+
+            jQuery('#business-max-section .pricepoint-wrapper .pricepoint .pricepoint__middle.js-price',boundObj).text(totalPricePoint);
+            jQuery('#business-max-section .pricepoint-wrapper .pricepoint .pricepoint__decimal',boundObj).text(totalPriceDecimal.length == 2 ? (totalPriceDecimal+'0') : totalPriceDecimal);
+
+            jQuery('#business-section .pricepoint-wrapper .pricepoint .pricepoint__middle.js-price',boundObj).text(flightPricePoint);
+            jQuery('#business-section .pricepoint-wrapper .pricepoint .pricepoint__decimal',boundObj).text(flightPriceDecimal.length == 2 ? (flightPriceDecimal+'0') : flightPriceDecimal);
+            
+            
+        },
+
+        executeEvent = function executeEvent(boundObj){
+
+            if(isBundlePanelSelected(boundObj))
+            { 
+                jQuery('.business-banner-right .select-card-btn-text-section', boundObj).click();
+                jQuery('#business-max', boundObj).click();
+                //tick = false;
+                jQuery('#toggleButton',boundObj).click();
+            }
+            else{
+                jQuery('.business-banner-left .select-card-btn-text-section', boundObj).click();
+                jQuery('#business', boundObj).click();
+                //tick = true;
+                //jQuery('#toggleButton',boundObj).click();
+            }
+
+        },
+
+        showBusinessBanner = function showBusinessBanner(boundObj) {
+        jQuery('.flight-card-wrapper.js-fare-row', boundObj).each(function() {
+            
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    for(var i = 0; i < mutations.length; ++i) {
+                        
+                           if (mutation.attributeName === "class" && jQuery(mutation.target).hasClass('active')) {
+     
+                               jQuery('.business-banner', boundObj).remove();
+                               addBundleInHTML(boundObj);
+                               
+                               
+                            }
+                            else
+                            {
+                                if(jQuery('.flight-card-wrapper.js-fare-row.active', boundObj).length == 0) {
+                                    jQuery('.business-banner', boundObj).remove();
+                                    unselectedBundle(boundObj);
+                                }
+                            }
+                        
+                    }
+                });
+            });
+
+            observer.observe(this, {
+                attributes: true,
+                childList: true
+            });
+        });
+        };
+
+	return {
+		init: init
+	};
+}(window,document,jQuery));
+window.jetstarOptimisation.Bundles_BusinessMaxUptake_Removing_black_box_AU.init();
+</script>

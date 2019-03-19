@@ -1,0 +1,45 @@
+var utils = window.optimizely.get('utils'),
+    $ = window.optimizely.get('jquery'),
+    cardElementCSS = 'li.mobile-plans__contract',
+    minCostElementCSS = 'div.mobile-plans__min-cost.mt-0.mb-2.d1',
+    twlMonth_mobPlanOne = '.mobile-plans__contract-container:nth-child(1) li.mobile-plans__contract:nth-child(1)',
+    twlMonth_mobPlanTwo = '.mobile-plans__contract-container:nth-child(1) li.mobile-plans__contract:nth-child(2)',
+    twlMonth_mobPlanThird = '.mobile-plans__contract-container:nth-child(1) li.mobile-plans__contract:nth-child(3)',
+    monthToMonth_mobPlanOne = '.mobile-plans__contract-container:nth-child(2) li.mobile-plans__contract:nth-child(1)',
+    monthToMonth_mobPlanTwo = '.mobile-plans__contract-container:nth-child(2) li.mobile-plans__contract:nth-child(2)',
+    monthToMonth_mobPlanThird = '.mobile-plans__contract-container:nth-child(2) li.mobile-plans__contract:nth-child(3)',
+    hrRawHTML = '<hr>',
+    htmlSmall = '<div class="perple-text-section"><p class="perple-text">Small</p></div>',
+    htmlMedium = '<div class="perple-text-section"><p class="perple-text">Medium</p></div>',
+    htmlLarge = '<div class="perple-text-section"><p class="perple-text">Large</p></div>',
+    headerText = '<div class="plan-section">All plans include:<ul><li>Unlimited local & national calls + national & international texts. <a href="https://www.dodo.com/mobile/international-call-rates">View full rates.</a></li><li>Free delivery of your sim when you order online</li></ul></div>';
+
+utils.waitForElement('.mobile-plans__contract-container.js-mobile-plans__year.counter1').then( function(){
+  
+    $('h1.dodoPurpleText').text('More data. Less money.');
+    $('h2.dodoGreyText').text('Powered by the Optus Superfast 4G Plus Network.');
+    $('.justify-content-around.w1024 .secondary-font.dodoGreyText').append(headerText);
+    $('.justify-content-around.w1024 .secondary-font.dodoGreyText p').remove();
+    $(twlMonth_mobPlanThird).insertBefore(twlMonth_mobPlanOne);
+    $(twlMonth_mobPlanThird).insertBefore(twlMonth_mobPlanTwo);
+    $(monthToMonth_mobPlanThird).insertBefore(monthToMonth_mobPlanOne);
+    $(monthToMonth_mobPlanThird).insertBefore(monthToMonth_mobPlanTwo);
+
+  
+    $(htmlSmall).insertBefore('li.mobile-plans__contract:nth-child(1) .mobile-plans__data.p-2');
+    $(htmlMedium).insertBefore('li.mobile-plans__contract:nth-child(2) .mobile-plans__data.p-2');
+    $(htmlLarge).insertBefore('li.mobile-plans__contract:nth-child(3) .mobile-plans__data.p-2');
+    var item = $('.field--type-entity-reference-revisions.field__items .field__item');
+    $(item[0]).insertAfter($(item[3]));  
+  
+    //$('.btn.btn-primary.ml-auto.mr-auto').text('SHOP MOBILE PLANS');
+    $('.mt-5').text('Super simple plans');
+});
+
+utils.observeSelector(cardElementCSS, function(cardElement) {  
+    var $minCostElement = $(minCostElementCSS,cardElement); 
+    //$(hrRawHTML).insertBefore('.mobile-plans__international-container.mt-2.mb-3');
+    $(hrRawHTML).insertAfter('.mobile-plans__contract-toggles');
+});  
+
+

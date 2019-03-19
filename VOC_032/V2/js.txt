@@ -1,0 +1,19 @@
+var utils = window.optimizely.get('utils'),
+	$ = window.optimizely.get('jquery'),
+  cardElementCSS = '.card-header.has-badge',
+  minCostElementCSS = '.card-header__badge.ng-star-inserted';
+    
+  utils.waitForElement('dodo-broadband-contract-length-selection').then(function() {  
+		//$('.tag.ng-star-inserted').html('<img _ngcontent-c39="" src="//cdn.optimizely.com/img/7766623933/706dc447a36e49da83678738c9d66152.png" style="width: 10px;" data-optly-bbdaa09f-11d3-4091-a3b7-97daf9122fff="">Great for high usage');
+    //$('.card-header__badge').html('<img _ngcontent-c40="" src="//cdn.optimizely.com/img/7766623933/be9f899bfe874a06a1570effb147df23.png" data-optly-e6173b48-eb2d-42f8-9ab8-f3c9616493ec="">No upfront costs');
+    //$('.card-header__badge').html('<img _ngcontent-c40="" src="//cdn.optimizely.com/img/7766623933/be9f899bfe874a06a1570effb147df23.png" data-optly-e6173b48-eb2d-42f8-9ab8-f3c9616493ec="">NO UP-FRONT COSTS');
+    
+    //'.card-header__badge.ng-star-inserted').text('NO UP-FRONT COSTS');
+  });
+
+utils.observeSelector(cardElementCSS, function(cardElement) {  
+    var $minCostElement = $(minCostElementCSS,cardElement);
+  
+    $('.card-header__badge.ng-star-inserted').text('NO UP-FRONT COSTS');
+    
+}); 

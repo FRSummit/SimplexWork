@@ -1,0 +1,120 @@
+<div class="alerts-container">
+        
+<aside role="note" class="alert alert--sticky alert--warning alert--pos-notification js-pos-notification" aria-live="polite" aria-hidden="false">
+    <div class="alert__wrapper">
+        <div class="gutter">
+            <div class="alert__txt">
+                <span class="js-pos-notification-txt">You are viewing our Australia website
+</span>
+                <button tabindex="2" type="button" class="alert__close-btn icon-hover"><i class="icon icon--md cross-p1-md cross-p1-t70-md-aft" aria-hidden="true" role="presentation"></i> <span class="visuallyhidden">Remove Notification
+
+</span></button>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<noscript>
+    <aside role="note" class="alert alert--sticky alert--warning alert--pos-notification" aria-hidden="true">
+        <div class="alert__wrapper">
+            <div class="gutter">
+                <div class="alert__txt">
+                    You are viewing our Australia website
+
+                </div>
+            </div>
+        </div>
+    </aside>
+</noscript>
+
+
+        <div class="js-va-notification"></div>
+    </div>
+
+
+
+
+
+
+.alerts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    border-bottom: 1px solid #d5d6d7;
+}
+
+.cookies .alert {
+    height: auto;
+}
+
+.alert--warning {
+    background: #fffedd;
+}
+.alert {
+    background: #fff;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+.cookies .alert .alert__wrapper {
+    display: block;
+    transform: translate3d(0,0,0);
+    will-change: transform,opacity;
+    transition: all .3s cubic-bezier(.3,.6,.3,1);
+    opacity: 1;
+}.gutter {
+    padding: 0 2.5rem;
+}
+.alert--sticky .alert__txt {
+    line-height: 2.5rem;
+    height: 2.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.alert--warning .alert__txt {
+    color: #000;
+}
+.alert .alert__txt {
+    color: #ff5115;
+}
+.alert__close-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    background: 0 0;
+    border: 0;
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    right: 0;
+}
+.icon--md, .icon--md:after, .icon--md:before {
+    background-size: 24px 2464px;
+}
+
+.icon--md {
+    width: 16px;
+    height: 16px;
+}
+.icon {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+    zoom: 1;
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

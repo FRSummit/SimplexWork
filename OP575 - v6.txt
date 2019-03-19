@@ -1,0 +1,1618 @@
+<div id="afterpayModal" class="price-watch-modal">
+  <div class="price-watch-modal-main-content-section">
+    <div class="new-modal-section">
+        <div class="pw-header-section">
+            <div class="pw-header-icon-section">
+                <img src="#$(ContentManager:price_watch_icon_white_sf.png)!" alt="price-watch-icon">
+            </div>
+            <h1 class="price-watch-title-header-section">Price Watch</h1>
+    </div>
+        <a class="close-afterpay-modal-section">Close<span class="afterpay-close">&times;</span></a>
+        <a class="back-btn to-new"><span>&lt;</span> Back</a>
+</div>
+
+
+  <div class="watch-price-container-section"> 
+
+     <h2 class="watch-price-header-section js-sentence">
+        <div class="origin-text"><span class="origin-name-text" id="originText"></span></div>
+        <div class="pw-space-text"><span class="" id=""> to </span></div>
+        <div class="destination-text"><span class="destination-name-text" id="destiText"></span></div>
+        <div class="dash-text"><div></div></div>
+        <div class="departing-date-text">
+            <span class="departing-date-header-text depart-js-date" id="depart-date-header"></span>
+        </div>
+        <div class="departing-week-text">
+            <span class="departing-week-header-text" id="week-counter-Text"></span>
+        </div>
+
+<!------------///////////////////////////////--------------->
+        <!--<div>
+          <div class="pw-subheader-origin">
+            <span id="originText">...</span><span style="display:none;" id="originCode"></span>
+        </div>
+        <div class="pw-subheader-dest">
+            <div><span id=""></span><span style="display:block;" id=""><h2> to </h2></div>
+        </div>
+        <div class="pw-subheader-dest">
+            <div><span id="destiText">...</span><span style="display:none;" id="destiCode"></div>
+            <div class="dash-text"><div></div> </div>
+        </div>
+        <div class="pw-subheader-dest">
+            <div><span id=""></span><span style="display:block;" id=""><h2> to </h2></div>
+        </div>
+        <div class="pw-subheader-dest">
+            <div><span id=""></span><span style="display:block;" id=""><h2> to </h2></div>
+        </div>-->
+<!-------------------////////////////////---------------------->
+    </h2>
+
+  </div>
+
+<div class="main-content-section">
+<div class="content">
+  <h3 class="question" id="departure-question" aria-label="">When would you like to depart?</h3>
+  <div class="tabs">
+    <ul class="tab-links" role="tablist">
+      <li class="active" role="presentation"><a href="#tab1" role="tab" aria-controls="tab-content">Select a date</a></li>
+      <li role="presentation"><a href="#tab2" role="tab" aria-controls="tab-content">Anytime in a month</a></li>
+      <li role="presentation"><a class="tab-three" href="#tab3" role="tab" aria-controls="tab-content">Anytime</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="tab1" class="tab active"></div>
+      <div id="tab2" class="tab"></div>
+      <div id="tab3" class="tab"></div>
+    </div>
+  </div>
+<!--------tab2---------->
+  <div class="tabs-two">
+    <ul class="tab-links" role="tablist">
+      <li class="active" role="presentation"><a href="#tab1" role="tab" aria-controls="tab-content">Specify a trip length</a></li>
+      <li role="presentation"><a href="#tab2" role="tab" aria-controls="tab-content">Select a date</a></li>
+      <li role="presentation"><a href="#tab3" role="tab" aria-controls="tab-content">One way</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="tab1-two" class="tab-two active">
+<!-------passenger select-------->
+<div class="passenger-section">
+<div class="pw-passenger-section_wrapper">
+    <div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" id="ddAbout" aria-labelledby="adults-tag">
+            <option value="1" selected="">About</option>
+            <option value="2">Exactly</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text about" aria-hidden="true">About</div>
+      </div>
+    </div>
+    <div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" id="ddDay" aria-labelledby="children-tag">
+            <option value="1" selected="">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text day" aria-hidden="true">2</div>
+      </div>
+    </div><div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" id="ddMonth" aria-labelledby="infants-tag">
+            <option value="0" selected="">Days</option>
+            <option value="1">Weeks</option>
+            <option value="2">Months</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text month" aria-hidden="true">Weeks</div>
+      </div>
+    </div>
+</div>
+</div>
+<!-------passenger select-------->
+      </div>
+      <div id="tab2-two" class="tab-two"></div>
+      <div id="tab3-two" class="tab-two"></div>
+    </div>
+  </div>
+</div>
+
+<form id="priceWatchForm">
+  <p class="intro">Get email updates on the price of your flights</p>
+  <div class="form-main-content-section-section">
+ <div class="form-main-content-section-section">
+   <!--<div class="airport-name-section">
+     <label class="label-section">Origin Airport<abbr title="Required">*</abbr></label>
+     <input class="origin-airport-input-section" id="origin-airport" placeholder="" value="">
+   </div>
+   <div class="airport-name-section">
+     <label class="label-section">Destination Airport<abbr title="Required">*</abbr></label>
+   <input class="destination-airport-input-section" id="destination-airport" placeholder="" value="">
+ </div>-->
+  <div class="email_wrapper">
+    <label class="label-section">Email <abbr title="Required">*</abbr></label>
+    <input class="email-input-section" id="email" placeholder="sample@sample.com" value="">
+    <!-- <span class="errors">Email address is required</span> -->
+  </div>
+  <p class="limit_and_email_tag-section">Receive weekly updates on how prices are tracking, the latest deals and our famous sales. And if the price drops, we’ll send you an alert.<br><br>You can unsubscribe at any time. <a class="privacy-policy" href="http://www.jetstar.com/sg/en/privacy-policy" target="_blank">See our privacy policy</a></p>
+
+<div class="passenger-section">
+<div class="pw-passenger-section_wrapper">
+    <div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" id="adult" aria-labelledby="adults-tag">
+            <option value="1" selected="">1 Adult</option>
+            <option value="1">1 Adults</option>
+            <option value="2">2 Adults</option>
+            <option value="3">3 Adults</option>
+            <option value="4">4 Adults</option>
+            <option value="5">5 Adults</option>
+            <option value="6">6 Adults</option>
+            <option value="7">7 Adults</option>
+            <option value="8">8 Adults</option>
+            <option value="9">9 Adults</option>
+            <option value="10">10 Adults</option>
+            <option value="11">11 Adults</option>
+            <option value="12">12 Adults</option>
+            <option value="13">13 Adults</option>
+            <option value="14">14 Adults</option>
+            <option value="15">15 Adults</option>
+            <option value="16">16 Adults</option>
+            <option value="17">17 Adults</option>
+            <option value="18">18 Adults</option>
+            <option value="19">19 Adults</option>
+            <option value="20">20 Adults</option>
+            <option value="21">21 Adults</option>
+            <option value="22">22 Adults</option>
+            <option value="23">23 Adults</option>
+            <option value="24">24 Adults</option>
+            <option value="25">25 Adults</option>
+            <option value="26">26 Adults</option>
+            <option value="27">27 Adults</option>
+            <option value="28">28 Adults</option>
+            <option value="29">29 Adults</option>
+            <option value="30">30 Adults</option>
+            <option value="31">31 Adults</option>
+            <option value="32">32 Adults</option>
+            <option value="33">33 Adults</option>
+            <option value="34">34 Adults</option>
+            <option value="35">35 Adults</option>
+            <option value="36">36 Adults</option>
+            <option value="37">37 Adults</option>
+            <option value="38">38 Adults</option>
+            <option value="39">39 Adults</option>
+            <option value="40">40 Adults</option>
+            <option value="41">41 Adults</option>
+            <option value="42">42 Adults</option>
+            <option value="43">43 Adults</option>
+            <option value="44">44 Adults</option>
+            <option value="45">45 Adults</option>
+            <option value="46">46 Adults</option>
+            <option value="47">47 Adults</option>
+            <option value="48">48 Adults</option>
+            <option value="49">49 Adults</option>
+            <option value="50">50 Adults</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text adult" aria-hidden="true">
+            1 Adult
+        </div>
+      </div>
+    </div>
+    <div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" id="child" aria-labelledby="children-tag">
+            <option value="0" selected="">0 Children</option>
+            <option value="1">1 Child</option>
+            <option value="2">2 Children</option>
+            <option value="3">3 Children</option>
+            <option value="4">4 Children</option>
+            <option value="5">5 Children</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text child" aria-hidden="true">
+            0 Children
+        </div>
+      </div>
+    </div><div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" id="infant" aria-labelledby="infants-tag">
+            <option value="0" selected="">0 Infants</option>
+            <option value="1">1 Infant</option>
+            <option value="2">2 Infants</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text infant" aria-hidden="true">
+            0 Infants
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<div class="submit-section">
+  <a class="btn btn-secondary flexible-dates-btn" href="#"><span>Choose dates</span></a>
+  <a class="btn btn-secondary watch-price-btn" href="#"><span>Watch prices</span></a>
+</div>
+</form>
+
+
+</div>
+
+<style type="text/css">
+
+/*--------------------Tab---------------------------*/
+
+.OP575 .tab-content {
+    text-align: -webkit-center;
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+
+.OP575 .tabs-two {
+    display: none;
+}
+
+.OP575 .origin-text {
+    display: inline-block;
+}
+
+.OP575 .pw-space-text {
+    display: inline-block;
+}
+
+.OP575 .departing-date-text {
+    display: inline-block;
+}
+
+.OP575 .departing-week-text{
+    display: inline-block;
+}
+
+/*--------------------Tab---------------------------*/
+
+.OP575 .main-content-section {padding: 20px; text-align: center;}
+.content .question{
+    font-weight: 700;
+    font-size: 1.17em; color: #696a6c;
+    font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;
+}
+
+/*----- Content of Tabs -----*/
+
+.tab-links {
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    margin: 0 0 1em;
+}
+
+.tab-links li {
+    border: none;
+    border-bottom: solid 1px #d5d6d7;
+    padding: 0 5px;
+    float: left;
+    width: 33.33%;
+}
+.tab-links li:first-child {padding: 0;}
+.tab-links li:last-child {padding: 0;}
+
+.tab-links li a {
+    background: #fafafa;
+    color: #28262b;
+    font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;
+    padding: 14px 5px 14px;
+    min-height: 60px;
+    font-weight: 700;
+    font-size: 12px;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+}
+
+li.active {border: solid 1px #d5d6d7; border-bottom: none;}
+li.active a, li.active a:hover {background: #fff;color: #ff5115;}
+
+.tab-links a:hover {
+    color: #ff5115;
+    background: #eee;
+}
+
+
+@media only screen and (min-width: 480px){
+.tab-links li { width: 35%;}
+.tab-links li:last-child {width: 30%;}
+.tab-links li a {min-height: 0;font-size: 13px;}
+.tab-links li:last-child a {height: auto;}
+}
+
+
+.tab {
+	display:none;
+}
+
+.tab.active {
+	display:block;
+}
+
+.OP575 .back-btn {
+    display: inline-block;
+    float: left;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.OP575 .back-btn:hover, .OP575 .back-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*----- Content of Tabs -----*/
+
+
+.OP575 .new-modal-section {
+    padding: 20px 0 8px;
+    background-color: #ff5115;
+    font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #696a6c;
+    text-align: center;
+}
+
+.OP575 .pw-header-icon-section {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.OP575 .price-watch-title-header-section {
+    display: inline-block;
+}
+
+.OP575 h1.price-watch-title-header-section {
+    line-height: 3.5rem;
+    color: #fff; 
+    /*font: 900 26px JetstarHappy,"Helvetica Neue",Roboto,Arial,sans-serif;*/
+    margin-bottom: 0;
+    vertical-align: top;
+    margin-top: 0px;
+    font: 700 26px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+
+.OP575 .watch-price-container-section {
+    text-align: center;
+    /*font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    font-size: 14px;
+    color: #696a6c;
+    font: AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    background: #434244;
+}
+
+.OP575 .watch-price-pw-header-section {
+    display: block;
+    background: #434244;
+    color: #fff;
+    /*font-size: 16px;*/
+    font-weight: 700;
+    margin-top: 0px;
+    padding: 12px 15px 12px;
+    width: 100%;
+    margin-bottom: 0;
+    font: 700 16px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+
+
+.OP575 .main-content-section form {
+    width: 410px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #696a6c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.OP575 .form-main-content-section-section{
+    padding-left: 16px;
+    width: 95%;
+}
+
+.OP575 p.intro {
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    /*font-weight: 700;*/
+    /*font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    /*font-size: 14px;*/
+    color: #696a6c;
+    font: 700 14px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+.OP575 label.label-section {
+    color: #696a6c; 
+    display: block;
+    /*font: normal 12px HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    margin-bottom: 4px;
+    padding-top: 6px;
+    font: 400 12px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    text-align: left;
+}
+
+.OP575 abbr {
+    color: #ff5115;
+    border: none;
+}
+
+.OP575 input.email-input-section, .OP575 input.origin-airport-input-section, .OP575 input.destination-airport-input-section {
+    /*font-size: 12px;*/
+    color: #696a6c;
+    outline: 0;
+    border-radius: 0;
+    background: #fafafa;
+    border: none;
+    border-bottom: solid 1px #d5d6d7;
+    padding: 6px 13px;
+    width: 100%;
+    font: 700 13px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    box-shadow: none;
+}
+
+.OP575 .main-content-section .limit_and_email_tag-section {
+    color: #696a6c; 
+    text-align: left;
+    /*font: normal 12px HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    margin: 14px 0 16px;
+    font: 400 12px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+.OP575 a.privacy-policy {
+    color: inherit;
+    text-decoration: underline;
+    outline: none;
+}
+.OP575 a.privacy-policy:hover {
+    color: #28262b;
+}
+
+.OP575 .passenger-section {
+    padding: 0 0 14px;
+    text-align: left;
+    width: 310px;
+}
+
+.OP575 .pw-passenger-section_wrapper {
+    margin-bottom: 10px;
+}
+
+.OP575 .pw-select_wrapper {
+    border-right: solid 10px #fff; */
+    font-size: 14px;
+    color: #696a6c;
+    border-bottom: solid 1px #d5d6d7;
+    margin-bottom: 10px;
+    width: 32%;
+    display: inline-block;
+}
+
+.OP575 .fake-select-section {
+    position: relative;
+}
+
+.OP575 select.pw-select_wrapper-section {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 32px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    border-style: none;
+}
+
+.OP575 .fake-select-section-text {
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+
+.OP575 .disclaimers-section {
+    bottom: 20px;
+    height: 120px;
+    overflow-y: scroll;
+    margin: 9px -20px -20px;
+    padding: 10px 16px;
+    background: #f8f8f8;
+    border-top: 1px solid #ccc;}
+
+.OP575 .disclaimers-section p {
+    color: #696a6c;
+    /*font: 11px/11px HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    text-align: left;  
+    padding-bottom: 1em;
+    font: 400 11px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    line-height: 1.2;
+}
+
+.OP575 .disclaimers-section a {
+    text-decoration: underline;
+    color: #ff5115;
+    cursor: pointer;}
+
+
+.OP575 .submit-section {
+    text-align: center;
+}
+.OP575 .submit-section .flexible-dates-btn {
+    text-align: center;
+    font-size: 12px;
+    background-color: #434244;
+}
+
+.OP575 .submit-section .watch-price-btn{
+    background-color: #ff5115;
+}
+
+
+.OP575 .submit-section .btn {
+    /*font-size: 13px;*/
+    color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font: 700 12px HelveticaNeueW01,Helvetica,Arial,sans-serif;
+    border-radius: 4px;
+    border: none;
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+.OP575 .submit-section .flexible-dates-btn:hover, .OP575 .submit-section .flexible-dates-btn:focus{
+    background-color:#28262b;
+}
+
+.OP575 .submit-section .watch-price-btn:hover, .OP575 .submit-section .watch-price-btn:focus{
+    background-color:#ff5115 ;
+}
+
+.OP575 .icon-downarrow-section {
+    -webkit-transform: rotate(225deg);
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #696a6c;
+}
+
+
+
+/*-------------------------*/
+.OP575 .price-watch-modal-opener-banner-section{padding: 9px 12px 10px 12px; background-color: #f4f4f4; margin: 0 auto; text-align: center; margin-top: -22px; width: 34%; margin-bottom: 18px;}
+.OP575 .price-watch-banner-image-section{/*float: left;*/ margin-right: 10px; display: inline-block;}
+.OP575 .afterpay-text{color: #444; padding-top: 1px; display: inline-block;} 
+.OP575 .afterpay-text p {margin-bottom: 0px; font-size: 14px; line-height: 24px; text-align: left;} 
+.OP575 .pay-text{font-weight: bold;}
+.OP575 .afterpay-text a {font-size: 14px; line-height: 24px; color: #0792fc;font-weight: bold;}
+
+.OP575 .price-watch-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    padding-top: 98px; 
+    padding-bottom: 108px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: auto;    
+    overflow: auto; 
+    background-color: rgba(0,0,0,.7);
+    background: radial-gradient(ellipse farthest-corner,rgba(0,0,0,.5) 0,rgba(0,0,0,.7) 100%);
+    bottom: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.OP575 .price-watch-modal-opener-btn {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.OP575 .price-watch-modal-main-content-section {
+    background-color: #fefefe;
+    margin: auto;
+    /*padding: 20px;*/
+    border: 1px solid #888;
+    width: 46.6%;
+    /*width: 100%;*/
+}
+
+.OP575 .price-watch-modal-main-content-section2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1290px;
+}
+
+
+.OP575 .afterpay-close {
+    /*color: #fff;*/
+    float: right;
+    font-size: 24px;
+    font-weight: normal;
+    padding-right: 16px;
+    line-height: 1.1;
+    padding-left: 4px;
+}
+
+.OP575 .afterpay-close:hover, .OP575 .afterpay-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.OP575 .moreinfo-price-watch-banner-image-section{
+    background-image: url(''); 
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+.OP575 .moreinfo-modal-section{
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 36px;
+}
+
+.OP575 .heading-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222222;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+.OP575 .heading-title2{
+    margin-bottom: 36px;
+}
+.OP575 .moreinfo-text p{text-align: center; font-size: 14px; line-height: 24px;}
+.OP575 .subtitle-image {
+    text-align: center;
+    padding-bottom: 24px;
+}
+.OP575 .subtitle-image img {
+    max-height: 36px;
+}
+.OP575 .heading-subtitle {
+    text-align: center;
+    color: #222222;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+.OP575 .subtitle-text {
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+}
+.OP575 .moreinfo-conditions {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 24px;
+    padding-bottom: 48px;
+}
+.OP575 .moreinfo-conditions a{
+    color: #007ddb;
+}
+
+.OP575 .moreinfo-btn-section{
+    text-align: center;
+}
+
+.OP575 .moreinfo-btn-section .gotit-btn {
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.4;
+    padding: 12px 80px;
+    font-size: 1rem;
+    background-color: #ff5115;
+    border: 1px solid #ff5115;
+    color: #fff;
+}
+
+.OP575 .flight-schedule__selected-currency.bookingcurrencycode{
+    text-align: right;
+}
+
+.OP575 .pw-header-section {
+    display: inline-block;
+    /*margin-left: 66px;*/
+}
+
+.OP575 .close-afterpay-modal-section {
+    display: inline-block;
+    float: right;
+    color: #fff;
+    padding-right: 4px;
+    font-size: 14px;
+}
+
+.OP575 .close-afterpay-modal-section:hover, .OP575 .close-afterpay-modal-section:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1150px){
+.OP575 .price-watch-modal-main-content-section {width: 80%;}
+}
+
+@media only screen and (max-width: 767px)
+{
+  .OP575 .price-watch-modal-opener-banner-section{width: 100%; margin-bottom: 12px;}
+  .OP575 .price-watch-modal-main-content-section { padding: 20px 4px; width: 100%;}
+  .OP575 .price-watch-modal{padding-top: 0px; }
+  .OP575 .moreinfo-modal-section {padding-left: 0;padding-right: 0;padding-bottom: 0px;}
+  .OP575 .price-watch-banner-image-section{float: none; text-align: center; display: block;}
+  .OP575 .afterpay-text{display: block;} 
+  .OP575 .price-watch-modal-opener-btn { padding-top: 2px; padding-left: 5px; padding-right: 5px;}
+  .OP575 .moreinfo-jetstar-image{
+    background-image: url('');    
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -32px;
+    width: auto;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+.OP575 .moreinfo-price-watch-banner-image-section{ 
+    background-image: url(''); 
+    height: 30px;
+    margin-top: 24px;margin-bottom: 22px;
+}
+  .OP575 .heading-title {font-size: 16px; margin-top: 14px;}
+  .OP575 .moreinfo-text p {font-size: 12px; line-height: 20px;}
+  .OP575 .heading-title2 {margin-bottom: 27px;}
+  .OP575 .subtitle-image {padding-bottom: 18px;}
+  .OP575 .heading-subtitle {font-size: 14px;line-height: 20px;}
+  .OP575 .subtitle-text {margin-bottom: 24px; font-size: 12px; line-height: 20px;}
+  .OP575 .moreinfo-conditions {font-size: 12px;padding-top: 8px;padding-bottom: 31px; line-height: 20px;}
+  .OP575 .moreinfo-btn-section .gotit-btn {border-radius: 6px; width: 100%;display: block; padding: 12px;margin-bottom: 2px;}
+  .OP575 .afterpay-text p {text-align: center;}
+
+}
+
+/*----------------------------*/
+
+
+
+.OP575 .valid-email{ border: 1px solid #00d400; background: #f4f4f4; }
+.OP575 .invalid-email{ border: 1px solid red; background: #f4f4f4; }
+
+.OP575 .disclaimers-section::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #6c6c6b;
+    border: 7px solid transparent;
+    background-clip: padding-box;
+    margin: 10px;
+}
+
+.OP575 .disclaimers-section::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 20px;
+}
+
+
+
+
+/**/
+
+.OP575 .airport-name-section{
+  position: relative;
+}
+
+.OP575 .autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.OP575 .autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  border-bottom: none;
+  z-index: 99;
+  font-size: 11px;
+  width: 100%
+}
+
+.OP575 .autocomplete-items div {
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.OP575 .autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+.OP575 .autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.OP575 .submit-section {
+    text-align: center;
+}
+
+.OP575 .watch-price-travell-section {
+    background: #434244;
+    color: #fff;
+    padding-bottom: 9px;
+    text-align: left;
+    padding-top: 9px;
+}
+
+.OP575 .watch-price-depart-name-section {
+    display: inline-block;
+    /*margin-right: 84px;*/
+}
+
+.OP575 .depart-date, .OP575 .return-date {
+    text-align: left;
+    font-size: 15px;
+    margin-top: -5px;
+}
+
+.OP575 .watch-price-return-name-section {
+    display: inline-block;
+}
+
+.OP575 .label-depart-segment, .OP575 .label-return-segment {
+    line-height: 0.5;
+    padding-bottom: 5px;
+    font-size: 15px;
+    padding-top: 2px;
+    padding-bottom: 9px;
+}
+
+.OP575 .pw-origin-text {
+    display: inline-block;
+    text-align: left;
+}
+
+.OP575 .destination-text {
+    display: inline-block;
+    text-align: left;
+}
+
+.OP575 .dash-text {
+    display: none;
+    text-align: left;
+    /*padding: 0 0.2em;
+    padding-left: 12px;*/
+}
+
+.OP575 .dash-text>div::before {
+    content: '\2014';
+    display: inline-block;
+    /*width: 20px;
+    height: 10px;*/
+}
+
+.OP575 .destination-text-section-span, .OP575 .destination-text-section-span {
+    font-size: 15px;
+}
+
+/*---------------------------*/
+
+.OP575 h2.watch-price-header-section.js-sentence {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    line-height: 2.6;
+    font: 700 15px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    padding-top: 18px;
+    padding-bottom: 17px;
+}
+
+.OP575 .pw-subheader-origin {
+    display: inline-block;
+    padding-top: 11px;
+}
+
+.OP575 .pw-subheader-dest {
+    display: inline-block;
+    padding-left: 8px;
+}
+
+
+
+.OP575 .valid-email{ border: 1px solid #00d400; background: #f4f4f4; }
+.OP575 .invalid-email{ border: 1px solid red; background: #f4f4f4; }
+
+
+/*Cal*/
+
+.OP575 .monthPre{
+	color: #DDDEDF;
+	text-align: center;
+}
+
+.OP575 .monthNow{
+	color: #7B7C7D;
+    text-align: center;
+}
+
+.OP575 .monthDay{
+	color: #7B7C7D;
+    text-align: center;
+}
+
+.OP575 .dayNow{
+ border: 2px solid black;
+ color: #FF0000;
+ text-align: center;
+}
+
+.OP575 .calendar{
+    border-collapse: collapse;
+    width: 61%;
+}
+
+.OP575 .calendar td{
+    htmlContent: 2px;
+    width: 40px;
+    padding: 8px;
+    padding-bottom: 7px;
+}
+
+.OP575 .monthNow th{
+	background-color: #ffffff;
+    color: #9C9D9E;
+    text-align: center;
+}
+
+.OP575 .monthNow th{
+    position:relative;
+	background-color: #ffffff;
+    color: #9C9D9E;
+    text-align: center;
+}
+
+.OP575 .monthDay{
+    position:relative;
+}
+
+.OP575 td.monthDay{
+    color: #696a6c !important;
+    font-weight: 700;
+}
+
+.OP575 td.monthPre{
+    font-weight: 700;
+}
+
+.OP575 .monthDay p {
+    display:none;
+    margin-top: 22px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.OP575 .monthDay:hover{
+    cursor:pointer;
+    color: #ff5115 !important;
+}
+
+.OP575 .monthDay:hover p {
+    display: inline-block;
+	width:180px;
+    position: absolute;
+    border-style: solid;
+    background-color: #ffffff;
+    border-width: thin;
+	box-shadow: 3px 3px #D4D4D4;
+	border-color: #000000;
+	color:#000000;
+	z-index: 3;
+	overflow: hidden;
+	top:15px;
+	left:10px;
+}
+
+.OP575 .monthPre{
+border-width: thin;
+    border-color: #d5d6d7!important;
+    border-style: solid;
+}
+
+.OP575 .monthDay{
+border-width: thin;
+    border-color: #d5d6d7!important;
+    border-style: solid;
+}
+
+.OP575 .dayNames{
+    background: #ffffff;
+    /*color: #9C9D9E;*/
+    color: #696a6c;
+    text-align: center;
+}
+ 
+.OP575 .prev{
+	float:left;
+	color: #696a6c;
+    font-size: 32px;
+    padding: 0 15px;
+}
+
+.OP575 .prev:hover{
+    color: #ff5115;
+	cursor: pointer;
+}
+
+.OP575 .next{
+    float: right;
+    color: #696a6c;
+    font-size: 32px;
+    padding: 6px 15px;
+    padding-bottom: 9px;
+    margin-top: -10px;
+} 
+
+.OP575 .next:hover{
+    color: #ff5115;
+    cursor: pointer;
+    background: #696a6c;
+} 
+ 
+.OP575 .cal-title{
+    /*position: absolute;
+    top: 14px;
+    left: 105px;*/
+    margin-left: 38px;
+    color: #696a6c;
+}
+
+/*Cal*/
+/*CalMonth*/
+
+.OP575 .calendarMonth{
+    border-collapse: collapse;
+    width: 61%;
+}
+
+.OP575 .calendarMonth td{
+    htmlContent: 2px;
+    width: 40px;
+    text-align: center;
+    padding: 14px;
+    padding-bottom: 12px;
+}
+
+.OP575 .onlyMonth{
+    color: #7B7C7D;
+    border-width: thin;
+    border-color: #000000;
+    border-style: solid;
+    position:relative;
+    font-weight: 700;
+    font-size: 14px;
+    color: #696a6c !important;
+}
+
+.OP575 .onlyMonth:hover{
+    cursor:pointer;
+    color: #ff5115 !important;
+}
+
+/*CalMonth*/
+</style>
+
+<script type="text/javascript">
+
+  dom.addCss(css);
+
+  window.jetstarOptimisation = window.jetstarOptimisation || {};
+  window.jetstarOptimisation.AfterPayIt_FlightSelect_AU = (function(window, document) {
+
+    var modal = document.getElementById('afterpayModal'), 
+    nextMonthCount = 0,
+    backButton = 0,
+    origintext = undefined,
+    destitext = undefined,
+    emailId = null,
+    cities = ["Adelaide (ADL)","Auckland (AKL)","Uluru (Ayers Rock) (AYQ)","Bangkok (BKK)","Buon Ma Thuot (BMV)","Brisbane (BNE)","Ballina Byron (BNK)","Jakarta (CGK)","Zhengzhou (CGO)","Christchurch (CHC)","Cairns (CNS)","Clark (CRK)","Sapporo (CTS)","Nha Trang (CXR)","Da Nang (DAD)","Da Lat (DLI)","Bali (Denpasar) (DPS)","Darwin (DRW)","Dunedin (DUD)","Fukuoka (FUK)","Haikou (HAK)","Hanoi (HAN)","Hobart (HBA)","Hat Yai (HDY)","Hayman Island (HIS)","Hong Kong (HKG)","Phuket (HKT)","Honolulu (HNL)","Hai Phong (HPH)","Hamilton Island (HTI)","Hue (HUI)","Osaka (KIX)","Medan - Kualanamu  (KNO)","Kagoshima (KOJ)","Kuala Lumpur (KUL)","Launceston (LST)","Sunshine Coast (MCY)","Mackay (MKY)","Manila (MNL)","Matsuyama (MYJ)","Nadi (NAN)","Napier (NPE)","New Plymouth (NPL)","Tokyo (Narita) (NRT)","Nelson (NSN)","Newcastle – Port Stephens (NTL)","Oita (OIT)","Okinawa (Naha) (OKA)","Gold Coast (OOL)","Penang (PEN)","Perth (PER)","Pekanbaru (PKU)","Palembang (PLM)","Palmerston North (PMR)","Phnom Penh (PNH)","Whitsunday Coast (PPP)","Phu Quoc (PQC)","Pleiku (PXU)","Rarotonga (RAR)","Yangon (RGN)","Ho Chi Minh City (SGN)","Singapore (SIN)","Surabaya (SUB)","Sydney (SYD)","Sanya (SYX)","Takamatsu (TAK)","Tuy Hoa (TBB)","Thanh Hoa (THD)","Townsville (TSV)","Quy Nhon (UIH)","Chu Lai (VCL)","Vinh (VII)","Wellington (WLG)","Wuhan (WUH)","Queenstown (ZQN)"],
+    monthNames = ["Jan","Feb","Mar","Apr","May","Sun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    init = function () {
+        if(/deals/.test(self.location.href)){
+            addBodyClass();
+            appendModalinBody();
+            onDestinationChange();
+        }
+    },
+
+    addBodyClass = function addBodyClass() {
+      jQuery('body').addClass('OP575');
+    },
+
+    getFromDataLayer = function getFromDataLayer(){
+            var orig = jQuery('[data-direction-id=origin] span.js-location-value').text();
+            var dest = jQuery('[data-direction-id=destination] span.js-location-value').text();
+            
+            if(orig != undefined){
+            $.each( cities , function( key, value ) {
+             if(value.indexOf(orig) > -1){ 
+                 origintext = value;
+             }
+           });
+           }
+
+           if(dest != undefined){
+            $.each( cities , function( key, value ) {
+             if(value.indexOf(dest) > -1){ 
+                 destitext= value;
+             }
+           });
+           }
+            
+            jQuery("#originCode").text((orig == undefined ? '...' : origintext.substring(origintext.indexOf('(')+1,origintext.indexOf(')')) ));
+            jQuery("#destiCode").text((dest == undefined ? '...' : destitext.substring(destitext.indexOf('(')+1,destitext.indexOf(')')) ));
+            
+            jQuery("#originText").text((origintext == undefined ? '...' : origintext ));
+            jQuery("#destiText").text((destitext == undefined ? '...' : destitext));
+
+            var todayDate = new Date();
+
+            jQuery('.js-depart-date').text(monthNames[todayDate.getMonth()] + ' ' + todayDate.getDate());
+            jQuery('.js-return-date').text(monthNames[todayDate.getMonth()] + ' ' + todayDate.getDate());
+
+
+    },
+
+    validateEmail = function validateEmail(sEmail,element) {
+        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+        if (filter.test(sEmail)) {
+            $(element).find("#email").addClass('valid-email');
+            $(element).find("#email").removeClass('invalid-email');
+            $(element).find("#error").css("display","none");
+            $(element).find("#email").css("border","1px solid #00d400", "background-color","#FFF");
+            return true;
+        }
+        else {
+            $(element).find("#email").removeClass('valid-email');
+            $(element).find("#email").addClass('invalid-email');
+            $(element).find(".errors").css("display","block");
+            $(element).find("#email").css("border","1px solid red", "background-color","#FFF3F3");  
+            return false;
+        }
+    },
+
+    bindBlurEvent = function bindBlurEvent(element){
+        $(element).find(".email-input-section").bind("blur", function(event, ui) { 
+            validateEmail($(element).find('#email').val(),element);
+        });
+    },
+
+    onSubmitModal = function onSubmitModal() {
+        $( ".watch-price-btn" ).click(function( event ) {
+            validateEmail($('#email').val(),emailId);
+            if(!jQuery('#email').hasClass('invalid-email')){
+                site.scope.price_watch.submitPriceWatch();
+                modal.style.display = "none";
+            }
+        });
+    },
+
+    showPriceWatchOnPageLeave = function showPriceWatchOnPageLeave(){
+      if(jQuery('[data-direction-id=destination] span.js-location-value').text().toUpperCase() != 'ALL') {
+        
+        emailId = jQuery('.email_wrapper');
+        onSubmitModal();
+
+        jQuery('.price-watch-modal-main-content-section').each(function(index, element){
+            bindBlurEvent(element);
+        });
+
+        $('.afterpay-close').click(function() {
+            modal.style.display = "none";
+        });
+
+        $('.close-afterpay-modal').click(function() {
+            modal.style.display = "none";
+        });
+
+        $('.close-afterpay-modal-section').click(function() {
+            modal.style.display = "none";
+        });
+
+        $('.close-afterpay-modal-section').click(function() {
+            modal.style.display = "none";
+        });
+
+        $('.flexible-dates-btn').click(function() {
+            validateEmail($('#email').val(),emailId);
+            if(!jQuery('#email').hasClass('invalid-email')){
+                switchFirstTab();
+                backButton++;
+            }
+        });
+
+        hideBothTab();
+        jQuery("#afterpayModal .back-btn").click(function(){
+            if(backButton == 2){
+                switchFirstTab();
+            }
+            else{
+                hideBothTab();
+            }
+            backButton--;
+            
+            e.preventDefault();
+        });
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                $(modal).removeClass('ismodal');
+            }
+
+        };
+        
+
+        modal.style.display = "block";
+        getFromDataLayer();
+
+      }  
+      else{
+        modal.style.display = "none";
+      }
+
+
+/*about, day, month selection*/
+
+        jQuery("#ddAbout").on("change", function(e){
+            jQuery('.fake-select-section-text.about').text($("#ddAbout option:selected").html().trim());
+            jQuery('.departing-week-header-text').text("for " + $("#ddAbout option:selected").html().trim() + " " + $("#ddDay option:selected").html().trim() + " " + $("#ddMonth option:selected").html().trim());
+        });
+
+        jQuery("#ddDay").on("change", function(e){
+            jQuery('.fake-select-section-text.day').text($("#ddDay option:selected").html().trim());
+            jQuery('.departing-week-header-text').text("for " + $("#ddAbout option:selected").html().trim() + " " + $("#ddDay option:selected").html().trim() + " " + $("#ddMonth option:selected").html().trim());
+        });
+
+        jQuery("#ddMonth").on("change", function(e){
+            jQuery('.fake-select-section-text.month').text($("#ddMonth option:selected").html().trim());
+            jQuery('.departing-week-header-text').text("for " + $("#ddAbout option:selected").html().trim() + " " + $("#ddDay option:selected").html().trim() + " " + $("#ddMonth option:selected").html().trim());
+        });
+
+
+/*about, day, month selection*/
+
+/*adult, child, infunt selection*/
+
+        jQuery("#adult").on("change", function(e){
+            jQuery('.fake-select-section-text.adult').text($("#adult option:selected").html().trim());
+        });
+
+        jQuery("#child").on("change", function(e){
+            jQuery('.fake-select-section-text.child').text($("#child option:selected").html().trim());
+        });
+
+        jQuery("#infant").on("change", function(e){
+            jQuery('.fake-select-section-text.infant').text($("#infant option:selected").html().trim());
+        });
+
+
+/*adult, child, infunt selection*/
+
+
+    },
+ 
+
+    appendModalinBody = function appendModalinBody() {
+        var $element = jQuery('body');
+        $element.append(html);
+
+        modal = document.getElementById('afterpayModal');  
+
+//jQuery(document).ready(function() {
+	jQuery('.tabs .tab-links a').on('click', function(e) {
+		var currentAttrValue = jQuery(this).attr('href');
+
+		// Show/Hide Tabs
+		jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+		// Change/remove current tab to active
+		jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+		e.preventDefault();
+	});
+//});
+    
+    },    
+
+    displayCalendar = function displayCalendar(){
+ 
+ 
+        var htmlContent = "";
+        var FebNumberOfDays = "";
+        var counter = 1;
+ 
+ 
+        var dateNow = new Date();
+        var toDay = dateNow.getDate();
+        var month = dateNow.getMonth() + nextMonthCount;
+        var year = dateNow.getFullYear();
+        var currentMonth = dateNow.getMonth();
+        var currentYear = dateNow.getFullYear();
+ 
+        if(month > 11)
+        {
+	    year = year + parseInt(month/12);
+	    var noMonth = parseInt(month/12);
+	    if(noMonth == 0){
+	        noMonth = 1;
+	    }
+	    month = month - (12*noMonth);
+        }
+ 
+        //Determing if February (28,or 29)  
+        //if (month == 1){
+            if ( (year%100!=0) && (year%4==0) || (year%400==0)){
+               FebNumberOfDays = 29;
+            }
+            else{
+                FebNumberOfDays = 28;
+            }
+        //}
+ 
+
+        var nextMonth = month + 1; //+1; //Used to match up the current month with the correct start date.
+        var prevMonth = month - 1;
+ 
+        var monthNames = ["January","February","March","April","May","June","July","August","September","October","November", "December"];
+        var dayNames = ["Monday","Tuesday","Wednesday","Thrusday","Friday", "Saturday","Sunday"];
+        var dayPerMonth = ["31", ""+FebNumberOfDays+"","31","30","31","30","31","31","30","31","30","31"]
+ 
+ 
+        var nextDate = new Date(nextMonth +' 1 ,'+year);
+        var weekdays = nextDate.getDay();
+        if(weekdays == 0){
+            weekdays = 7;
+        }
+
+        var weekdays2 = weekdays;
+        var numOfDays = dayPerMonth[month];
+     
+ 
+        var pmonth = month == 0 ? (parseInt(dayPerMonth[month])+1) : (parseInt(dayPerMonth[month-1])+1);
+        while (weekdays>1){
+            htmlContent += "<td class='monthPre'>" + (pmonth - (weekdays-1)) + "</td>";
+            weekdays--;
+        }
+        weekdays2--;
+ 
+        
+        while (counter <= numOfDays){
+ 
+            if (weekdays2 > 6){
+                weekdays2 = 0;
+                htmlContent += "</tr><tr>";
+            }
+            
+            if(currentMonth == month && currentYear == year){
+                if(counter >= parseInt(toDay)){
+                    htmlContent +="<td class='monthDay' data-day='"+ counter +"' data-month='"+ monthNames[month] +"' >"+counter+"<p id='tooltip-span'>&nbsp;Select " + dayNames[weekdays2] + ", " + monthNames[month].substring(0,3) + " " + counter + "&nbsp;</p></td>";
+                }
+                else{
+                    htmlContent +="<td class='monthPre' data-day='"+ counter +"' data-month='"+ monthNames[month] +"' >"+counter+"</td>";
+                }
+	    }
+            else{
+                htmlContent +="<td class='monthDay' data-day='"+ counter +"' data-month='"+ monthNames[month] +"' >"+counter+"<p id='tooltip-span'>&nbsp;Select " + dayNames[weekdays2] + ", " + monthNames[month].substring(0,3) + " " + counter + "&nbsp;</p></td>";
+            }
+
+            weekdays2++;
+            counter++;
+        }
+ 
+ 
+        var calendarBody = "<div id='calendar'><table class='calendar'> <tr class='monthNow'><th colspan='7'><a class='prev'>‹</a><span class='cal-title'>"
+ +monthNames[month]+" "+ year +"</span><a class='next'>›</a></th></tr>";
+ calendarBody +="<tr class='dayNames'>  <td>MO</td> <td>TU</td>"+
+ "<td>WE</td> <td>TH</td> <td>FR</td> <td>SA</td> <td>SU</td>  </tr>";
+ calendarBody += "<tr>";
+ calendarBody += htmlContent;
+ calendarBody += "</tr></table></div>";
+ 
+        jQuery("#calendar").remove();
+        jQuery("#tab1").append(calendarBody);
+ 
+        jQuery('.monthDay').mouseover(function(){
+            jQuery(this).css("background","#fef3e6"); 
+            jQuery(this).css("color","#ff5115");
+        });
+
+        jQuery('.monthDay').mouseout(function(){
+            jQuery(this).css("background","#FFFFFF"); 
+	    jQuery(this).css("color","#9C9D9E");
+        });
+ 
+ 
+        jQuery('.next').click(function(){
+            nextMonthCount = nextMonthCount + 1;
+	    displayCalendar();
+        });
+
+        jQuery('.prev').click(function(){
+            nextMonthCount = nextMonthCount - 1;
+	    displayCalendar();
+        });
+ 
+        jQuery('.monthDay').click(function(){
+            //console.log($(this).data("day") + " " + $(this).data("month"));
+            jQuery('.dash-text').css("display","inline-block");
+            jQuery('.depart-js-date').text("departing " + (jQuery(this).data("day") == undefined ? "" : jQuery(this).data("day")) + " " + jQuery(this).data("month") + ", ");
+            jQuery('.departing-week-header-text').text("for " + $("#ddAbout option:selected").html().trim() + " " + $("#ddDay option:selected").html().trim() + " " + $("#ddMonth option:selected").html().trim());
+            switchSecondTab();
+            backButton++;
+        });
+ 
+        if(nextMonthCount < 1){
+	    jQuery('.prev').css("display","none");
+        }
+        else{
+	    jQuery('.prev').css("display","block");
+        }
+ 
+ 
+     },
+
+
+     displayCalendarMonth = function displayCalendarMonth(){
+ 
+         var htmlContent = "";
+ 
+         var counter2 = 0;
+ 
+         var dateNow = new Date();
+ 
+ 
+         var month2 = dateNow.getMonth();
+         var year2 = dateNow.getFullYear();
+ 
+ 
+         // names of months and week days.
+         var monthNames = ["January","February","March","April","May","June","July","August","September","October","November", "December"];
+ 
+ 
+         // loop to build the calander body.
+         while (counter2 < 12){
+ 
+             if (counter2%4 == 0){
+                 htmlContent += "</tr><tr>";
+             }
+ 
+             htmlContent +="<td class='onlyMonth' data-month='"+ monthNames[month2] +"' >" + "<div>" + monthNames[month2].substring(0,3).toUpperCase() + "</div>" + "<div>" + year2 + "</div></td>";
+    
+             month2++;
+	
+             if(month2 > 11){
+	         month2 = 0;
+                 year2++;
+	     }
+
+	     counter2++;
+          }
+ 
+          // building the calendar html body.
+          var calendarBody = "<div id='calendarMonth'><table class='calendarMonth'>";
+          calendarBody += "<tr>";
+          calendarBody += htmlContent;
+          calendarBody += "</tr></table></div>";
+ 
+          jQuery("#calendarMonth").remove();
+          jQuery("#tab2").append(calendarBody);
+ 
+          jQuery('.onlyMonth').click(function(){
+              //console.log($(this).data("month"));
+              jQuery('.depart-js-date').text("depart in " + jQuery(this).data("month") + ", ");
+              
+              jQuery('.dash-text').css("display","inline-block");
+              jQuery('.depart-js-date').text("departing " + (jQuery(this).data("day") == undefined ? "" : jQuery(this).data("day")) + " " + jQuery(this).data("month") + ", ");
+              jQuery('.departing-week-header-text').text("for " + $("#ddAbout option:selected").html().trim() + " " + $("#ddDay option:selected").html().trim() + " " + $("#ddMonth option:selected").html().trim());
+
+              switchSecondTab();
+              backButton++;
+          });
+ 
+          jQuery('.onlyMonth').mouseover(function(){
+              jQuery(this).css("background","#fef3e6"); 
+	      jQuery(this).css("color","#ff5115");
+          });
+
+          jQuery('.onlyMonth').mouseout(function(){
+              jQuery(this).css("background","#FFFFFF"); 
+	      jQuery(this).css("color","#9C9D9E");
+          });
+ 
+    },
+
+    displayAnytime = function displayAnytime() {
+         jQuery('.tab-three').click(function(){
+             switchSecondTab();    
+         });
+    },
+
+    switchSecondTab = function switchSecondTab(){
+        jQuery('.main-content-section .content').css("display","block");
+        jQuery('.main-content-section #priceWatchForm').css("display","none");
+        jQuery('.tabs').css("display","none");
+        jQuery('.tabs-two').css("display","block");
+    },
+
+    switchFirstTab = function switchFirstTab(){
+        jQuery('.main-content-section .content').css("display","block");
+        jQuery('.main-content-section #priceWatchForm').css("display","none");
+        jQuery('.tabs').css("display","block");
+        jQuery('.tabs-two').css("display","none");
+    },
+
+    hideBothTab = function hideBothTab(){
+        jQuery('.main-content-section #priceWatchForm').css("display","block");
+        jQuery('.tabs').css("display","none");
+        jQuery('.tabs-two').css("display","none");
+        jQuery('.main-content-section .content').css("display","none");
+    },
+
+    onDestinationChange = function onDestinationChange() {
+            var observer = new MutationObserver(function(e) {
+                showPriceWatchOnPageLeave();
+                displayCalendar();
+                displayCalendarMonth();
+                displayAnytime();
+            });
+
+            observer.observe(jQuery('[data-direction-id=destination] span.js-location-value')[0], {
+                characterData: true,
+                childList: true
+            });
+    };
+    
+
+    return {
+      init: init
+    };
+
+  }(window, document));
+
+  window.jetstarOptimisation.AfterPayIt_FlightSelect_AU.init();
+
+</script>

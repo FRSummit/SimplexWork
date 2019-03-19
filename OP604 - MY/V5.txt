@@ -1,0 +1,143 @@
+<style>
+.OP604 .iconBlock {
+    margin: 0 10px;
+    position: absolute;
+    /*top: 40px;*/
+    /*right: 408px;*/
+    right: 350px;
+    cursor: pointer;
+    color: #0692fc;
+    font-size: 14px;
+    border-bottom: none;
+    line-height: 11px;
+}
+
+.OP604 .texthover:hover{
+    border-bottom: 1px solid #0692fc !important;
+}
+
+.OP604 .sold-out .iconBlock {
+    display: none;
+}
+.OP604 .successMessage {
+    font-size: 16px;
+    text-align: center;
+    font-family: "Jetstar Happy",sans-serif;
+}
+.OP604 .successMessage img {
+    vertical-align: -12px;
+    width: 40px;
+}
+.OP604 .hoverText {
+    position: absolute;
+    top: -28px;
+    /*right: 374px;*/
+    right: 316px;
+    width: 180px;
+    background: #ffffff;
+    padding: 5px;
+    color: #000000;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 5px 14px #cccccc;
+    z-index: 123;
+    display: none;
+}
+.OP604 .hoverText::before {
+    content: "";
+    border: 0.8em solid transparent;
+    position: absolute;
+    left: 45%;
+    bottom: -19px;
+    border-top: 10px solid #ffffff;
+}
+
+.OP604 .flight-schedule__selected-currency.bookingcurrencycode{
+ text-align: right;
+}
+</style>
+<script type="text/javascript">
+    dom.addCss(css);
+    window.jetstarOptimisation = window.jetstarOptimisation || {};
+    window.jetstarOptimisation.emailSignupWatchThisMY = (function(window, document) {
+
+        var init = function () {                  
+            addBodyClass();
+            variantFive();
+        },
+             
+        addBodyClass = function addBodyClass() {  
+            jQuery('body').addClass('OP604');
+        },
+            
+        priceWatchSuccess = function priceWatchSuccess(e) {
+            if(typeof(window.Jumpseat) == 'object' || window.Jumpseat !== undefined){
+                window.Jumpseat.run('addListener', {  
+                    eventName: 'subscriptionCreated',  
+                    listener: onSubscriptionCreated  
+                })
+                function onSubscriptionCreated() { 
+                  var successMesssage = '<p class="successMessage"><img src="#$(ContentManager:green-tick-line.png)!"> <b>Success!</b> You are now watching prices for this date, keep an eye on your inbox for any updates.</p>';
+                    
+                    $('.iconBlock').text('Watch this price').css('color', '#0692fc');
+                    $('.iconBlock').css('cursor','pointer');
+
+                    $('.iconBlock').addClass("texthover");
+                    $('.iconBlock').hover(
+                    function() {
+                        $(this).attr('src', '#$(ContentManager:bell-Active.png)!');
+                        $(this).siblings('.hoverText').show();
+                    }, function() {
+                        $(this).attr('src', '#$(ContentManager:bell-Default.png)!');
+                        $(this).siblings('.hoverText').hide();
+                    }
+                );
+                $('.iconBlock').click(function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    priceWatchSuccess(this);
+                    $('.js-watch-price-btn').click();
+                });      
+                    $(e).text('Watching price').css('color', '#767676');
+                    $(e).css('cursor','auto');
+                    $('.successMessage').remove();
+                    $('.flight-card-wrapper').removeClass('successMessageShow');
+                    $(e).removeClass("texthover");
+                    $(e).unbind('mouseenter mouseleave click');
+                    $(e).parents('.flight-card-wrapper').addClass('successMessageShow');
+                    if($(e).closest('.successMessageShow').next('.successMessage').length == 0)
+                        $(e).closest('.successMessageShow').after(successMesssage);
+                }
+            }
+        },
+        
+        variantFive = function variantFive() {
+            $(document).ready(function() {
+                $('.js-watch-price-btn').hide();
+                $('.price-select__price').before('<span class="iconBlock">Watch this price</span><span class="hoverText">Turn on <b>Price Watch</b> to get low fare alerts for this date</span>');
+                $('.iconBlock').hover(
+                    function() {
+                        $(this).css('border-bottom', '1px solid #007ddb');
+                        $(this).siblings('.hoverText').show();
+                    }, function() {
+                        $(this).css('border-bottom', 'none');
+                        $(this).siblings('.hoverText').hide();
+                    }
+                );
+                $('.iconBlock').click(function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    priceWatchSuccess(this);
+                    $('.js-watch-price-btn').click();
+                });              
+            });
+        };
+ 
+        return {      
+            init: init
+        };
+
+    }(window, document));
+    window.jetstarOptimisation.emailSignupWatchThisMY.init();
+</script>

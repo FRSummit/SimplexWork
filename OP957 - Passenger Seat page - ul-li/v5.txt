@@ -1,0 +1,67 @@
+<style type="text/css">
+
+  .OP957 .seat-banner-section {
+      overflow: hidden;
+      background-color: #ffffff;
+  }
+  .OP957 .grid_11 .top-text-section {
+      font-weight: bold;
+      color: #333333;
+      font-size: 16px !important;
+  }
+  .OP957 .grid_11 .list-section {
+      margin-top: 12px !important;
+  }
+  .OP957 .grid_11 .list-section li {
+      font-size: 16px !important;
+      color: #333333;
+      padding-left: 58px !important; 
+      height: 40px;
+      padding-top: 8px;
+      margin: 0 !important;
+  }
+  .OP957 .grid_11 .list-section li:first-child {
+      background: url(#$(ContentManager:icon3.png)!) 0px 5px no-repeat !important;
+  }
+  .OP957 .grid_11 .list-section li:last-child {
+      background: url(#$(ContentManager:icon2.png)!) 0px 5px no-repeat !important;
+  }
+  .OP957 .grid_11 p {
+    display: none;
+  }
+
+
+</style>
+<script type="text/javascript">
+    
+    (function (window, document, $) {
+        
+        var $seatPanel = $('.grid_11'),
+        passenger = ($(".name-list").children().length),
+        init = function init() {
+            addBodyClass();
+            dom.addCss(css);
+            bannerCondition();
+            //addBanner();
+        },
+
+        addBodyClass = function addBodyClass() {
+            $('body').addClass('OP957');
+        },
+
+        bannerCondition = function bannerCondition() {
+            if(passenger == 1){
+                addBanner();
+            }
+        },
+
+        addBanner = function addBanner() {
+            var seatSectionBanner = '<div class="seat-banner-section"><span class="top-text-section">Choose your favourite spot</span><ul class="list-section"><li>Add your favourite seat now before it sells out</li><li>Sit upfront and be more likely to get on and off the plane quickly</li></ul></div>';
+            $seatPanel.prepend(seatSectionBanner);
+        };
+
+        init();
+
+    }(window, document, jQuery));
+
+</script>

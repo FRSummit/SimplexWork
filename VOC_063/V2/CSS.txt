@@ -1,0 +1,139 @@
+.mobile-plans__most-popular {
+    display:none;
+}
+.mobile-plans__data-container.p-3{
+    padding-top: 12px !important;
+}
+.perple-text{
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+}
+.mobile-plans__price-container{
+    background: #F1F2F5;
+    min-height: 106px;
+}
+.hero-banner{
+    padding-top: 0px;
+}
+/*.justify-content-around.w1024{
+    width: 100%;
+}*/
+img.d-block.img-fluid{
+    float: right;
+}
+.col-lg-5.col-md-5.col-xs-12.mt-52{
+    padding-right: 0;
+}
+.col-lg-6.col-md-5.offset-md-1.col-xs-12.p-0{
+    margin-top: 44px;
+}
+.field--type-entity-reference-revisions.field__items .field__item:nth-child(2){
+  padding:0rem 0rem 6rem 0rem;
+}
+
+.hero-banner {
+  padding-bottom: 0;
+}
+
+.mobile-plans h2.mt-5 {
+  margin-top: 0 !important; 
+}
+.mobile-plans__included-container.mt-2 {
+    display:none;
+}
+.mobile-plans__countries-link.p-0.pb-2 {
+    display:none;
+}
+.mobile-plans__countries-link.p-0.pb-3.text-center {
+    display:none;
+}
+.hero-banner h1 {
+    font-size: 36px;
+}
+.hero-banner h2 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+.plan-section{
+    font-size: 14px;
+}
+.plan-section ul {
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-bottom: 28px;
+}
+.plan-section ul li a {
+   text-decoration: underline;
+}
+.plan-section ul li a:hover {
+   text-decoration: none;
+   color: #6A3A86;
+}
+
+.key-product-messages h3{
+    margin-bottom: 22px !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+.hero-banner {
+    padding-bottom: 25px;
+}
+.hero-banner:before{
+    height: 20px;
+}
+  
+}
+
+@media (max-width: 481px) {
+  
+.hero-banner {
+    padding-bottom: 25px;
+}
+.hero-banner:before{
+    height: 18px;
+}
+  
+}
+
+/*new css*/
+
+.hero-banner:before{
+    height: 77px;
+}
+
+.mobile-plans__discount-info{
+		display: none;
+}
+/*
+.field--name-field-image img{
+		max-width: 86%;
+    margin-top: 70px;
+    float: left;
+}
+
+.col-lg-6.col-md-5.offset-md-1.col-xs-12.p-0 {
+    max-width: 68%;
+    margin-left: 18%;
+}
+.col-lg-5.col-md-5.col-xs-12.mt-52 {
+    max-width: 31%;
+    padding-left: 0;
+}*/
+
+hr{
+		width: 761px;
+    margin: 0 auto;
+    background: #470A68;
+}
+
+hr:nth-of-type(2), hr:nth-of-type(3), hr:nth-of-type(4), hr:nth-of-type(5), hr:nth-of-type(6) {
+		display: none;
+}
+.mobile-plans_free-sim-delivery.pt-3 {
+		display: none;
+}

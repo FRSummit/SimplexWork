@@ -1,0 +1,73 @@
+<style>
+    .OP734 .promo-banner-section{
+        position: relative;
+        width: 88%;
+        background: linear-gradient(to right, #FDA108 0%,#FE8405 100%);
+        padding: 20px 26px;
+        margin-left: 6%;
+        padding-right: 0;
+        margin-top: 8px;
+        margin-bottom: 48px;
+    }
+    .OP734 .promo-banner-innse-section{
+    }
+    .OP734 .promo-banner-img{
+        background-image: url('#$(ContentManager:promo-banner-domestic.png)!');
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        width: 4%;vertical-align: top;
+        margin-top: 12px;
+    }
+    .OP734 .promo-banner-text-area{
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        width: 95%;
+        margin-left: 2px;
+        line-height: 1.4;
+    }
+    .OP734 .promo-banner-title-domestic, .OP734 .promo-banner-title-international{
+    }
+</style>
+
+<div class="row promo-banner-section">
+    <div class="promo-banner-innse-section">
+        <div class="promo-banner-img"></div>
+        <div class="promo-banner-text-area">
+            <div class="promo-banner-title-domestic">Popular extras for shorter trips include seat selection, checked baggage and loyalty rewards. Combine today and save with our bundles.</div>
+            <div class="promo-banner-title-international">Popular extras for longer trips include seat selection, meals and checked baggage. Combine today and save with our bundles.</div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+dom.addCss(css);
+(function (window, document, $) {
+    var init = function init() {
+        addBodyClass();
+        addPromoBanner();
+        domIntCheck();
+    },
+            
+    addBodyClass = function addBodyClass() {
+        $('body').addClass('OP734');
+    },
+            
+    addPromoBanner = function addPromoBanner() {
+        $(html).insertAfter('.row.page-header');
+    },
+            
+    domIntCheck = function domIntCheck() {
+        if (site.scope.targeting.isDomesticFlight()) {
+            $('.promo-banner-title-international').css('display', 'none');
+        } else  {
+            $('.promo-banner-title-domestic').css('display', 'none');
+        }
+    };
+    init();
+}(window, document, jQuery));
+</script>

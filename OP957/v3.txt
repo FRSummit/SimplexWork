@@ -1,0 +1,68 @@
+<div class="seat-banner-section">
+    <span class="top-text-section">Choose your favourite spot</span>
+    <ul class="list-section">
+        <li>Add your favourite seat now before it sells out</li>
+        <li style="background: url(#$(ContentManager:icon2.png)!) 0px 5px no-repeat !important;">Sit upfront and be more likely to get on and off the plane quickly</li>
+    </ul>
+</div>
+
+<div class="seat-banner-section">
+    <span class="top-text-section">Choose your favourite spot</span>
+    <ul class="list-section">
+        <li>Window or aisle, it’s your choice</li>
+        <li style="background: url(#$(ContentManager:icon4.png)!) 0px 5px no-repeat !important;">Ensure you sit togather with your travel companions</li>
+    </ul>
+</div>
+
+
+<style type="text/css">
+  .OP957 .seat-banner-section {
+      overflow: hidden;
+      background-color: #ffffff;
+  }
+  .OP957 .grid_11 .top-text-section {
+      font-weight: bold;
+      color: #333333;
+      font-size: 16px !important;
+  }
+  .OP957 .grid_11 .list-section {
+      margin-top: 12px !important;
+  }
+  .OP957 .grid_11 .list-section li {
+      font-size: 16px !important;
+      color: #333333;
+      padding-left: 58px !important; 
+      height: 40px;
+      padding-top: 8px;
+      margin: 0 !important;
+  }
+  .OP957 .grid_11 .list-section li:first-child {
+      background: url(#$(ContentManager:icon3.png)!) 0px 5px no-repeat !important;
+  }
+  .OP957 .grid_11 p {
+    display: none;
+  }
+</style>
+<script type="text/javascript">
+    (function (window, document, $) {
+        var seatPanel = $('.grid_11'),
+        passenger = ($(".name-list").children().length),
+        init = function init() {
+            addBodyClass();
+            dom.addCss(css);
+            addBanner();
+        },
+        addBodyClass = function addBodyClass() {
+            $('body').addClass('OP957');
+        },
+        addBanner = function addBanner() {
+            if(passenger > 1){
+                seatPanel.prepend($(html)[2]);
+            }else{
+                seatPanel.prepend($(html)[0]);
+            }
+        };
+
+        init();
+    }(window, document, jQuery));
+</script>

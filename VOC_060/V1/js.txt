@@ -1,0 +1,33 @@
+var utils = window.optimizely.get('utils'),
+    $ = window.optimizely.get('jquery'),
+    cardElementCSS = 'dodo-feature-selection-card.ng-star-inserted',
+    minCostElementCSS = 'div.card-body__content.ng-star-inserted .min-cost',
+    cardFooterCSS = 'div.card-footer.ng-star-inserted',
+    buttonWrapperCSS = 'div.card-button-wrapper.ng-star-inserted',
+    hrRawHTML = '<hr>',
+    lastHROnBodyContentCSS = '.card-body__content.ng-star-inserted hr:last',
+    footerSummaryCSS = 'dodo-mobile-summary-footer.ng-star-inserted',
+    selectButtonCSS = 'button.mat-raised-button.mat-primary',
+    mostPopularPlanCSS = 'dodo-feature-selection-card.ng-star-inserted:eq(0)',
+    iframeTag = 'iframe';
+
+
+utils.observeSelector(cardElementCSS, function(cardElement) {  
+    var $minCostElement = $(minCostElementCSS,cardElement);
+    
+  
+    $minCostElement.after($(cardFooterCSS,cardElement));
+    $minCostElement.after($(buttonWrapperCSS,cardElement));
+    $minCostElement.after(hrRawHTML);   
+    $(lastHROnBodyContentCSS, cardElement).remove();  
+    
+});  
+ 
+
+utils.waitForElement(iframeTag).then( function(ifrm){
+  $(selectButtonCSS,mostPopularPlanCSS).click();
+});
+
+
+
+

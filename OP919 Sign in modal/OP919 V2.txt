@@ -1,0 +1,109 @@
+<style>
+
+.OP919 .js-giaya-login-section {
+    display: none;
+}
+.OP919 .smaller-pannel-section {
+    overflow: hidden;
+    width: 765px;
+    height: 80px;
+    object-fit: contain;
+    margin: 60px auto;
+    border: 2px solid #E5E5E5;
+    border-radius: 2px;
+    background: #fff;
+}
+.OP919 .smaller-pannel-inner-section {
+    padding-top: 19px;
+}
+.OP919 .pannel-text-section {
+    display: inline-block;
+    float: left;
+    margin-left: 24px;
+    margin-top: 5px;
+
+}
+.OP919 .banner-question {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: -0.3px;
+    color: #222222;
+}
+.OP919 .pannel-btn-section{
+    display: inline-block;
+    float: right;
+    margin-right: 32px;
+    padding: 10px 86px 6px 86px;
+    border-radius: 6px;
+    background-color: #0692fc;
+    cursor: pointer;
+}
+.OP919 .blue-signin-btn {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+</style>
+
+
+<div class="smaller-pannel-section">
+  <div class="smaller-pannel-inner-section">
+    <div class="pannel-text-section">
+      <p class="banner-question">Do you have a Jetstar account?</p>
+    </div>
+    <div class="pannel-btn-section" tabindex="0">
+      <!--<a class="blue-signin-btn">Sign in here</a>-->
+      <div class="home-position-blue-btn-section">
+        <a class="blue-signin-btn">Sign in</a></div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+dom.addCss(css);
+(function (window, document, $) {
+    var init = function init() {
+        addBodyClass();
+        addSignupBanner();
+    },
+
+    addBodyClass = function addBodyClass() {
+        $('body').addClass('OP919');
+    },
+
+    openSignUpModal = function openSignUpModal(){
+        window.gigyaHelper = {
+            jqCulture: "en-AU",
+            gigyaLang: "en"
+        };
+      
+        document.body.classList.contains('isNativeMobile') ? jsr.invoke('gigyaScreenset', 'login') : gigya.accounts.showScreenSet({ screenSet: 'Jetstar-v2-RegistrationLogin', startScreen: 'jetstar-login-screen', context: { mode: 'mode--standard', culture: window.gigyaHelper.jqCulture, jetstarCulture: window.gigyaHelper.jqCulture }, lang: window.gigyaHelper.gigyaLang });
+
+      actions
+	.set('SignInLinkOrBtnClick', 1)
+	.send();
+
+    },
+
+    bindSignUpClickEvent = function bindSignUpClickEvent(){
+        $('.pannel-btn-section').click(function(){
+            openSignUpModal();
+        });
+    },
+
+    addSignupBanner = function addSignupBanner() {
+        $('div.row.page-header > div.column').append(html);
+        bindSignUpClickEvent();
+    };
+
+	init();
+}(window, document, $));
+</script>

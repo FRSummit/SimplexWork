@@ -1,0 +1,81 @@
+<div class="seat-banner-section">
+    <div class="seat-image">
+        <img src="#$(ContentManager:seat-1.png)!" alt="MySeat" />
+    </div>
+    <div class="seat-banner-text">
+        <div class="seat-title">Choose your favourite spot</div>
+        <div class="seat-text">Window? Aisle? Closer to the front or back of the plane? Add your favourite seat now before it sells out.</div>
+    </div>
+</div>
+
+<div class="seat-banner-section">
+    <div class="seat-image">
+        <img src="#$(ContentManager:seat-1.png)!" alt="MySeat" />
+    </div>
+    <div class="seat-banner-text">
+        <div class="seat-title">Choose your favourite spot</div>
+        <div class="seat-text">Window or aisle, it’s your choice. Add your seats now to ensure you sit together with your travel companions.</div>
+    </div>
+</div>
+
+
+
+<style type="text/css">
+	.OP957 .seat-banner-section {
+	    overflow: hidden;
+	    border: solid 1px #cccccc;
+	    background-color: #ffffff;
+	}
+	.OP957 .seat-image {
+	    width: 25%;
+	    float: left;
+	}
+	.OP957 .seat-banner-text{
+	    float: left;
+	    margin-left: 18px;
+	    width: 72%;
+	    color: #222222;
+	}
+	.OP957 .seat-title {
+	    font-size: 18px;
+	    font-weight: bold;
+	    letter-spacing: -0.5px;
+	    margin-top: 12px;
+	    margin-bottom: 8px;
+	}
+	.OP957 .seat-text {
+	    font-size: 16px;
+	    letter-spacing: -0.4px;
+	    padding-right: 15px;
+	}
+	.OP957 .grid_11 p {
+	    display:none;
+	}
+</style>
+
+
+
+<script type="text/javascript">
+    (function (window, document, $) {
+        var seatPanel = $('.grid_11'),
+        passenger = ($(".name-list").children().length),
+        init = function init() {
+            addBodyClass();
+            dom.addCss(css);
+            addBanner();
+        },
+        addBodyClass = function addBodyClass() {
+            $('body').addClass('OP957');
+        },
+        addBanner = function addBanner() {
+            if(passenger > 1){
+                seatPanel.prepend($(html)[2]);
+            }else{
+                seatPanel.prepend($(html)[0]);
+            }
+        };
+
+        init();
+    }(window, document, jQuery));
+
+</script>

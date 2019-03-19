@@ -1,0 +1,1085 @@
+<div id="afterpayModal" class="price-watch-modal">
+  <div class="price-watch-modal-main-content-section">
+    <div class="new-modal-section">
+        <div class="pw-header-section">
+            <div class="pw-header-icon-section">
+                <img src="#$(ContentManager:price_watch_icon_white_sf.png)!" alt="price-watch-icon">
+            </div>
+            <h1 class="price-watch-title-header-section">Price Watch</h1>
+    </div>
+        <a class="close-afterpay-modal-section">Close<span class="afterpay-close">&times;</span></a>
+</div>
+
+
+  <div class="watch-price-container-section"> 
+
+    <h2 class="watch-price-header-section js-sentence">
+        <div>
+          <div class="pw-subheader-origin">
+            <span id="originText">...</span>&nbsp;<span style="display:none;" id="originCode"></span>
+            <div class="dash-text"><div></div> </div>
+            <div class="watch-price-travell-section">
+                <div class="watch-price-depart-name-section">
+                    <div class="label-depart-segment">Departing</div>
+                    <div class="depart-date"><span class="js-depart-date">Nov 28</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="pw-subheader-dest">
+            <div><span id="destiText">...</span>&nbsp;<!--<span id="destiCode"></span>--></div>
+            <div class="watch-price-travell-section">
+                <div class="watch-price-return-name-section">
+                    <div class="label-return-segment">Returning</div>
+                    <div class="return-date"><span class="js-return-date">Dec 27</span></div>
+                </div>
+            </div>
+        </div>
+    </h2>
+
+
+<!--
+  <div class="watch-price-travell-section">
+      <div class="watch-price-depart-name-section">
+          <div class="label-depart-segment">Departing</div>
+          <div class="depart-date"><span class="js-depart-date">Nov 28</span></div>
+      </div>
+      <div class="watch-price-return-name-section">
+          <div class="label-return-segment">Returning</div>
+          <div class="return-date"><span class="js-return-date">Dec 27</span></div>
+      </div>
+  </div>
+-->
+</div>
+
+<div class="main-content-section">
+<form id="priceWatchForm">
+  <p class="intro">Get email updates on the price of your flights</p>
+  <div class="form-main-content-section-section">
+ <div class="form-main-content-section-section">
+   <!--<div class="airport-name-section">
+     <label class="label-section">Origin Airport<abbr title="Required">*</abbr></label>
+     <input class="origin-airport-input-section" id="origin-airport" placeholder="" value="">
+   </div>
+   <div class="airport-name-section">
+     <label class="label-section">Destination Airport<abbr title="Required">*</abbr></label>
+   <input class="destination-airport-input-section" id="destination-airport" placeholder="" value="">
+ </div>-->
+  <div class="email_wrapper">
+    <label class="label-section">Email <abbr title="Required">*</abbr></label>
+    <input class="email-input-section" id="email" placeholder="asdad@asd.com" value="">
+    <span class="errors">Email address is required</span>
+  </div>
+  <p class="limit_and_email_tag-section">Receive weekly updates on how prices are tracking, the latest deals and our famous sales. And if the price drops, we’ll send you an alert.<br><br>You can unsubscribe at any time. <a class="privacy-policy" href="http://www.jetstar.com/sg/en/privacy-policy" target="_blank">See our privacy policy</a></p>
+
+<div class="passenger-section">
+<div class="pw-passenger-section_wrapper">
+    <div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" aria-labelledby="adults-tag">
+            <option value="1" selected="">1 Adult</option>
+            <option value="1">1 Adults</option>
+            <option value="2">2 Adults</option>
+            <option value="3">3 Adults</option>
+            <option value="4">4 Adults</option>
+            <option value="5">5 Adults</option>
+            <option value="6">6 Adults</option>
+            <option value="7">7 Adults</option>
+            <option value="8">8 Adults</option>
+            <option value="9">9 Adults</option>
+            <option value="10">10 Adults</option>
+            <option value="11">11 Adults</option>
+            <option value="12">12 Adults</option>
+            <option value="13">13 Adults</option>
+            <option value="14">14 Adults</option>
+            <option value="15">15 Adults</option>
+            <option value="16">16 Adults</option>
+            <option value="17">17 Adults</option>
+            <option value="18">18 Adults</option>
+            <option value="19">19 Adults</option>
+            <option value="20">20 Adults</option>
+            <option value="21">21 Adults</option>
+            <option value="22">22 Adults</option>
+            <option value="23">23 Adults</option>
+            <option value="24">24 Adults</option>
+            <option value="25">25 Adults</option>
+            <option value="26">26 Adults</option>
+            <option value="27">27 Adults</option>
+            <option value="28">28 Adults</option>
+            <option value="29">29 Adults</option>
+            <option value="30">30 Adults</option>
+            <option value="31">31 Adults</option>
+            <option value="32">32 Adults</option>
+            <option value="33">33 Adults</option>
+            <option value="34">34 Adults</option>
+            <option value="35">35 Adults</option>
+            <option value="36">36 Adults</option>
+            <option value="37">37 Adults</option>
+            <option value="38">38 Adults</option>
+            <option value="39">39 Adults</option>
+            <option value="40">40 Adults</option>
+            <option value="41">41 Adults</option>
+            <option value="42">42 Adults</option>
+            <option value="43">43 Adults</option>
+            <option value="44">44 Adults</option>
+            <option value="45">45 Adults</option>
+            <option value="46">46 Adults</option>
+            <option value="47">47 Adults</option>
+            <option value="48">48 Adults</option>
+            <option value="49">49 Adults</option>
+            <option value="50">50 Adults</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text" aria-hidden="true">
+            1 Adult
+        </div>
+      </div>
+    </div>
+    <div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" aria-labelledby="children-tag">
+            <option value="0" selected="">0 Children</option>
+            <option value="1">1 Child</option>
+            <option value="2">2 Children</option>
+            <option value="3">3 Children</option>
+            <option value="4">4 Children</option>
+            <option value="5">5 Children</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text" aria-hidden="true">
+            0 Children
+        </div>
+      </div>
+    </div><div class="pw-select_wrapper">
+      <div class="fake-select-section">
+        <select class="pw-select_wrapper-section" aria-labelledby="infants-tag">
+            <option value="0" selected="">0 Infants</option>
+            <option value="1">1 Infant</option>
+            <option value="2">2 Infants</option>
+        </select>
+        <i class="icon-downarrow-section"></i>
+        <div class="fake-select-section-text" aria-hidden="true">
+            0 Infants
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<div class="submit-section">
+  <a class="btn btn-secondary flexible-dates-btn" href="#"><span>Choose dates</span></a>
+  <a class="btn btn-secondary watch-price-btn" href="#"><span>Watch prices</span></a>
+</div>
+</div>
+</form>
+</div>
+
+<div class="disclaimers-section" style="">
+  <p>
+    <strong>^Things you need to know:</strong>
+	<br><br> 
+	You are watching Starter fares, inclusive of taxes, fees and surcharges. Checked baggage not included but may be added for an additional fee.
+	<br><br> 
+	For booking in Singapore Dollars no Booking and Service Fee applies for bookings made through SingPost or with a Jetstar Voucher. A Booking and Service fee of $5.00-$10.00 SGD per passenger-section per flight applies for all other bookings.
+	<br><br> 
+	For bookings in other currencies different fees and payment options apply. 
+	<br><br> 
+	Unless otherwise stated fares are non-refundable, limited changes are permitted, charges apply.
+	<br><br> Jetstar collects your personal information to enable us to process and administer your Price Watch alerts. We may also use it to improve customer service including by way of market research and to provide you with information about travel related products or services from Jetstar and other providers in accordance with our Privacy Policy. If you wish to find out more about our Privacy Policy and how to access your personal information, 
+	<a href="http://www.jetstar.com/sg/en/privacy-policy" target="_blank">click here</a>. 
+	By signing up to Price Watch alerts, you acknowledge that your personal information relating to your Price Watch alerts may be accessible to Jetstar’s related bodies corporate and other organisations to whom the airline grants system access to provide these services. You consent to this information being transferred to or from Australia for these purposes and you consent to Jetstar and its partners exchanging, using and disclosing your personal information. 
+  </p>
+</div>
+
+
+  </div>
+</div>
+
+<style type="text/css">
+.OP575 .errors {
+    display: none !important;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #c00;
+}
+
+.OP575 .new-modal-section {
+    padding: 8px 0 0px;
+    background-color: #ff5115;
+    font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #696a6c;
+    text-align: center;
+}
+
+.OP575 .pw-header-icon-section {
+    display: inline-block;
+					  
+}
+
+.OP575 .price-watch-title-header-section {
+    display: inline-block;
+    /*vertical-align: top;*/
+}
+
+.OP575 h1.price-watch-title-header-section {
+    padding-left: 6px;
+    line-height: 3.5rem;
+    color: #fff; 
+    /*font: 900 26px JetstarHappy,"Helvetica Neue",Roboto,Arial,sans-serif;*/
+    margin-bottom: 0;
+    vertical-align: text-bottom;
+    margin-top: 6px;
+    font: 800 26px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+
+.OP575 .watch-price-container-section {
+    text-align: center;
+    /*font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    font-size: 14px;
+    color: #696a6c;
+    font: AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    background: #434244;
+}
+
+.OP575 .watch-price-pw-header-section {
+    display: block;
+    background: #434244;
+    color: #fff;
+    /*font-size: 16px;*/
+    font-weight: 700;
+    margin-top: 0px;
+    padding: 12px 15px 12px;
+    width: 100%;
+    margin-bottom: 0;
+    font: 700 16px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+.OP575 .main-content-section {
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: -4px;
+    padding-bottom: 0;
+}
+
+.OP575 .main-content-section form {
+    width: 410px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #696a6c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.OP575 .form-main-content-section-section{
+    padding-left: 21px;
+    width: 95%;
+}
+
+.OP575 p.intro {
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    /*font-weight: 700;*/
+    /*font-family: HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    /*font-size: 14px;*/
+    color: #696a6c;
+    font: 700 14px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+.OP575 label.label-section {
+    color: #696a6c; 
+    display: block;
+    /*font: normal 12px HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    margin-bottom: 4px;
+    padding-top: 6px;
+    font: 400 13px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    text-align: left;
+}
+
+.OP575 abbr {
+    color: #ff5115;
+    border: none;
+}
+
+.OP575 input.email-input-section, .OP575 input.origin-airport-input-section, .OP575 input.destination-airport-input-section {
+    /*font-size: 12px;*/
+    color: #696a6c;
+    outline: 0;
+    border-radius: 0;
+    background: #fafafa;
+    border: none;
+    border-bottom: solid 1px #d5d6d7;
+    padding: 6px 13px;
+    width: 100%;
+    font: 700 14px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+					 
+}
+
+.OP575 .main-content-section .limit_and_email_tag-section {
+    color: #696a6c; 
+    text-align: left;
+    padding-right: 2px;
+    /*font: normal 12px HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    margin: 14px 0 16px;
+    font: 400 12px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+.OP575 a.privacy-policy {
+    color: inherit;
+    text-decoration: underline;
+				  
+}
+							   
+				   
+ 
+
+.OP575 .passenger-section {
+    padding: 0 0 14px;
+    text-align: left;
+}
+
+.OP575 .pw-passenger-section_wrapper {
+    margin-bottom: 10px;
+}
+
+.OP575 .pw-select_wrapper {
+    border-right: solid 10px #fff; */
+    font-size: 14px;
+    color: #696a6c;
+    border-bottom: solid 1px #d5d6d7;
+    margin-bottom: 10px;
+    width: 32%;
+    display: inline-block;
+}
+
+.OP575 .fake-select-section {
+    position: relative;
+}
+
+.OP575 select.pw-select_wrapper-section {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 32px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    border-style: none;
+}
+
+.OP575 .fake-select-section-text {
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+
+.OP575 .disclaimers-section {
+    bottom: 20px;
+    height: 120px;
+    overflow-y: scroll;
+    margin: 9px -20px -20px;
+    padding: 10px 16px;
+    background: #f8f8f8;
+    border-top: 1px solid #ccc;}
+
+.OP575 .disclaimers-section p {
+    /*color: #696a6c;*/
+    color: #434244;
+    /*font: 11px/11px HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    text-align: left;  
+    padding-bottom: 1em;
+    font: 400 11px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+    line-height: 1.2;
+}
+
+.OP575 .disclaimers-section a {
+    text-decoration: underline;
+    color: #ff5115;
+    cursor: pointer;}
+
+.OP575 a.btn.btn-secoundary.flexible-dates-btn {
+    text-align: center;
+    font-size: 12px;
+    background-color: #434244;
+}
+
+.OP575 a.btn.btn-secoundary.watch-price-btn
+    background-color: #ff5115;
+}
+
+.OP575 .submit-section {
+    text-align: center;
+}
+
+.OP575 .submit-section .btn {
+    /*font-size: 13px;*/
+    color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font: 700 12px HelveticaNeueW01,Helvetica,Arial,sans-serif;
+    border-radius: 4px;
+    border: none;
+    background-color: #434244;
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+.OP575 .submit-section .btn:hover, .OP575 .submit-section .btn:focus{
+    background-color: #ff5115;
+    /*font-size: 13px;*/
+    color: #fff;
+    /*padding: 10px 15px;*/
+    /*margin-bottom: 20px;*/
+    /*font: 700 13px HelveticaNeueW01,Helvetica,Arial,sans-serif;*/
+    /*border-radius: 4px;*/
+    border: none; 
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+.OP575 .icon-downarrow-section {
+    -webkit-transform: rotate(225deg);
+    display: inline-block;
+    float: right;
+    margin-top: 8px;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #696a6c;
+}
+
+
+
+/*-------------------------*/
+.OP575 .price-watch-modal-opener-banner-section{padding: 9px 12px 10px 12px; background-color: #f4f4f4; margin: 0 auto; text-align: center; margin-top: -22px; width: 34%; margin-bottom: 18px;}
+.OP575 .price-watch-banner-image-section{/*float: left;*/ margin-right: 10px; display: inline-block;}
+.OP575 .afterpay-text{color: #444; padding-top: 1px; display: inline-block;} 
+.OP575 .afterpay-text p {margin-bottom: 0px; font-size: 14px; line-height: 24px; text-align: left;} 
+.OP575 .pay-text{font-weight: bold;}
+.OP575 .afterpay-text a {font-size: 14px; line-height: 24px; color: #0792fc;font-weight: bold;}
+
+.OP575 .price-watch-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: auto;    
+    overflow: auto; 
+    background-color: rgba(0,0,0,.7);
+    background: radial-gradient(ellipse farthest-corner,rgba(0,0,0,.5) 0,rgba(0,0,0,.7) 100%);
+    bottom: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.OP575 .price-watch-modal-opener-btn {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.OP575 .price-watch-modal-main-content-section {
+    background-color: #fefefe;
+    margin: auto;
+    /*padding: 20px;*/
+    border: 1px solid #888;
+    width: 46.6%;
+    /*width: 100%;*/
+}
+
+.OP575 .price-watch-modal-main-content-section2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1290px;
+}
+
+
+.OP575 .afterpay-close {
+    /*color: #fff;*/
+    float: right;
+    font-size: 28px;
+    font-weight: normal;
+    padding-right: 16px;
+    line-height: 0.9;
+    padding-left: 4px;
+}
+
+.OP575 .afterpay-close:hover, .OP575 .afterpay-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.OP575 .moreinfo-price-watch-banner-image-section{
+    background-image: url(''); 
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+.OP575 .moreinfo-modal-section{
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 36px;
+}
+
+.OP575 .heading-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222222;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+.OP575 .heading-title2{
+    margin-bottom: 36px;
+}
+.OP575 .moreinfo-text p{text-align: center; font-size: 14px; line-height: 24px;}
+.OP575 .subtitle-image {
+    text-align: center;
+    padding-bottom: 24px;
+}
+.OP575 .subtitle-image img {
+    max-height: 36px;
+}
+.OP575 .heading-subtitle {
+    text-align: center;
+    color: #222222;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+.OP575 .subtitle-text {
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+}
+.OP575 .moreinfo-conditions {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 24px;
+    padding-bottom: 48px;
+}
+.OP575 .moreinfo-conditions a{
+    color: #007ddb;
+}
+
+.OP575 .moreinfo-btn-section{
+    text-align: center;
+}
+
+.OP575 .moreinfo-btn-section .gotit-btn {
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.4;
+    padding: 12px 80px;
+    font-size: 1rem;
+    background-color: #ff5115;
+    border: 1px solid #ff5115;
+    color: #fff;
+}
+
+.OP575 .flight-schedule__selected-currency.bookingcurrencycode{
+    text-align: right;
+}
+
+.OP575 .pw-header-section {
+    display: inline-block;
+    margin-right: -50px;
+    margin-bottom: 10px;
+    padding-top: 4px;
+    /*padding-bottom: 4px;*/
+}
+
+.OP575 .close-afterpay-modal-section {
+    display: inline-block;
+    float: right;
+    color: #fff;
+    margin-top: 12px;
+    padding-right: 2px;
+    font-size: 14px;
+}
+
+.OP575 .close-afterpay-modal-section:hover, .OP575 .close-afterpay-modal-section:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1150px){
+.OP575 .price-watch-modal-main-content-section {width: 80%;}
+}
+
+@media only screen and (max-width: 767px)
+{
+  .OP575 .price-watch-modal-opener-banner-section{width: 100%; margin-bottom: 12px;}
+  .OP575 .price-watch-modal-main-content-section { padding: 20px 4px; width: 100%;}
+  .OP575 .price-watch-modal{padding-top: 0px; }
+  .OP575 .moreinfo-modal-section {padding-left: 0;padding-right: 0;padding-bottom: 0px;}
+  .OP575 .price-watch-banner-image-section{float: none; text-align: center; display: block;}
+  .OP575 .afterpay-text{display: block;} 
+  .OP575 .price-watch-modal-opener-btn { padding-top: 2px; padding-left: 5px; padding-right: 5px;}
+  .OP575 .moreinfo-jetstar-image{
+    background-image: url('');    
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -32px;
+    width: auto;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+.OP575 .moreinfo-price-watch-banner-image-section{ 
+    background-image: url(''); 
+    height: 30px;
+    margin-top: 24px;margin-bottom: 22px;
+}
+  .OP575 .heading-title {font-size: 16px; margin-top: 14px;}
+  .OP575 .moreinfo-text p {font-size: 12px; line-height: 20px;}
+  .OP575 .heading-title2 {margin-bottom: 27px;}
+  .OP575 .subtitle-image {padding-bottom: 18px;}
+  .OP575 .heading-subtitle {font-size: 14px;line-height: 20px;}
+  .OP575 .subtitle-text {margin-bottom: 24px; font-size: 12px; line-height: 20px;}
+  .OP575 .moreinfo-conditions {font-size: 12px;padding-top: 8px;padding-bottom: 31px; line-height: 20px;}
+  .OP575 .moreinfo-btn-section .gotit-btn {border-radius: 6px; width: 100%;display: block; padding: 12px;margin-bottom: 2px;}
+  .OP575 .afterpay-text p {text-align: center;}
+
+}
+
+/*----------------------------*/
+
+
+
+.OP575 .valid-email{ border: 1px solid #00d400; background: #f4f4f4; }
+.OP575 .invalid-email{ border: 1px solid red; background: #f4f4f4; }
+
+.OP575 .disclaimers-section::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #6c6c6b;
+    border: 7px solid transparent;
+    background-clip: padding-box;
+    margin: 10px;
+}
+
+.OP575 .disclaimers-section::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 20px;
+}
+
+
+
+
+/**/
+
+.OP575 .airport-name-section{
+  position: relative;
+}
+
+.OP575 .autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.OP575 .autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  border-bottom: none;
+  z-index: 99;
+  font-size: 11px;
+  width: 100%
+}
+
+.OP575 .autocomplete-items div {
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.OP575 .autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+.OP575 .autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.OP575 .submit-section {
+    text-align: center;
+}
+
+.OP575 .watch-price-travell-section {
+    background: #434244;
+    color: #fff;
+    padding-bottom: 13px;
+    text-align: left;
+    padding-top: 13px;
+}
+
+.OP575 .watch-price-depart-name-section {
+    display: inline-block;
+    /*margin-right: 84px;*/
+}
+
+.OP575 .depart-date, .OP575 .return-date {
+    text-align: left;
+    font-size: 15px;
+    margin-top: -5px;
+}
+
+.OP575 .watch-price-return-name-section {
+    display: inline-block;
+}
+
+.OP575 .label-depart-segment, .OP575 .label-return-segment {
+    line-height: 0.5;
+    padding-bottom: 5px;
+    font-size: 14px;
+    padding-top: 2px;
+    padding-bottom: 12px;
+}
+
+.OP575 .pw-origin-text {
+    display: inline-block;
+    text-align: left;
+}
+
+.OP575 .destination-text {
+    display: inline-block;
+    text-align: left;
+}
+
+.OP575 .dash-text {
+    display: inline-block;
+    text-align: left;
+    padding: 0 0.2em;
+    padding-left: 12px;
+}
+
+.OP575 .dash-text>div::before {
+    content: '\2014';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+}
+
+.OP575 .destination-text-section-span, .OP575 .destination-text-section-span {
+    font-size: 15px;
+}
+
+/*---------------------------*/
+
+.OP575 h2.watch-price-header-section.js-sentence {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    line-height: 2.6;
+    font: 700 19px AvantGardeGthcITCW01,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+
+.OP575 .pw-subheader-origin {
+    display: inline-block;
+    padding-top: 14px;
+}
+
+.OP575 .pw-subheader-dest {
+    display: inline-block;
+    padding-left: 8px;
+}
+
+
+/**/
+</style>
+
+<script type="text/javascript">
+
+  dom.addCss(css);
+
+  window.jetstarOptimisation = window.jetstarOptimisation || {};
+  window.jetstarOptimisation.AfterPayIt_FlightSelect_AU = (function(window, document) {
+
+    var modal = document.getElementById('afterpayModal'), 
+    origintext = undefined,
+    destitext = undefined,
+    emailId = null,
+    cities = ["Adelaide (ADL)","Auckland (AKL)","Uluru (Ayers Rock) (AYQ)","Bangkok (BKK)","Buon Ma Thuot (BMV)","Brisbane (BNE)","Ballina Byron (BNK)","Jakarta (CGK)","Zhengzhou (CGO)","Christchurch (CHC)","Cairns (CNS)","Clark (CRK)","Sapporo (CTS)","Nha Trang (CXR)","Da Nang (DAD)","Da Lat (DLI)","Bali (Denpasar) (DPS)","Darwin (DRW)","Dunedin (DUD)","Fukuoka (FUK)","Haikou (HAK)","Hanoi (HAN)","Hobart (HBA)","Hat Yai (HDY)","Hayman Island (HIS)","Hong Kong (HKG)","Phuket (HKT)","Honolulu (HNL)","Hai Phong (HPH)","Hamilton Island (HTI)","Hue (HUI)","Osaka (KIX)","Medan - Kualanamu  (KNO)","Kagoshima (KOJ)","Kuala Lumpur (KUL)","Launceston (LST)","Sunshine Coast (MCY)","Mackay (MKY)","Manila (MNL)","Matsuyama (MYJ)","Nadi (NAN)","Napier (NPE)","New Plymouth (NPL)","Tokyo (Narita) (NRT)","Nelson (NSN)","Newcastle – Port Stephens (NTL)","Oita (OIT)","Okinawa (Naha) (OKA)","Gold Coast (OOL)","Penang (PEN)","Perth (PER)","Pekanbaru (PKU)","Palembang (PLM)","Palmerston North (PMR)","Phnom Penh (PNH)","Whitsunday Coast (PPP)","Phu Quoc (PQC)","Pleiku (PXU)","Rarotonga (RAR)","Yangon (RGN)","Ho Chi Minh City (SGN)","Singapore (SIN)","Surabaya (SUB)","Sydney (SYD)","Sanya (SYX)","Takamatsu (TAK)","Tuy Hoa (TBB)","Thanh Hoa (THD)","Townsville (TSV)","Quy Nhon (UIH)","Chu Lai (VCL)","Vinh (VII)","Wellington (WLG)","Wuhan (WUH)","Queenstown (ZQN)"],
+
+    init = function () {
+											 
+        addBodyClass();
+        showPriceWatchOnPageLeave();
+								  
+		 
+    },
+
+    addBodyClass = function addBodyClass() {
+      jQuery('body').addClass('OP575');
+    },
+
+
+    getFromDataLayer = function getFromDataLayer(){
+            var orig = analyticsDataLayer.get('flightSearchOutboundOrigin');
+            var dest = analyticsDataLayer.get('flightSearchOutboundDestination');
+            //alert(orig);
+            if(orig != undefined){
+            $.each( cities , function( key, value ) {
+             if(value.indexOf(orig) > -1){ 
+                 origintext = value;
+             }
+           });
+           }
+
+            if(dest != undefined){
+            $.each( cities , function( key, value ) {
+             if(value.indexOf(dest) > -1){ 
+                 destitext= value;
+             }
+           });
+           }
+
+            jQuery("#originCode").text((orig == undefined ? '...' : orig ));
+            jQuery("#destiCode").text((dest == undefined ? '...' : dest));
+            
+            jQuery("#originText").text((origintext == undefined ? '...' : origintext ));
+            jQuery("#destiText").text((destitext == undefined ? '...' : destitext));
+
+    },
+
+    autocomplete = function autocomplete(inp, arr) {
+  
+      var currentFocus;
+  
+      inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      
+      closeAllLists();
+      
+      if (!val) { return false;}
+      currentFocus = -1;
+      
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      
+      this.parentNode.appendChild(a);
+      
+      for (i = 0; i < arr.length; i++) {
+        
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          
+          b = document.createElement("DIV");
+          
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          
+          b.addEventListener("click", function(e) {
+              
+              inp.value = this.getElementsByTagName("input")[0].value;
+              
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        
+        currentFocus++;
+        
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        
+        currentFocus--;
+        
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        
+        e.preventDefault();
+        if (currentFocus > -1) {          
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+
+  function addActive(x) {
+    
+    if (!x) return false;
+    
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+
+  function removeActive(x) {
+    
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+
+  function closeAllLists(elmnt) {
+    
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+
+},
+
+    validateEmail = function validateEmail(sEmail,element) {
+        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+        if (filter.test(sEmail)) {
+            $(element).find("#email").addClass('valid-email');
+            $(element).find("#email").removeClass('invalid-email');
+            $(element).find(".errors").css("display","none");
+            $(element).find("#email").css("border","1px solid #00d400", "background-color","#FFF");
+            return true;
+        }
+        else {
+            $(element).find("#email").removeClass('valid-email');
+            $(element).find("#email").addClass('invalid-email');
+            $(element).find(".errors").css("display","block");
+            $(element).find("#email").css("border","1px solid red", "background-color","#FFF3F3");  
+            return false;
+        }
+    },
+
+    bindBlurEvent = function bindBlurEvent(element){
+        $(element).find(".email-input-section").bind("blur", function(event, ui) { 
+            validateEmail($(element).find('#email').val(),element);
+        });
+    },
+
+    onSubmitModal = function onSubmitModal() {
+        $( ".watch-price-btn" ).click(function( event ) {
+            //validateEmail($('#email').val(),emailId);
+            if(!jQuery('#email').hasClass('invalid-email')){
+                site.scope.price_watch.submitPriceWatch();
+                modal.style.display = "none";
+            }
+        });
+    },
+
+    showPriceWatchOnPageLeave = function showPriceWatchOnPageLeave(){
+
+        var $element = jQuery('body');
+        $element.append(html);
+
+        modal = document.getElementById('afterpayModal'),
+        emailId = document.getElementById('email');
+        onSubmitModal();
+
+        jQuery('.price-watch-modal-main-content').each(function(index, element){
+            bindBlurEvent(element);
+        });
+
+        //console.log(site.scope.campaignTargeting.getOriginAirport());
+        //console.log(site.scope.campaignTargeting.getDestinationAirport());
+
+        //autocomplete(document.getElementById("origin-airport"), cities);
+        //autocomplete(document.getElementById("destination-airport"), cities);
+
+
+
+        $('.afterpay-close').click(function() {
+            modal.style.display = "none";
+        });
+
+        $('.close-afterpay-modal').click(function() {
+            modal.style.display = "none";
+        });
+
+        $('.close-afterpay-modal-section').click(function() {
+            modal.style.display = "none";
+        });
+
+		
+
+									  
+						   
+
+        document.addEventListener("mouseleave", function(e){
+            if( e.clientY < 0 )
+									 
+	   
+
+
+								  
+
+												  
+																									  
+		   
+
+												  
+																									  
+		   
+
+												   
+																										
+		   
+
+
+								  
+
+
+	  
+  
+            {
+                modal.style.display = "block";
+                getFromDataLayer();
+            }
+        }, false);
+	  
+
+														  
+															 
+											
+			   
+
+																								   
+									
+							   
+			   
+    };
+	
+
+    return {
+      init: init
+    };
+
+  }(window, document));
+
+  window.jetstarOptimisation.AfterPayIt_FlightSelect_AU.init();
+
+</script>

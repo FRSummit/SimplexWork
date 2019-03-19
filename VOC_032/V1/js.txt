@@ -1,0 +1,10 @@
+var utils = window.optimizely.get('utils'),
+	$ = window.optimizely.get('jquery');
+    
+  utils.waitForElement('dodo-broadband-contract-length-selection').then(function() {  
+		$('.tag.ng-star-inserted').html('<img _ngcontent-c39="" src="/assets/img/badge-dark-triangle.svg">Great for high usage');
+    //$('.card-header__badge').html('<img _ngcontent-c40="" src="/assets/img/badge-dark-triangle.svg">No upfront costs');
+    $('.card-header__badge').html('<img _ngcontent-c40="" src="/assets/img/badge-dark-triangle.svg">NO UP-FRONT COSTS');
+    
+    //$('.card-header__badge').text('NO UP-FRONT COSTS');
+  });

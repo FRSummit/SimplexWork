@@ -1,0 +1,27 @@
+.is-purple .card-header.has-badge .card-header__badge {
+  	background-color: #AC7AFF;
+  	color: #fff;
+  	font-weight: 600;
+}
+
+.is-purple div.tags div.tag {
+		background-color: #AC7AFF;
+  	color: #fff;
+  	font-weight: 600;
+}
+
+/*new css*/
+
+.is-purple .card-header.has-badge .card-header__badge {
+    right: -11px !important;
+    color: #470a68 !important;
+    background-color: yellow !important;
+
+}
+
+.card-header__badge.ng-star-inserted img {
+    position: absolute;
+    width: 10px;
+    right: 0;
+    bottom: -10px;
+}

@@ -1,0 +1,144 @@
+<div class="green-tick-icon-section">
+    <img src="#$(ContentManager:green-tick.png)!" alt="tick"/>
+</div>
+
+<style>
+    .OP1027 .green-tick-icon-section{
+        float: left;
+    }
+    .OP1027 .green-tick-icon-section img{
+        margin: 0;
+        width: 24px;
+    }
+    .OP1027 .seat-confirm-tip__desc{
+        display: inline-block;
+        font-size: 16px;
+        padding: 0;
+        vertical-align: text-top;
+        margin-left: 12px;
+    }
+    .OP1027 .seat-confirm-tip__footer{
+        display: inline-block;
+        padding: 0;
+        vertical-align: bottom;
+    }
+    .OP1027 .seat-confirm-tip__body{
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 84px;
+    }
+    .OP1027 .seat-confirm-tip.show{
+        left: 34.5% !important;
+        /*right: 30px !important;*/
+        /*padding-left: 86px;*/
+        max-width: 406px;
+        top: 420px !important;
+        position: fixed;
+        border: none;
+    }
+    .OP1027 .pricepoint-wrapper .pricepoint .pricepoint__currencycode, .pricepoint-wrapper .pricepoint .pricepoint__symbol {
+        font-size: 16px !important;
+        color: #222222;
+        font-family: "Helvetica Neue",Roboto,Arial,sans-serif;
+    }
+    .OP1027 .pricepoint-wrapper .pricepoint .pricepoint__middle, .OP1027 .pricepoint-wrapper .pricepoint__decimal {
+        font-size: 16px;
+        padding-top: 2px;
+        vertical-align: bottom;
+        color: #222222;
+    }
+    .OP1027 .seat-confirm-tip__pointer {
+        display: none;
+    }
+
+    @media screen and (max-width:650px) {
+        OP1027 .seat-confirm-tip {
+            top: 120px !important;
+            /*left: 12px !important;*/
+            right: 0 !important;
+        }
+        .OP1027 .seat-confirm-tip__desc {
+            font-size: 14px;
+        }
+    .OP1027 .seat-confirm-tip.show {
+        max-width: 284px;
+        top: 282px !important;
+        left: -4% !important;
+        margin: 0 auto;
+    }
+    .OP1027 .seat-confirm-tip__body {
+        padding-top: 8px;
+        padding-bottom: 6px;
+        padding-left: 32px;
+        padding-right: 30px;
+    }
+    .OP1027 .pricepoint-wrapper .pricepoint .pricepoint__currencycode, .pricepoint-wrapper .pricepoint .pricepoint__symbol {
+        font-size: 14px !important;
+    }
+    .OP1027 .pricepoint-wrapper .pricepoint .pricepoint__middle, .OP1027 .pricepoint-wrapper .pricepoint__decimal {
+        font-size: 14px;
+    }
+}
+    .OP1027 .seat-confirm-tip__img {display: none;}
+    .OP1027 .seat-confirm-tip__heading {display: none;}
+    .OP1027 .seat-confirm-tip__button.small {display: none;}
+</style>
+
+<script type="text/javascript">
+    (function(window,document,$){
+        var isMutationObserverCreated = false,
+        init = function init(){
+            addBodyClass();
+            dom.addCss(css);
+            observerChange();
+        },
+        addBodyClass = function addBodyClass(){
+            $('body').addClass('OP1027');
+        },
+
+        observerChange = function observerChange(){
+            $('.seat-minimap-card.js-seat-minimap-card.js-seat-panel').click(function(){
+               if(!isMutationObserverCreated){ 
+                isMutationObserverCreated = true;
+	        var targetNode = document.getElementById('seatmap');
+            var observer = new MutationObserver(function pricePanelChange(){
+			    if($('.seat-confirm-tip__button.button-outline.small.js-seat-confirm-tip__button').length > 0)
+			    {
+                    var pricePopup = $('.seat-confirm-tip.upfront-seat.js-seat-confirm-tip.show');
+                    if(pricePopup.length == 0)
+                        pricePopup = $('.seat-confirm-tip.standard-seat.js-seat-confirm-tip.show');
+                    if(pricePopup.length == 0)
+                        pricePopup = $('.seat-confirm-tip.extralegroom-seat.js-seat-confirm-tip.show');
+
+                    var pricePopupClone = pricePopup.clone();
+                    pricePopupClone.find('.seat-confirm-tip__button.button-outline.small.js-seat-confirm-tip__button').remove();
+				
+                    $('.seat-confirm-tip__button.button-outline.small.js-seat-confirm-tip__button').click();
+                    $('#seatmap .seatmap').append(pricePopupClone);
+                    bannerRedesign();
+
+                    setInterval(function(){
+                        pricePopupClone.remove();
+                    }, 2000);
+                                
+				
+			    }
+            });
+            observer.observe(targetNode, {
+                attributes: true,
+                childList: true, subtree: true
+            });
+            }
+          });
+        },
+
+        bannerRedesign = function bannerRedesign(){
+            $('.seat-confirm-tip__body').append(html);
+            $('#seatmap .standard-seat .seat-confirm-tip__desc').html('Standard seat selected');
+            $('#seatmap .upfront-seat .seat-confirm-tip__desc').html('Upfront seat selected');
+            $('#seatmap .extralegroom-seat .seat-confirm-tip__desc').html('Extra legroom seat selected');
+        };
+
+        init();
+    }(window,document,jQuery));
+</script>

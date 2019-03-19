@@ -1,0 +1,104 @@
+var utils = window.optimizely.get('utils'),
+$ = window.optimizely.get('jquery'),
+cardElementCSS = 'dodo-feature-selection-card.ng-star-inserted',
+mobileCardElementCSS = 'dodo-feature-selection-card-small-device.ng-star-inserted',
+minCostElementCSS = '.card-body .card-content-button-wrapper .card-content-wrapper .card-body__content .min-cost',
+
+dodoCardElementFirst = 'dodo-feature-selection-card:nth-of-type(1)',
+dodoCardElementSecond = 'dodo-feature-selection-card:nth-of-type(2)',
+dodoCardElementThird = 'dodo-feature-selection-card:nth-of-type(3)',
+
+dodoMobileCardElementFirst = 'dodo-feature-selection-card-small-device:nth-of-type(1)',
+dodoMobileCardElementSecond = 'dodo-feature-selection-card-small-device:nth-of-type(2)',
+dodoMobileCardElementThird = 'dodo-feature-selection-card-small-device:nth-of-type(3)',
+
+smallCard = 'dodo-feature-selection-card:nth-of-type(1) div.card-header.ng-star-inserted:nth-child(1)',
+mediumCard = 'dodo-feature-selection-card:nth-of-type(2) div.card-header.ng-star-inserted:nth-child(1)',
+largeCard = 'dodo-feature-selection-card:nth-of-type(3) div.card-header.ng-star-inserted:nth-child(1)',
+htmlSmall = '<div class="perple-text-section"><p class="perple-text">Small</p></div>',
+htmlMedium = '<div class="perple-text-section"><p class="perple-text">Medium</p></div>',
+htmlLarge = '<div class="perple-text-section"><p class="perple-text">Large</p></div>',
+hrPosition = 'dodo-feature-selection-card div.main-part:nth-child(1)',
+hrDelFirstChild = 'dodo-feature-selection-card div.title-part.part-1:nth-child(1) hr',
+division = '<div class="min-cost-section"></div>',
+
+cardFooterCSS = 'div.card-footer.ng-star-inserted',
+buttonWrapperCSS = 'div.card-button-wrapper.ng-star-inserted',
+hrRawHTML = '<hr>',
+lastHROnBodyContentCSS = '.card-body__content.ng-star-inserted hr:last',
+footerSummaryCSS = 'dodo-mobile-summary-footer.ng-star-inserted',
+selectButtonCSS = 'button.mat-raised-button.mat-primary',
+mostPopularPlanCSS = 'dodo-feature-selection-card.ng-star-inserted:eq(0)',
+contentStrongCSS = '.card-content-button-wrapper .card-content-wrapper .card-body__content p strong',
+contentStrong = null,
+contentTextCSS = '.card-content-button-wrapper .card-content-wrapper .card-body__content p',
+contentText = null,
+iframeTag = 'iframe',
+topPosBackColorPanel = 0,
+widthBackColorPanel = 0,
+heightBackColorPanel = 0;
+String.prototype.replaceAll = function(s1, s2) {
+	return this.replace(
+		new RegExp(  s1.replace(/[.^$*+?()[{\\|]/g, '\\\\$&'),  'g'  ),
+		s2
+		);
+};
+
+utils.observeSelector(cardElementCSS, function(cardElement) {  
+	$('.plans-heading .container .row .col-md-7').addClass('col-md-12').removeClass('col-md-7');
+	$('dodo-mobile-plans-heading').parent('section').css('height',"230px");
+
+
+	$(dodoCardElementThird).insertBefore(dodoCardElementFirst);
+	$(dodoCardElementThird).insertBefore(dodoCardElementSecond);
+
+	$(dodoMobileCardElementThird).insertBefore(dodoMobileCardElementFirst);
+	$(dodoMobileCardElementThird).insertBefore(dodoMobileCardElementSecond);
+
+	$(htmlSmall).insertBefore(smallCard); 
+	$(htmlMedium).insertBefore(mediumCard);
+	$(htmlLarge).insertBefore(largeCard);
+
+	$('<hr>').insertBefore(hrPosition);
+	$(hrDelFirstChild).css('display', 'none');
+	$('.card-content-wrapper:nth-child(1)').append(division);
+
+	var $minCostElement = $(minCostElementCSS,cardElement);
+	var $sub = $('.multi-line-2-part-title',cardElement);
+
+
+	if($minCostElement.length == 0){
+		$('.ffer-ends',cardElement).next().after('<span class="min-cost" style="position: relative;">Total min cost ' + $('.title-part.part-2 .main-part .main',cardElement).text().replaceAll('/mth','') + '</span>');
+		$minCostElement = $(minCostElementCSS,cardElement);
+	}
+	$minCostElement.after($(buttonWrapperCSS,cardElement));
+	$minCostElement.after(hrRawHTML);   
+	$(lastHROnBodyContentCSS, cardElement).remove();
+	topPosBackColorPanel = $(".title-part.part-2 hr").offset().top - $("dodo-feature-selection-card .card").offset().top;
+	widthBackColorPanel = $('.multi-line-2-part-title').width();
+	heightBackColorPanel = $('.min-cost').next().offset().top - $(".title-part.part-2 hr").offset().top;
+
+
+	$(".card-body .card-content-button-wrapper .card-content-wrapper .card-body__content a:last",cardElement).before('<div></div>');
+	$(".card",cardElement).prepend('<div id="backColorPanel" style="position: absolute;background-color: #f7f8fa;top: ' + topPosBackColorPanel + 'px;height: ' + (heightBackColorPanel-1) + 'px;left: 0;width: ' + widthBackColorPanel + 'px;"></div>');
+	$(".title-part.part-2 .main-part .main",cardElement).css("z-index","1");
+	$(".min-cost",cardElement).css("position","relative");
+
+	contentStrong = $(contentStrongCSS,cardElement);
+	contentStrong.html(contentStrong.html().replace('Unlimited','Unlimited:'));
+	contentText = $(contentTextCSS,cardElement);
+	contentText.html(contentText.html().replaceAll('<br>','<div></div>'));
+
+
+	$('is-selected .card-button-wrapper').css("background","#f5f2fc");
+});
+
+utils.observeSelector(mobileCardElementCSS, function(cardElement) {  
+	$('.plans-heading .container .row .col-md-7').addClass('col-md-12').removeClass('col-md-7');
+	$('dodo-mobile-plans-heading').parent('section').css('height',"230px");
+
+	$(dodoMobileCardElementThird).insertBefore(dodoMobileCardElementFirst);
+	$(dodoMobileCardElementThird).insertBefore(dodoMobileCardElementSecond);
+
+	
+});

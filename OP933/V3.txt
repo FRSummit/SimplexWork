@@ -1,0 +1,201 @@
+<style>
+    body {
+        padding-top: 32px;
+    }
+    .OP933 .session-expired.container {
+        margin-top: 56px;
+    }
+    .OP933 p.session-search-again__date.removeDate {
+        display: none;
+    }
+    .OP933 a.change-search:nth-child(1) {
+        display: none;
+    }
+    .OP933 p.session-search-again__date.removeDate {
+        display: none;
+    }
+
+    .OP933 .session-search-again {
+        background: none;
+        margin-top: 50px;
+    }
+    .OP933 .session-search-again__subheader {
+        display: inline-flex;
+        font-family: PingFangSC;
+        font-size: 14px;
+    }
+    .OP933 h2.session-expired__header {
+        text-align: center;
+        margin: 0;
+        letter-spacing: -1.3px;
+    }
+    .OP933 h4.session-search-again__header {
+        text-align: center;
+        margin: 0;
+        letter-spacing: -0.8px;
+    }
+    .OP933 .button, .extend-button a {
+        border-radius: 40px;
+        font-weight: 700;
+        display: inline-block;
+        line-height: 1.5;
+        padding: 18px 44px;
+        font-size: 1rem;
+        background-color: #ff5115;
+        color: #fff;
+        /*margin-right:32%;
+        margin-top: -7px;*/
+        font-family: HelveticaNeue;
+        font-size: 20px;
+    }
+    .OP933 .session-search-again .session-search-again__history {
+        border-top: solid 1px #dedede;
+        border-bottom: solid 1px #dedede;
+        padding-top: 16px;
+        padding-bottom: 8px;
+        margin-top: 22px;
+    }
+
+    .OP933 .session-search-again .session-search-again__citypair {
+        padding-bottom: -1px;
+        color: #444444;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+
+    .OP933 .session-search-again__subheader.addContent {
+        padding-bottom: 18px;
+    }
+
+    .OP933 .session-search-again .session-search-again__date {
+        position: relative;
+        padding-left: 3px;
+        font-family: PingFangSC;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .OP933 a.change-search.removeIcon {
+       display: none;
+       border-radius: 40px;
+       border: solid 2px #dddddd;
+    }
+
+    .OP933 .session-search-again .session-search-again__date:before {
+        content: "";
+        background: none;
+        width: 0;
+        background-size: 16px 16px;
+        display: inline-block;
+        left: 0px;
+        top: 0;
+        vertical-align: middle;
+        margin-top: -6px;
+    }
+    .OP933 a.change-search {
+        display: none;
+    }
+    .OP933 span.newText {
+        font-family: HelveticaNeue;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: center;
+        color: #0692fc;
+        border-radius: 40px;
+        border: solid 2px #dddddd;
+        padding:18px 23px;
+        margin-right: 20px;
+    }
+    .footer {
+        border-top: none;
+        margin-top: 58px;
+    }
+    .OP933 .session-search-again .session-search-again__footer {text-align: center;}
+
+    @media screen and (max-width:950px){
+        .OP933 .session-expired.container {margin-top: 28px;}
+        .OP933 .session-search-again {margin-top: 28pxpx;}
+        .OP933 h2.session-expired__header {letter-spacing: -1px;}
+        .OP933 h4.session-search-again__header {letter-spacing: -0.8px;}
+        .OP933 .session-search-again .session-search-again__history {margin-top: 14px;}
+        .OP933 .columns.large-4:nth-child(3) {position: absolute; left: 50%;}
+        .OP933 span.newText{font-size: 16px; padding: 12px 18px; margin-right: 14px;}
+        .OP933 .button, .extend-button a {padding: 12px 34px; font-size: 16px; margin: 0;}
+        .OP933 .session-search-again .session-search-again__footer {margin: 2px;}
+        main, main:focus {min-height: calc(100vh - 298px);}
+        .footer {border-top: 2px solid #dedede;}
+    }
+
+    @media screen and (max-width:767px){
+        .OP933 .session-expired.container {margin-top: 0px;}
+        .OP933 .session-search-again {margin-top: 30px;}
+        .OP933 h2.session-expired__header {letter-spacing: -0.8px;}
+        .OP933 h4.session-search-again__header {letter-spacing: -0.6px;}
+        .OP933 .session-search-again .session-search-again__citypair{font-size: 14px; letter-spacing: -.5px;}
+        .OP933 .session-search-again__subheader{font-size: 12px;}
+        .OP933 .columns.large-4:nth-child(1){top: 50px;}
+        .OP933 .columns.large-4:nth-child(2){top: 50px;}
+        .OP933 .columns.large-4:nth-child(3){left:0;}
+        .OP933 .session-search-again .session-search-again__history{min-height: 182px; margin-bottom: 16px;}
+        .OP933 span.newText{margin-right: 0px; display: block; padding: 12px;}
+        .OP933 .button, .extend-button a {width: 100%; margin-top: 8px;}
+        .footer {border-top: none; margin-top: 46px;}
+
+    }
+
+</style>
+
+<script type="text/javascript">
+    dom.addCss(css);
+    (function (window, document, $) {
+        var init = function init() {
+                addBodyClass();
+                addSignupBanner();
+                variantOne();
+                responsiveTag();
+            },
+
+            addBodyClass = function addBodyClass() {
+                $('body').addClass('OP933');
+            },
+            
+            responsiveTag = function responsiveTag(){
+                $(".columns.medium-4").eq(0).addClass('topDiv').end().eq(1).addClass('addDiv').end().eq(2).addClass('addtop').find('.session-search-again__subheader').addClass('addContent').find('p:nth-child(2)').addClass('removeDate');
+            },
+
+            variantOne = function variantOne() {
+                $(document).ready(function() {
+                $('.session-expired__header').html('??????????????');
+                var departDate = $('.session-search-again__history .columns:first-child .session-search-again__date').text();
+                var dateArray = departDate.split(' ');
+                var dayDeparture = dateArray[0];
+                var monthDeparture = dateArray[1];
+                var yearDeparture = dateArray[2];
+                var months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+                var weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                var monthNum = months.indexOf(monthDeparture.toLowerCase());
+                var mmddyyyy = (monthNum+1) +'/'+ dayDeparture +'/'+ yearDeparture;
+                var dd = new Date(mmddyyyy);
+                var week = weekDays[dd.getDay()];
+                $('.session-search-again__history .columns:first-child .session-search-again__subheader').append(' '+ week + ' ' + departDate);
+                });
+            },
+
+            addSignupBanner = function addSignupBanner() {
+                $('.session-search-again__subheader').append($('.session-search-again__date'));
+                $('.session-search-again__history .columns:nth-child(1)').removeClass('medium-6').addClass('large-4');
+                $('.session-search-again__history .columns:nth-child(2)').removeClass('medium-6').addClass('large-4');
+                $('p.session-search-again__citypair:first').html('<div class="citypair-text-section">?????(?????) ?? ???????</div>');
+                $('p.session-search-again__citypair:last').html('<div class="citypair-text-section">??????? ?? ?????(?????)</div>');
+                $('.session-search-again__history .row').append('<div class="columns large-4"><div class="session-search-again__subheader">???</div><div class="last-child-text">??x1</div></div>');
+                $("button.button").html('??????').before("<span class='newText'>???????????</span>");
+            };
+
+        init();
+    }(window, document, jQuery));
+</script>

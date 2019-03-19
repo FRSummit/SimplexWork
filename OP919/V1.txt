@@ -1,0 +1,84 @@
+<style>
+
+.OP919 .js-giaya-login-section {
+    display: none;
+}
+.OP919 .smaller-pannel-section {
+    overflow: hidden;
+    width: 765px;
+    height: 78px;
+    object-fit: contain;
+    margin: 60px auto;
+    border: 2px solid #E5E5E5;
+    border-radius: 2px;
+}
+.OP919 .smaller-pannel-inner-section {
+    padding: 24px 0 0 0;
+}
+.OP919 .pannel-text-section {
+
+}
+.OP919 .banner-question {
+    margin: 0;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: -0.3px;
+    color: #222222;
+}
+.OP919 .blue-signin-btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0692fc;
+    margin-left: 8px;
+}
+
+</style>
+
+
+<div class="smaller-pannel-section">
+  <div class="smaller-pannel-inner-section">
+    <div class="pannel-text-section">
+      <p class="banner-question">Do you have a Jetstar account?</p>
+      <a class="blue-signin-btn">Sign in here</a>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+dom.addCss(css);
+(function (window, document, $) {
+	var init = function init() {
+	    addBodyClass();
+	    addSignupBanner();
+            onShowModal();
+	},
+
+	addBodyClass = function addBodyClass() {
+	    $('body').addClass('OP919');
+	},
+
+	addSignupBanner = function addSignupBanner() {
+	    $('div.row.page-header > div.column').append(html);
+	    //$('html').insertAfter(div.row.page-header);
+	},
+
+	onShowModal = function onShowModal() {
+	    $('.blue-signin-btn').click(function(){
+		//e.stopPropagation();
+		alert('working');
+	    });
+	};
+
+	init();
+}(window, document, jQuery));
+</script>

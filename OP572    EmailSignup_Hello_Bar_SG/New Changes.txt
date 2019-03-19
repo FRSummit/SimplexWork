@@ -1,0 +1,18 @@
+.OP572 .blue-section-table {padding: 15px 0 8px 0;}
+.OP572 .blue-banner-link__content {position: absolute; margin-top: 3px;}
+.OP572 .blue-btn-section {margin-top: -5px;}
+
+
+650
+.OP572 .blue-section-table {padding: 12px 0 5px 0 !important;}
+.OP572 .blue-banner-link__icon {margin-left: 3px !important;}
+.OP572 .blue-btn-section {right: 14px !important;}
+.OP572 .blue-banner-link__content {margin-left: 36px !important;}
+.OP572 .blue-cross-icon {padding-top: 0;}
+
+
+950
+.OP572 .blue-section-table {padding: 16px 0 7px 0;}
+.OP572 .blue-banner-link__icon {margin-left: 19px;}
+.OP572 .blue-banner-link__content {margin-left: 64px; margin-top: -5px;}
+.OP572 .blue-btn-section {right: 30px; top: 15px;}

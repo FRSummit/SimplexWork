@@ -1,0 +1,390 @@
+<div class="row">
+<div class="columns gutter">
+<div class="leadtime-deals-banner-section">
+    <div class="leadtime-deals-banner-inner-section">
+        <div class="leadtime-deals-banner-img-section">
+            <img class="leadtime-deals-banner-pw-img" src="#$(ContentManager:pw-orange-icon.png)!"  alt="pw-image"/>
+        </div>
+        <div class="leadtime-deals-banner-text-inner-section">
+            <div class="leadtime-deals-banner-header-section">
+                <h2>Looking to fly soon?</h2>
+            </div>
+            <div class="leadtime-deals-banner-sub-header-section">
+                <h2 class="leadtime-deals-banner-sub-header-desktop-section">You can still get low fares. Set up Price Watch now.</h2>
+                <span class="leadtime-deals-banner-sub-header-tab-section">You can still get low fares.</span>
+            </div>
+        </div>
+
+<div class="mobile">
+  <div><span class="mobile-text-header">Looking to fly soon?</span></div>
+  <div><span class="mobile-text-sub-header">You can still get low fares.</span></div>
+</div>
+
+
+        <div class="leadtime-deals-banner-pw-section">
+            <h2 class="leadtime-deals-banner-pw-text-section">Start watching prices</h2>
+            <span><img class="leadtime-deals-banner-pw-down-img" src="#$(ContentManager:7BE7FF21-C0F5-4BD0-8989-B78DB27A4F7E.png)!" alt="down-arrow"/></span>
+        </div>
+    </div>
+
+    <div class="row extend-section">
+        <div class="columns">
+            <div class="leadtime-deals-banner-expand-message-section">
+                <div class="leadtime-deals-banner-expand-message-inner-section">
+<div class="leadtime-deals-banner-expand-message-inner-text-form-section">
+                    <div class="large-6 medium-12 small-12 columns expand-text">
+                        <h2>Each week we’ll keep you updated on how prices to Taipei are tracking. If prices drop, we’ll send you an email alert.</h2>
+                    </div>
+                    <div class="large-6 medium-12 small-12 columns expand-submit-form">
+                        <div class="expand-submit-form-inner-section column expand-add-email">
+                            <label class="medium-12 small-12 columns expand-submit-form-label">Email address</label>
+                            <div class="large-8 medium-9 small-12 columns expand-email-ip">
+                                <input type="email" class="expand-form-control expand-email" name="email" id="email" placeholder="Enter your email address">
+                                <span class="expand-green-trick"></span>
+                                <span class="expand-error-icon"></span>
+                                <span class="expand-errors">Please enter correct email address </span>
+                            </div>
+                            <div class="large-4 medium-3 small-12 columns expand-watch-btn">
+                                <button type="button" class="btn expand-submit-btn" id="btnValidate">Confirm</button>
+                            </div> 
+                        </div>
+                    </div>
+</div>
+                    <div class="expand-legal-copy large-12 medium-12">
+
+    <div class="large-10 medium-12 columns expand-legal-header expand-legal-text-Padding">
+        Receive weekly updates on how prices are tracking, the latest deals and our famous sales. Your information will be used in accordance with our <a class="privacy-terms" href="http://www.jetstar.com/sg/en/privacy-policy">privacy policy</a>. You can unsubscribe at any time.
+    </div>
+    <div class="large-2 medium-12 columns expand-full-terms" style="line-height: normal;">
+        <span class="expand-toggle-legal-show"><a class="expand-toggle-terms">Full terms  <img src="https://booking.jetstar.com/Images/Icons/Icon_chevron_closed_12px_s1_hover.svg"></a></span>
+        <span class="expand-toggle-legal-hide" style="display: hide"><a class="expand-toggle-terms">Hide terms  <img src="https://booking.jetstar.com/Images/Icons/Icon_chevron_closed_12px_s1_hover.svg"></a></span>
+    </div>                
+
+    <div class="expand-hidden-legal expand-display-hide expand-legaltext-Padding expand-privacy-policy">
+        <p class="expand-paragraph">
+            You are watching Starter fares, inclusive of taxes, fees and surcharges. Checked baggage not included but may be added for an additional fee.
+        </p>
+        <p class="expand-paragraph">
+            For booking in Singapore Dollars no Booking and Service Fee applies for bookings made through SingPost or with a Jetstar Voucher. A Booking and Service fee of $5.00-$10.00 SGD per passenger per flight applies for all other bookings. For bookings in other currencies different fees and payment options apply.  Unless otherwise stated fares are non-refundable, limited changes are permitted, charges apply.
+        </p>
+        <p class="expand-paragraph">
+            Jetstar collects your personal information to enable us to process and administer your Price Watch alerts. We may also use it to improve customer service including by way of market research and to provide you with information about travel related products or services from Jetstar and other providers in accordance with our <a href="http://www.jetstar.com/sg/en/privacy-policy">Privacy Policy</a>. If you wish to find out more about our Privacy Policy and how to access your personal information, <a href="http://www.jetstar.com/sg/en/privacy-policy">click here</a>. By signing up to Price Watch alerts, you acknowledge that your personal information relating to your Price Watch alerts may be accessible to Jetstar’s related bodies corporate and other organisations to whom the airline grants system access to provide these services. You consent to this information being transferred to or from Australia for these purposes and you consent to Jetstar and its partners exchanging, using and disclosing your personal information. 
+        </p>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
+<div>
+<div>
+
+
+<style>
+
+.OP602 .leadtime-deals-banner-section {
+    box-shadow: inset 0 -1px 0 0 #eeeeee;
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 34px;
+}
+
+.OP602 .leadtime-deals-banner-inner-section {
+    padding: 5px;
+    padding-left: 28px;
+    padding-right: 20px;
+}
+
+.OP602 .leadtime-deals-banner-img-section {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.OP602 .leadtime-deals-banner-pw-img {
+    width: 40px;
+}
+
+.OP602 .leadtime-deals-banner-text-inner-section {
+    display: inline-block;
+}
+
+.OP602 .leadtime-deals-banner-header-section {
+    display: inline-block;
+    padding-left: 8px;
+}
+
+.OP602 .leadtime-deals-banner-header-section h2 {
+    font-size: 20px;
+    color: #ff5115;
+    margin: 0;
+    letter-spacing: normal;
+}
+
+.OP602 .leadtime-deals-banner-sub-header-section {
+    display: inline-block;
+    padding-left: 22px;
+}
+
+.OP602 .leadtime-deals-banner-sub-header-section h2 {
+    font-size: 18px;
+    color: #444444;
+    margin: 0;
+    letter-spacing: normal;
+}
+
+.OP602 .leadtime-deals-banner-sub-header-tab-section {
+    display: none;
+}
+
+.OP602 .leadtime-deals-banner-pw-section {
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+}
+
+.OP602 .leadtime-deals-banner-pw-section span {
+    vertical-align: text-top;
+}
+
+.OP602 .leadtime-deals-banner-pw-text-section {
+    display: inline-block;
+    font-size: 18px;
+    color: #0692fc;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: normal;
+}
+
+.OP602 .leadtime-deals-banner-pw-down-img {
+    display: inline-block;
+    width: 20px;
+}
+
+.OP602 .mobile {
+    display: none;
+}
+
+/*----------expand style-----------*/
+
+.OP602 .leadtime-deals-banner-expand-message-section {
+    overflow: hidden;
+}
+
+.OP602 .extend-section {
+    border-top: 1px solid #DFDFDF;
+}
+
+.OP602 .leadtime-deals-banner-expand-message-inner-section {
+    padding: 18px 0 0 22px;
+    overflow: hidden;
+}
+
+.OP602 .leadtime-deals-banner-expand-message-inner-text-form-section {
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.OP602 .expand-text {
+    display: inline-block;
+    width: 46%;
+}
+
+.OP602 .expand-text h2 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #444444;
+    margin: 0;
+}
+
+.OP602 .expand-submit-form {
+    /*margin-left: -8px;*/
+    width: 48%;
+    display: inline-block;
+    float: right;
+}
+
+.OP602 .expand-email-ip {
+    width: 66%;
+    float: left;
+}
+
+.OP602 .expand-submit-form-label {
+    font-size: 14px;
+    line-height: 1.71;
+    color: #444444;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.OP602 .expand-form-control.expand-email {
+    /*width: 369px;*/
+    width: 96.5%;
+    height: 58.7px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #767676;
+    margin-bottom: 0;
+    padding-left: 14px;
+    padding-top: 6px;
+}
+
+.OP602 .expand-errors {
+    font-size: 12px;
+    color: #fe1214;
+    font-weight: normal;
+    display: none;
+    /*margin-top: 9px;*/
+}
+
+.OP602 .expand-watch-btn {
+    width: 30%;
+    float: right;
+}
+
+.OP602 .expand-submit-btn {
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    /*width: 162px;*/
+    width: 93%;
+    background-color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #DFDFDF;
+    color: #0692fc;
+    padding: 16px 38px 14px 38px;
+    margin: 0;
+}
+
+.OP602 .expand-legal-copy {
+    font-size: 10.8px;
+    text-align: left;
+    color: #696a6c;
+    margin-bottom: 10px;
+}
+
+.OP602 a.privacy-terms {
+    color: #0692fc;
+}
+
+.OP602 .expand-legal-header.expand-legal-text-Padding {
+    display: inline-block;
+}
+
+.OP602 .expand-full-terms {
+    display: inline-block;
+    margin-left: 9px;
+}
+
+.OP602 a.expand-toggle-terms img {
+    vertical-align: bottom;
+}
+
+.OP602 .expand-toggle-terms {
+    letter-spacing: normal;
+    color: #0692fc;
+}
+
+.OP602 .expand-toggle-legal-hide {
+    display: none;
+}
+
+.OP602 .expand-hidden-legal {
+    display: none;
+    border-top: 1px solid #DFDFDF;
+}
+
+.OP602 .expand-paragraph {
+    font-size: 11px;
+}
+
+/*----------expand style-----------*/
+
+  /*@media screen and (max-width:950px)*/
+
+@media only screen and (min-width : 768px) and (max-width : 950px) {
+  .OP602 .leadtime-deals-banner-text-inner-section {display: inline-block; margin-top: -32px; /*margin-left: 40px;*/}
+  .OP602 .leadtime-deals-banner-header-section h2 {font-size: 18px;}
+  .OP602 .leadtime-deals-banner-sub-header-section h2 {font-size: 14px;}
+  .OP602 .leadtime-deals-banner-pw-text-section {font-size: 14px;}
+  .OP602 .leadtime-deals-banner-sub-header-desktop-section {display: none;}
+  .OP602 .leadtime-deals-banner-sub-header-tab-section {display: block;}
+}
+
+@media only screen and (min-width : 951px) and (max-width : 1100px) {
+  .OP602 .leadtime-deals-banner-sub-header-desktop-section {display: none;}
+  .OP602 .leadtime-deals-banner-sub-header-tab-section {display: block;}
+}
+
+@media screen and (max-width : 767px) {
+  .OP602 .leadtime-deals-banner-section {margin-top: -4px; margin-bottom: 18px;}
+  .OP602 .leadtime-deals-banner-inner-section {padding-top: 10px; padding-left: 12px; padding-bottom: 3px; padding-right: 11px;}
+  .OP602 .leadtime-deals-banner-img-section {vertical-align: top;}
+  .OP602 .leadtime-deals-banner-pw-img {width: 32px;}
+  //.OP602 .leadtime-deals-banner-header-section h2 {font-size: 16px; padding-left: 0;}
+  //.OP602 .leadtime-deals-banner-sub-header-section h2 {font-size: 12px; padding-left: 0;}
+  //.OP602 .leadtime-deals-banner-sub-header-desktop-section {display: none;}
+  //.OP602 .leadtime-deals-banner-sub-header-tab-section {font-size: 12px; padding-left: 0; display: block;}
+
+  .OP602 .leadtime-deals-banner-text-inner-section {display: none;}
+  .OP602 .leadtime-deals-banner-pw-text-section {display: none;}
+  .OP602 .mobile {display: inline-block; line-height: 1.1; padding-left: 3px;}
+  .OP602 .mobile-text-header {font-size: 16px; font-weight: bold; color: #ff5115;}
+  .OP602 .mobile-text-sub-header {font-size: 12px; color: #444444;}
+  .OP602 .leadtime-deals-banner-pw-section {padding-top: 1px;}
+}
+
+</style>
+
+
+<script type="text/javascript">
+dom.addCss(css);
+window.jetstarOptimisation = window.jetstarOptimisation || {};
+window.jetstarOptimisation.EmailSignup_LeadTime_Deals_SG = (function(window,document,$){
+	var init = function init(){
+	    addBodyClass();
+            addEmailSignupLeadTimeDeals();
+            //addEmailSignupLeadTimeDeals();
+            openExpandToggleLegalSection();
+            closeExpandToggleLegalSection()
+	},
+
+	addBodyClass = function addBodyClass(){
+	    jQuery('body').addClass('OP602');
+	},
+
+        addEmailSignupLeadTimeDeals = function addEmailSignupLeadTimeDeals(){
+           jQuery('.js-deals-hotfares').append(html);
+           //jQuery('.js-nw-flights-data').append(html);
+	},
+
+	openExpandToggleLegalSection = function openExpandToggleLegalSection(){
+	    jQuery('.expand-hidden-legal').css('display', 'block');
+            jQuery('.expand-toggle-legal-hide').css('display', 'block');
+            jQuery('.expand-legal-copy').css('display', 'none');
+	},
+
+	closeExpandToggleLegalSection = function closeExpandToggleLegalSection(){
+	    jQuery('.expand-hidden-legal').css('display', 'none');
+            jQuery('.expand-toggle-legal-hide').css('display', 'none');
+            jQuery('.expand-legal-copy').css('display', 'block');
+	};
+
+	return {
+		init: init
+	};
+}(window,document,jQuery));
+window.jetstarOptimisation.EmailSignup_LeadTime_Deals_SG.init();
+</script>

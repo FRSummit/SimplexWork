@@ -1,0 +1,265 @@
+<style>
+    .OP734 .item-desc {
+        font-size: 14px;
+        color: #707070;
+        text-align: left;
+        margin: 0;
+        line-height: 1.2;
+    }
+    .OP734 .item-desc-starter {
+        width: 92%;
+    }
+    .OP734 .addi-para {
+        color: #000000;
+        margin: 0;
+        line-height: 1.2;
+    }
+    .OP734 .other-inclusion-icon {
+        background-image: url('#$(ContentManager:other-inclusion-icon.png)!');
+        width: 24px;
+        height: 26px;
+        display: block;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+    .OP734 .right-tick-icon {
+        background-image: url('#$(ContentManager:other-inclusion-right-icon.png)!');
+        width: 14px;
+        height: 12px;
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+    .OP734 .starter-text-section {
+        display: inline-block;
+        width: 70%;
+    }
+    .OP734 .icon-text-section{
+        margin-bottom: 10px;
+    }
+    .OP734 .max-text-secton{
+        margin-top: 13%;
+    }
+  
+  
+</style>
+
+<div class="bundle__fare-row bundle__fare-meals">
+    <div class="bundle__fare-item">
+        <div class="bundle__fare-item-icon">
+            <span class="other-inclusion-icon"></span>
+        </div>
+        <div class="bundle__fare-item-desc">
+            <div class="bundle__item-text">Other inclusions</div>
+        </div>
+    </div>
+
+    <div class="bundle__fare-content js-bundle-content  js-bundle__option--individual-S-MEL-ADL ">
+        <div class="bundle__fare-item__added">
+            <div class="bundle__fare-item-desc">
+                <div class="bundle__item-text">Food and drink</div>
+            </div>
+        </div>
+        <p class="item-desc item-desc-starter">No additional inclusions, but you can add bugs and seat later</p>
+    </div>
+    <div class="bundle__fare-space"></div>
+    <div class="bundle__fare-content js-bundle-content  js-bundle__option--individual-Z-MEL-ADL ">
+        <div class="bundle__fare-item__added">
+            <div class="bundle__fare-item-desc">
+                <div class="bundle__item-text">Food and drink</div>
+            </div>
+        </div>
+        <div class="icon-text-section">
+            <div class="right-tick-icon">
+                <span class="right-tick-icon"></span>
+            </div>
+            <div class="starter-text-section">
+                <p class="item-desc addi-para">No change fee*</p>
+                <p class="item-desc">Fare Difference may apply</p>
+            </div>
+        </div>
+        <div class="icon-text-section">
+            <div class="right-tick-icon">
+                <span class="right-tick-icon"></span>
+            </div>
+            <div class="starter-text-section">
+                <p class="item-desc addi-para">Flexible fare*</p>
+                <p class="item-desc">Same day changes</p>
+            </div>
+        </div>
+    </div>
+    <div class="bundle__fare-space"></div>
+    <div class="bundle__fare-content js-bundle-content  js-bundle__option--individual-P-MEL-ADL ">
+        <div class="bundle__fare-item__added">
+            <div class="bundle__fare-item-desc">
+                <div class="bundle__item-text">Food and drink</div>
+            </div>
+        </div>
+          <!---------------------------------------------->
+        <div class="icon-text-section">
+            <div class="right-tick-icon">
+                <span class="right-tick-icon"></span>
+            </div>
+            <div class="starter-text-section">
+                <p class="item-desc addi-para">No change fee*</p>
+                <p class="item-desc">Fare Difference may apply</p>
+            </div>
+        </div>
+        <div class="icon-text-section">
+            <div class="right-tick-icon">
+                <span class="right-tick-icon"></span>
+            </div>
+            <div class="starter-text-section">
+                <p class="item-desc addi-para">Flight cancellation*</p>
+                <p class="item-desc">Credit voucher</p>
+            </div>
+        </div>
+    </div>
+          <!---------------------------------------------->
+    <div class="bundle__fare-space"></div>
+    <div class="bundle__fare-content js-bundle-content  js-bundle__option--individual-Y-MEL-ADL ">
+        <div class="bundle__fare-item__added">
+            <div class="bundle__fare-item-desc">
+                <div class="bundle__item-text">Food and drink</div>
+            </div>
+        </div>
+          <!----------------------------------------------------->
+        <div class="icon-text-section">
+            <div class="right-tick-icon">
+                <span class="right-tick-icon"></span>
+            </div>
+            <div class="starter-text-section">
+                <p class="item-desc addi-para">No change fee*</p>
+                <p class="item-desc">Fare Difference may apply</p>
+            </div>
+        </div>
+        <div class="icon-text-section">
+            <div class="right-tick-icon">
+                <span class="right-tick-icon"></span>
+            </div>
+            <div class="starter-text-section">
+                <p class="item-desc addi-para">Flexible fare*</p>
+            </div>
+        </div>
+        <div class="icon-text-section max-text-secton">
+            <div class="right-tick-icon">
+                <span class="right-tick-icon"></span>
+            </div>
+            <div class="starter-text-section">
+                <p class="item-desc addi-para">Flight cancellation*</p>
+                <p class="item-desc">Credit voucher</p>
+            </div>
+        </div>
+          <!----------------------------------------------------->
+    </div>
+</div>
+
+<script type="text/javascript">
+dom.addCss(css);
+(function (window, document, $) {
+    var init = function init() {
+        addBodyClass();
+        reArrange();
+        addOtherInclusions();
+        //domIntCheck();
+    },
+            
+    addBodyClass = function addBodyClass() {
+        $('body').addClass('OP734');
+    },
+            
+    addOtherInclusions = function addOtherInclusions() {
+      
+        if (site.scope.targeting.isDomesticFlight()) {
+            $(html).insertAfter('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-meals');
+            $(html).insertAfter('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-meals');
+        } else  {
+            $(html).insertAfter('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-frequentflyer');
+            $(html).insertAfter('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-frequentflyer');
+        }
+
+    },
+        
+    reArrange = function reArrange() {
+        var carryOnBaggage = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-carryonbaggage');
+
+        var checkedBaggage = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-checkedbaggage');
+
+        var seatSelection = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-seatbundle');
+
+        var loyaltyRewards = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-frequentflyer');
+
+        var foodAndDrink = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-meals');
+
+        var flexibleFare = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-flexiblefare');
+
+        var noChangeFee = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-nochangefee');
+
+        var flightCancellation = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-refundable');
+
+        var loungeAccess = $('.js-bundle-container:nth-child(1) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-loungeaccess');
+      
+      /*--------*/
+      
+        var carryOnBaggageR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-carryonbaggage');
+
+        var checkedBaggageR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-checkedbaggage');
+
+        var seatSelectionR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-seatbundle');
+
+        var loyaltyRewardsR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-frequentflyer');
+
+        var foodAndDrinkR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-meals');
+
+        var flexibleFareR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-flexiblefare');
+
+        var noChangeFeeR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-nochangefee');
+
+        var flightCancellationR = $('.js-bundle-container:nth-child(2) > .row .columns.large-12 .bundle-container.js-scroll-container .bundle.bundle--modifier.js-scroll-content.js-bundle .bundle__fare-row.bundle__fare-refundable');
+
+        if (site.scope.targeting.isDomesticFlight()) {
+            $(loyaltyRewards).insertAfter(seatSelection);
+            $(checkedBaggage).insertAfter(loyaltyRewards);
+            $(carryOnBaggage).insertAfter(checkedBaggage);
+            $(foodAndDrink).insertAfter(carryOnBaggage);
+            $(flexibleFare).css('display', 'none');
+            $(noChangeFee).css('display', 'none');
+            $(flightCancellation).css('display', 'none');
+            $(loungeAccess).css('display', 'none');
+          
+            if(!site.scope.targeting.isOneWayflight()){
+                $(loyaltyRewardsR).insertAfter(seatSelectionR);
+                $(checkedBaggageR).insertAfter(loyaltyRewardsR);
+                $(carryOnBaggageR).insertAfter(checkedBaggageR);
+                $(foodAndDrinkR).insertAfter(carryOnBaggageR);
+                $(flexibleFareR).css('display', 'none');
+                $(noChangeFeeR).css('display', 'none');
+                $(flightCancellationR).css('display', 'none');
+            }
+        
+        } else  {
+            $(carryOnBaggage).insertAfter(checkedBaggage);
+            $(seatSelection).insertAfter(carryOnBaggage);
+            $(foodAndDrink).insertAfter(seatSelection);
+            $(loyaltyRewards).insertAfter(foodAndDrink);
+            $(flexibleFare).css('display', 'none');
+            $(noChangeFee).css('display', 'none');
+            $(flightCancellation).css('display', 'none');
+            $(loungeAccess).css('display', 'none');
+          
+            if(!site.scope.targeting.isOneWayflight()){
+                $(carryOnBaggageR).insertAfter(checkedBaggageR);
+                $(seatSelectionR).insertAfter(carryOnBaggageR);
+                $(foodAndDrinkR).insertAfter(seatSelectionR);
+                $(loyaltyRewardsR).insertAfter(foodAndDrinkR);
+                $(flexibleFareR).css('display', 'none');
+                $(noChangeFeeR).css('display', 'none');
+                $(flightCancellationR).css('display', 'none');
+            }
+        }
+      
+    };
+    init();
+}(window, document, jQuery));
+</script>

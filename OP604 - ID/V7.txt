@@ -1,0 +1,140 @@
+<style>
+.OP604 .toggleBlock {
+    font-size: 12px;
+    padding: 10px 25px 7px 25px;
+    background: #ffffff;
+    border-top: 1px solid #cccccc;
+    text-align: right;
+    color: #000000;
+}
+.OP604 .sold-out .toggleBlock {
+    display: none;
+}
+.OP604 .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    vertical-align: -5px;
+    margin: 0 20px;
+}
+.OP604 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.OP604 .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.OP604 input {
+    display: none;
+}
+.OP604 input.active + .slider {
+    background-color: #02487d;
+    <!--background-color: #cccccc;-->
+}
+.OP604 input.active + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+.OP604 .slider.round {
+    border-radius: 34px;
+}
+.OP604 .slider.round:before {
+    border-radius: 50%;
+}
+.OP604 span.successMessage, .OP604 .toggleContent, .OP604 .toggleState {
+    font-family: "Jetstar Happy",sans-serif;
+    font-size: 14px;
+}
+.OP604 span.successMessage img {
+    width: 25px;
+    margin-top: -5px;
+}
+
+.OP604 .flight-schedule__selected-currency.bookingcurrencycode{
+ text-align: right;
+}
+</style>
+
+<div class='toggleBlock'>
+	<span class='toggleContent'>Turn on Price Watch to get low fare alerts for this date</span>
+    <label class='switch'><input type='input' class='toggleBtn'/><span class='slider round'></span></label>
+	<span class='toggleState'><strong></strong></span>
+</div>
+
+<script type="text/javascript">
+    dom.addCss(css);
+    window.jetstarOptimisation = window.jetstarOptimisation || {};
+    window.jetstarOptimisation.emailSignupWatchThisSG = (function(window, document) {
+
+        var init = function () {                  
+            addBodyClass();
+            variantSeven();
+        },
+             
+        addBodyClass = function addBodyClass() {  
+            jQuery('body').addClass('OP604');
+        },
+        
+        priceWatchSuccess = function priceWatchSuccess(e) {          
+            if(typeof(window.Jumpseat) == 'object' || window.Jumpseat !== undefined){
+                window.Jumpseat.run('addListener', {  
+                    eventName: 'subscriptionCreated',  
+                    listener: onSubscriptionCreated  
+                })
+                function onSubscriptionCreated() { 
+                    var successMesssage = '<span class="successMessage"><img src="#$(ContentManager:green-tick-line.png)!"> <b>Success!</b> You are now watching prices for this date, keep an eye on your inbox for any updates.</span>';
+                    $('.toggleBlock').show();
+                    $('.flight-card-wrapper').removeClass('successMessageShow');
+                    $('.flight-card-wrapper .toggleBtn').removeClass('active');
+                    $('.flight-card-wrapper .toggleState strong').text('Off');
+                    $('input + .slider').css({'background':'#eee', 'opacity':'1'});
+                    $('.flight-card-wrapper .toggleContent').text('Turn on Price Watch to get low fare alerts for this date');
+                    
+                    $(e).parents('.flight-card-wrapper').addClass('successMessageShow');
+                    
+                    $(e).parents('.flight-card-wrapper').find('.toggleBtn').addClass('active');
+                    $(e).parents('.flight-card-wrapper').find('.toggleState strong').text('On');
+                    $(e).parents('.flight-card-wrapper').find('input + .slider').css({'background':'#aaa', 'opacity':'0.8'});
+                    $(e).parents('.flight-card-wrapper').find('.toggleContent').html(successMesssage);
+                }
+            }
+        },
+            
+        variantSeven = function variantSeven() {
+            $(document).ready(function() {
+                $('.js-watch-price-btn').hide();              
+                $('.flight-card').after(html);              
+                $('.toggleState strong').text('Off');
+                $('.toggleBtn').click(function() {
+                    if(!jQuery(this).hasClass('active')) {
+                        priceWatchSuccess(this);
+                        $('.js-watch-price-btn').click();
+                    }
+                });          
+            });
+        };
+ 
+        return {      
+            init: init
+        };
+
+    }(window, document));
+    window.jetstarOptimisation.emailSignupWatchThisSG.init();
+</script>

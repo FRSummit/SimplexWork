@@ -1,0 +1,390 @@
+<style type="text/css">
+.OP734 .button-toggle,
+.OP734 .button-toggle.expand,
+.OP734 .button-toggle.active {
+    width: 25px !important;
+    height: 25px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-block;
+    vertical-align: top;
+    color: transparent;
+    border: 2px solid #dedede;
+}
+.OP734 .button-toggle:focus,
+.OP734 .button-toggle:hover,
+.OP734 .button-toggle:active,
+.OP734 .button-toggle.is-fill {
+    color: transparent;
+    background-color: #ffffff;
+}
+.OP734 .button-toggle.active:focus,
+.OP734 .button-toggle.active:hover,
+.OP734 .button-toggle.active:active,
+.OP734 .button-toggle.active.is-fill {
+    background-color: transparent;
+    color: transparent;
+}
+.OP734 .button-toggle.active {
+    border: 2px solid #00c249;
+}
+.OP734 .button-toggle span {
+    width: 0;
+    height: 0;
+    margin: 0;
+    display: block;
+}
+.OP734 .button-toggle.active .button-toggle__label--off {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 50px;
+    margin: 3px;
+    background-color: #00c249;
+}
+.OP734 .pricepoint-wrapper
+{
+    display: block;
+    text-align: right;
+}
+.OP734 .pricepoint-wrapper .pricepoint
+{
+    justify-content: flex-end;
+}
+.OP734 .OP734-added {
+    display: none;
+    margin-bottom: 1.5rem;
+}
+.OP734 .OP734-added .button {
+    padding: 0.5rem 1.5rem;
+    margin: 0;
+    white-space: nowrap;
+}
+.OP734 .OP734-added .box {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.125rem 1.75rem;
+    margin: 0 0 2rem;
+}
+.OP734 .OP734-added .box > * + * {
+    margin-left: 1.75rem;
+}
+.OP734 .OP734-added .selection.box {
+    border: 2px solid #00c249;
+    padding: calc(1.125rem - 2px) calc(1.75rem - 2px);
+    position: relative;
+}
+.OP734 .OP734-added .selection.box:after {
+    background-image: url('/Images/Icons/round-tick--s2.svg');
+    content: "";
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    right: -.5rem;
+    top: -.5rem;
+    opacity: 0;
+}
+.OP734 .OP734-added .selection.box .section-heading,
+.OP734 .OP734-added .selection.box .bundle-name {
+    flex-grow: 1;
+    flex-basis: 65%;
+}
+.OP734 .OP734-added .selection.box .bundle-name {
+    flex-basis: 35%;
+}
+.OP734 .OP734-added .prompt.box .h5 {
+    flex-grow: 1;
+}
+.OP734 .js-bundle-container[data-op734-bundleselected] .selection.box {
+    animation: shake-animate-frames .3s 1;
+}
+.OP734 .js-bundle-container[data-op734-bundleselected] .selection.box:after {
+    animation: green-tick-animate-frames .1s 1;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+}
+.OP734 .js-bundle-container[data-op734-bundleselected] .OP734-added {
+    display: block !important;
+}
+.OP734 .js-bundle-container[data-op734-bundleselected] .OP734-start,
+.OP734 .js-bundle-container.OP734-otherBundleSelected .prompt.box,
+.OP734 .js-bundle-container.OP734-otherBundleUnavailable .prompt.box {
+    display: none !important;
+}
+.OP734 .promo-banner-section{
+    position: relative;
+    width: 88%;
+    background: linear-gradient(to right, #FDA108 0%,#FE8405 100%);
+    padding: 20px 26px;
+    padding-right: 0;
+    height: 94px;
+    margin: 8px auto 48px auto;
+}
+.OP734 .promo-banner-img{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+DQogICAgPCEtLSBHZW5lcmF0b3I6IHNrZXRjaHRvb2wgNTIuNSAoNjc0NjkpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPg0KICAgIDx0aXRsZT5FNEUxOTEyOS0wQ0M2LTQ0RUMtQTQwQS0wMjBCMkE5NzNCRjc8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4NCiAgICA8ZyBpZD0iU3ltYm9scyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIGlkPSJJY29uL1Byb2R1Y3QvQnVuZGxlcy1FNzAyMS93aGl0ZSI+DQogICAgICAgICAgICA8ZyBpZD0iQnVuZGxlcy1JY29uL3doaXRlIj4NCiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iYm91bmRzIiBwb2ludHM9IjAgNjQgNjQgNjQgNjQgMCAwIDAiPjwvcG9seWdvbj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNTYuNjI2LDIwLjgzNTkgQzU1Ljk4MywxOS45Mzg5IDU0LjczNCwxOS43Mjc5IDUzLjgzNiwyMC4zNzM5IEw0NS45NzgsMjUuOTk5OSBMMTguMDIyLDI1Ljk5OTkgTDEwLjE2NCwyMC4zNzM5IEM5LjI2NiwxOS43Mjk5IDguMDE3LDE5LjkzNzkgNy4zNzQsMjAuODM1OSBDNi43MywyMS43MzM5IDYuOTM3LDIyLjk4MjkgNy44MzYsMjMuNjI1OSBMMTYsMjkuNDcwOSBMMTYsNTUuOTk5OSBMNDgsNTUuOTk5OSBMNDgsMjkuNDcwOSBMNTYuMTY0LDIzLjYyNTkgQzU3LjA2MiwyMi45ODI5IDU3LjI3LDIxLjczMzkgNTYuNjI2LDIwLjgzNTkiIGlkPSJGaWxsLTY5IiBmaWxsPSIjRkZGRkZGIj48L3BhdGg+DQogICAgICAgICAgICAgICAgPHBhdGggZD0iTTMyLDIzLjM3NSBDMzMuMTA0LDIzLjM3NSAzNCwyMi40NzkgMzQsMjEuMzc1IEwzNCw5LjM3NSBDMzQsOC4yNzEgMzMuMTA0LDcuMzc1IDMyLDcuMzc1IEMzMC44OTYsNy4zNzUgMzAsOC4yNzEgMzAsOS4zNzUgTDMwLDIxLjM3NSBDMzAsMjIuNDc5IDMwLjg5NiwyMy4zNzUgMzIsMjMuMzc1IiBpZD0iRmlsbC03MCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPg0KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMy4yMjg1LDIyLjE1ODcgQzIzLjU4ODUsMjIuODMyNyAyNC4yODA1LDIzLjIxNzcgMjQuOTk1NSwyMy4yMTc3IEMyNS4zMTI1LDIzLjIxNzcgMjUuNjM0NSwyMy4xNDA3IDI1LjkzNDUsMjIuOTgwNyBDMjYuOTA5NSwyMi40NjA3IDI3LjI3NzUsMjEuMjQ5NyAyNi43NTc1LDIwLjI3NDcgTDIzLjYzOTUsMTQuNDMyNyBDMjMuMTIwNSwxMy40NTk3IDIxLjkxMDUsMTMuMDkwNyAyMC45MzM1LDEzLjYxMDcgQzE5Ljk1ODUsMTQuMTMwNyAxOS41OTA1LDE1LjM0MjcgMjAuMTEwNSwxNi4zMTY3IEwyMy4yMjg1LDIyLjE1ODcgWiIgaWQ9IkZpbGwtNzEiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMzguMjg1MiwyMi45ODEgQzM4LjU4NTIsMjMuMTQxIDM4LjkwNzIsMjMuMjE3IDM5LjIyNDIsMjMuMjE3IEMzOS45MzkyLDIzLjIxNyA0MC42MzEyLDIyLjgzMyA0MC45OTEyLDIyLjE1OSBMNDQuMTA5MiwxNi4zMTcgQzQ0LjYyOTIsMTUuMzQyIDQ0LjI2MTIsMTQuMTMxIDQzLjI4NjIsMTMuNjExIEM0Mi4zMTAyLDEzLjA4OSA0MS4wOTkyLDEzLjQ2IDQwLjU4MDIsMTQuNDMzIEwzNy40NjIyLDIwLjI3NSBDMzYuOTQyMiwyMS4yNSAzNy4zMTAyLDIyLjQ2MSAzOC4yODUyLDIyLjk4MSIgaWQ9IkZpbGwtNzIiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4NCiAgICAgICAgICAgIDwvZz4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    width: 4%;vertical-align: top;
+    margin-top: 12px;
+    background-size: contain;
+    border-color: transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+.OP734 .promo-banner-text-area{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    width: 95%;
+    margin-left: 2px;
+    line-height: 1.4;
+}
+.OP734 .promo-banner-title-domestic, .OP734 .promo-banner-title-international{
+    font-family: "Jetstar Happy";
+}
+.OP734 .OP734--OPT-586-V4-added {
+    display: none;
+}
+</style>
+<div class="row OP734-added">
+    <div class="columns large-12">
+        <div class="selection box">
+            <div class="h4 bundle-name"><span class="selectedBundle"></span> Bundle</div>
+            <button type="button" class="button secondary-button-outline removeBtn">Remove bundle</button>
+        </div>
+        <div class="prompt box">
+            <div class="img"></div>
+            <div class="h5">Would you like to add a <span class="selectedBundle"></span> bundle to your <span class="return-or-departing">return</span> flight also?</div>
+            <button type="button" class="button button-outline addOtherBtn">Add <span class="selectedBundle"></span> bundle</button>
+        </div>
+    </div>
+</div>
+<div class="OP734--OPT-586-V4-added">
+    <label for="standard-footer-input" class="button button-toggle expand js-select-button qa-standard active" role="button">
+        <span class="button-toggle__label button-toggle__label--on"></span>
+        <span class="button-toggle__label button-toggle__label--off"></span>
+    </label>
+    <div class="addBundle">Standard inclusion</div>
+</div>
+
+
+<!----Banner------>
+
+
+<div class="row promo-banner-section">
+    <div class="promo-banner-innse-section">
+        <div class="promo-banner-img"></div>
+        <div class="promo-banner-text-area">
+            <div class="promo-banner-title-domestic">Popular extras for shorter trips include seat selection, checked baggage and loyalty rewards. Combine today and save with our bundles.</div>
+            <div class="promo-banner-title-international">Popular extras for longer trips include seat selection, meals and checked baggage. Combine today and save with our bundles.</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+dom.addCss(css);
+(function(window, document, $) {
+    var $journeys = $(".js-bundle-container"),
+        unselectedName = $(".bundle__header:not(.subfooter) .bundle__fare-content:nth-of-type(2) .bundle__heading").first().text(),
+        init = function() {
+            addBodyClass();
+            setTimeout(function(){
+                appendHtml();
+                if ($(".bundle__sub-header .bundle__fare-content:nth-of-type(2) .button-toggle").length < 1) OP734_V1();
+                bundleTargetClickEvent();
+                removeBtnClickEvent();
+                addOtherBtnClickEvent();
+            },100);
+        },
+        OP734_V1 = function OP734_V1(){
+            (function(window, document, $){
+                var init2 = function () {
+                    addRadioButtons();
+                    defaultBundle();
+                    bundleClick();
+                    bundleUnselect();
+                    removeButtonText();
+                                        domIntCheck();
+                                        textChange();
+                },
+                addRadioButtons = function addRadioButtons() {
+                    $('.bundle__sub-header, .bundle__sub-footer').each(function (index, element) {
+                        var $starterCell = $('.bundle__fare-content[data-product-class="S"]',this),
+                            cellColIndex = $starterCell.index()+1,
+                            $starterInput = $('input', $starterCell),
+                            starterId = $starterInput.attr('id'),
+                            $newStarterLabel = $('<label data-price="00.000000" tabindex="0" role="button" class="button button-toggle small expand text-center js-select-button js-'+starterId+' " />'),
+                            $newOnOffSpans = $('label.button-toggle:first span',this).clone(),
+                            $otherLabels = $('label[class*="js-bundle__option--individual"]:not([class*="js-bundle__option--individual-S"])',this),
+                            $allColCells = $(this).closest('.bundle-container').find('.bundle__fare-content:nth-child('+cellColIndex+'):not(.js-'+starterId+')');
+                        $newStarterLabel.insertBefore($starterInput);
+                        $starterInput
+                            .after('<div class="addBundle">Standard inclusion</div>')
+                            .prependTo($newStarterLabel)
+                            .closest('div').contents().filter(function() { return this.nodeType == 3 }).remove();
+                        $starterCell
+                            .addClass('js-bundle-content js-bundle-option js-aa-key-click-input js-'+starterId)
+                            .removeClass('text-left')
+                            .attr('role','radio')
+                            .attr('tabindex', '0');
+                        $newStarterLabel
+                            .attr('for', starterId)
+                            .attr('data-journey-key', $('[data-journey-key]:first',this).attr('data-journey-key') )
+                            .attr('data-flight-key', $starterInput.val() )
+                            .addClass( (index==0) ? 'qa-depart-standard' : 'qa-return-standard' );
+                        $newOnOffSpans.prependTo($newStarterLabel);
+                        $otherLabels.after('<div class="addBundle">Add bundle</div>');
+                        $allColCells.addClass('js-'+starterId);
+                    });
+                    $(".row.OP734-start .bundle__sub-header .button-toggle:not(.OP734-target), .row.OP734-start .bundle__sub-footer .button-toggle:not(.OP734-target)",this).addClass("OP734-target");
+                },
+                defaultBundle = function defaultBundle() {
+                    $('.bundle-container').each(function (index, element) {
+                        if (!$(element).find('.bundle__header [id^="individual"]').hasClass('active')) {
+                            $(element).find('.s-bundle__content').addClass('active');
+                            $(element).find('.s-bundle__header').addClass('active');
+                            $(element).find('[class*="js-bundle__option--individual-S"]').addClass('active');
+                            $(element).find('label[class*="standard"]').addClass('active');
+                        }
+                    })
+                },
+                bundleUnselect = function bundleUnselect() {
+                    $('.js-bundle-container:visible').each(function (index, element) {
+                        $(element).find('.button-toggle:not(label[class*="standard"])').on('click', function () {
+                            if ($(element).find('label[class*="js-bundle__option--individual"]').hasClass('active')) {
+                                $(element).find('[class*="js-bundle__option--individual-S"]').removeClass('active');
+                            } else {
+                                $(element).find('[class*="js-bundle__option--individual-S"]').addClass('active');
+                                $(element).find('.s-bundle__header').addClass('active');
+                                $(element).find('label[class*="standard"]').addClass('active');
+                            }
+                        })
+                    })
+                },
+                bundleClick = function bundleClick() {
+                    $('.js-bundle-container:visible').each(function (index, element) {
+                        $(element).find('label[class*="standard"]').on('click', function () {
+                            $(element).find('.button-toggle.active:not(label[class*="standard"]) input').first().trigger('click');
+                        })
+                    })
+                },
+                removeButtonText = function removeButtonText() {
+                    $('.button-toggle__label--on').html('');
+                    $('.button-toggle__label--off').html('');
+                };
+                init2();
+            }(window, document, jQuery));
+        },
+        addBodyClass = function addBodyClass() {
+            $("body").addClass("OP734");
+        },
+        textChange = function textChange() {
+            $('.bundle__fare-frequentflyer .bundle__item-sub-text').text('QFF points and status credits or Jetstar Flight rewards voucher');
+        },
+        domIntCheck = function domIntCheck() {
+            if (site.scope.targeting.isDomesticFlight()) {
+                $('.promo-banner-title-international').css('display', 'none');
+            } else  {
+                $('.promo-banner-title-domestic').css('display', 'none');
+            }
+        },
+        appendHtml = function appendHtml() {
+            $journeys.append( $(html).filter(".OP734-added") ).each(function(i){
+                $(this).children(":not(.OP734-added)").addClass("OP734-start");
+                $(".section-heading",this).clone().prependTo( $(".OP734-added .selection.box",this) ).find("h3").addClass("h4");
+                if (i==1) $(".OP734-added .return-or-departing",this).text("departing");
+                $(".row.OP734-start .bundle__sub-header .button-toggle, .row.OP734-start .bundle__sub-footer .button-toggle",this).addClass("OP734-target");
+            });
+            $(html).insertAfter('.row.page-header');
+        },
+        getJourneyBundleNames = function getJourneyBundleNames(journey, getSelected) {
+            var result = [],
+                $query;
+            if (getSelected) {
+                $query = $(".row.OP734-start .bundle__header:not(.subfooter) .bundle__fare-content.active .bundle__heading", journey);
+                if ($query.length == 0) {
+                    $query = $(".row.OP734-start .bundle__header:not(.subfooter) .bundle__fare-content:nth-of-type(2) .bundle__heading", journey);
+                }
+                result = $query.first().text();
+            } else {
+                result = [];
+                $query = $(".row.OP734-start .bundle__header:not(.subfooter) .bundle__heading", journey);
+                $query.each(function(){
+                    result.push($(this).text());
+                });
+            }
+            return result;
+        },
+        $getJourneyBundleTargets = function $getJourneyBundleTargets(journey, getSelected) {
+            var $result;
+            if (getSelected) {
+                $result = $(".row.OP734-start .bundle__sub-header .bundle__fare-content.active .OP734-target", journey);
+                if ($result.length == 0) {
+                    $result = $(".row.OP734-start .bundle__sub-header .bundle__fare-content:nth-of-type(2) .OP734-target", journey);
+                }
+            } else {
+                $result = $(".row.OP734-start .bundle__sub-header .OP734-target", journey);
+            }
+            return $result;
+        },
+        $getJourneyBundleTargetByName = function $getJourneyBundleTargetByName(journey, bundleName) {
+            var $header = $(".row.OP734-start .bundle__header:not(.subfooter) .bundle__fare-content .bundle__heading:contains("+bundleName+")",journey),
+                headerCellIdx = $header.closest(".bundle__fare-content").index(),
+                $subHeaderCell = $(".row.OP734-start .bundle__sub-header .bundle__fare-content:nth-child("+(headerCellIdx+1)+")",journey);
+            return $(".OP734-target",$subHeaderCell);
+        },
+        selectBundle = function selectBundle(journey, bundleName) {
+            var oldScrollTop = $(window).scrollTop();
+            $(journey).attr("data-op734-bundleselected", bundleName).removeClass("OP734-otherBundleUnavailable").find(".OP734-added .selectedBundle").text(bundleName);
+            var otherJourney = $journeys.not(journey)[0];
+            $(otherJourney).addClass("OP734-otherBundleSelected");
+            if (getJourneyBundleNames(otherJourney).indexOf(getJourneyBundleNames(journey,true)) < 0) {
+                $(journey).addClass("OP734-otherBundleUnavailable");
+            }
+            // scroll into view
+            $("html,body").scrollTop(oldScrollTop);
+            var $elementToView = $(".selection.box",journey);
+            var elementTop = $elementToView.offset().top;
+            var elementBottom = elementTop + $elementToView.outerHeight();
+            var viewportTop = $(window).scrollTop() + $(".site-header").height() + 30;
+            var viewportBottom = viewportTop + $(window).height() - 30;
+            if ( elementBottom > viewportBottom ) {
+                $("html,body").scrollTop( $elementToView.offset().top - $(window).height() + $elementToView.height() + 30 );
+            } else if ( elementTop < viewportTop ) {
+                $("html,body").scrollTop( $elementToView.offset().top - $(".site-header").height() - 30 );
+            }
+        },
+        unselectBundle = function unselectBundle(journey) {
+            $(journey).removeAttr("data-op734-bundleselected").removeClass("OP734-otherBundleUnavailable");
+            $journeys.not(journey).removeClass("OP734-otherBundleSelected");
+        },
+        bundleTargetClickEvent = function bundleTargetClickEvent() {
+            $(".OP734-target").on("click",function(){
+                var journey = $(this).closest($journeys)[0],
+                    bundleName = getJourneyBundleNames(journey,true);
+                if (bundleName && bundleName != unselectedName) selectBundle(journey, bundleName);
+                else unselectBundle(journey);
+            });
+        },
+        removeBtnClickEvent = function removeBtnClickEvent() {
+            $(".OP734-added .removeBtn").on("click",function(){
+                var journey = $(this).closest($journeys)[0];
+                $getJourneyBundleTargets(journey).first()[0].click();
+            });
+        },
+        addOtherBtnClickEvent = function addOtherBtnClickEvent() {
+            $(".OP734-added .addOtherBtn").on("click",function(){
+                var journey = $(this).closest($journeys)[0];
+                var otherJourney = $journeys.not(journey)[0];
+                $getJourneyBundleTargetByName(otherJourney, $(this).find(".selectedBundle").text() )[0].click();
+            });
+        };
+    init();
+}(window, document, jQuery));
+</script>

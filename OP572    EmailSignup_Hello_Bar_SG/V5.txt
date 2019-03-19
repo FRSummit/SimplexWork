@@ -1,0 +1,222 @@
+<div class="blue-banner-section">
+    <div class="gutter">
+      <div class="blue-section-table">
+        <div class="blue-banner-section-content-wrapper BlueBanner">
+            <div class="blue-banner-link__icon blue-star-icon">
+                <img src="#$(ContentManager:blue-star-icon-blue.png)!" alt="blue-star-icon">
+            </div>
+            <div class="blue-banner-link__content">
+            	<div class="blue-banner-link__txt">
+		    <h2 class="blue-banner-title">Sign up to Jetmail</h2>
+                    <p class="blue-banner-subtitle">Get the latest deals and special offers delivered straight to your inbox</p>
+                    <p class="blue-banner-subtitle-mobile">Get the latest deals and special offers</p>
+                </div>
+          </div>
+          <div class="blue-btn-section">
+            <button type="button" class="blue-signup-btn-secton">
+                <span class="signup-btn">Sign up</span>
+            </button>
+          	<span class="blue-cross-icon"><img src="#$(ContentManager:dark-cross.png)!" alt="Close"/></span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<style type="text/css">
+  
+  .OP572 span.mainmenu__global-login{
+    display: none;
+  }
+  
+  .OP572 .blue-section-table {
+    display: block;
+    padding: 15px 0 8px 0;
+  }
+  
+  .OP572 .blue-banner-link__icon .blue-star-icon {
+    display: inline-block !important;
+    margin-top: 7px;
+  }
+  
+  .OP572 .blue-banner-link__icon {
+    display: inline-block;
+    margin-left: 30px;
+  }
+  
+  .OP572 .blue-banner-link__content {
+    display: inline-block;
+    margin-left: 16px;
+    position: absolute;
+    margin-top: 3px;
+  }
+  
+  
+  .OP572 .blue-banner-section {
+    background: #ffffff;
+    box-shadow: inset 0 -1px 0 0 #eeeeee;
+  }
+  
+  .OP572 .blue-banner-link__txt{
+    display: inline-flex;
+    vertical-align: super;
+  }
+  
+  .OP572 .blue-signup-btn-secton {
+    height: 40px;
+    width: 116px;
+    display: inline-block;
+    border-radius: 32px;
+    border: solid 2px #0692fc;
+    background-color: transparent;
+    vertical-align: bottom;
+    margin-right: 24px;
+    color: #0692fc;
+    outline: none;
+  }
+
+  .OP572 .blue-signup-btn-secton:hover, .OP572 .blue-signup-btn-secton:focus{
+    background-color: #0692fc;
+    color: #ffffff;
+  }
+  
+  .OP572 .blue-btn-section{
+    display: inline-block;
+    float: right;
+    margin-right: 8px;
+    margin-top: -5px;
+  }
+  
+  .OP572 .blue-cross-icon{
+    display: inline-block;
+    color: #707070;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    padding-top: 7px;
+  }
+
+  .OP572 .blue-cross-icon:hover, .OP572 .blue-cross-icon:focus{
+     opacity: 0.5;  outline: none;
+  }
+  
+  .OP572 h2.blue-banner-title{
+    font-size: 20px;
+    font-family: JetstarHappy;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #0692fc;
+    margin-bottom: 0;
+    margin-right: 14px;
+  }
+  
+  .OP572 p.blue-banner-subtitle{
+    font-family: JetstarHappy;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #444444;
+    margin-bottom: 0;
+    margin-top: 4px;
+  }
+  
+  .OP572 .signup-btn{
+    /*
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.71;
+    text-align: center;
+*/
+  width: 51px;
+  height: 24px;
+  /*font-family: "Helvetica Neue",Roboto,Arial,sans-serif;*/ 
+  font-family: "HelveticaNeueW01",Arial,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: center;
+    //color: #0692fc;
+  }
+  
+  .OP572 .blue-banner-subtitle-mobile { display: none; }
+  .OP572 .active-promos {display: none;}
+  
+  @media screen and (max-width: 650px) {
+    .OP572 .blue-section-table {padding: 12px 0 5px 0 !important;}
+    .OP572 .blue-banner-link__icon {margin-left: 2px !important;;}
+    .OP572 .blue-banner-link__icon.blue-star-icon img {width: 19px;}
+    .OP572 .blue-banner-link__content {margin-left: 36px !important;}
+  	.OP572 h2.blue-banner-title {font-size: 16px; font-weight: 400; margin-right: 0;}
+    .OP572 .blue-banner-subtitle{display: none;}
+    .OP572 .blue-banner-subtitle-mobile { display: block; font-size: 12px; color: #444444; margin-bottom: 0; line-height: 1.43;}
+    .OP572 .blue-banner-link__txt {display: block;}
+    .OP572 .blue-btn-section {margin-right: 2px; right: 12px !important;}
+    .OP572 .blue-signup-btn-secton {display: none;}
+    .OP572 .blue-cross-icon {padding-top: 5px;}
+  }
+  
+  @media screen and (max-width: 730px) {
+    .OP572 .blue-signup-btn-secton {display: none;}
+  }
+  
+  @media screen and (max-width:950px) {
+    .OP572 .blue-section-table {padding: 16px 0 7px 0;}
+    .OP572 .blue-banner-section-content-wrapper {display: inline-flex;}
+    .OP572 .blue-banner-link__icon {margin-left: 19px;}
+    .OP572 .blue-banner-link__content {margin-left: 64px; margin-top: -5px;}
+  	.OP572 h2.blue-banner-title {font-size: 16px; margin-right: 0;}
+    .OP572 .blue-banner-link__txt {display: block;}
+    .OP572 .blue-btn-section {margin-right: 2px; position: absolute; right: 30px; /*top: 15px;*/ margin-top: -7px;}
+  }
+
+  .OP572 .cursor-pointer {cursor: pointer;}
+
+</style>
+
+<script type="text/javascript">
+dom.addCss(css);
+window.jetstarOptimisation = window.jetstarOptimisation || {};
+window.jetstarOptimisation.EmailSignup_Hello_Bar_SG = (function(window,document,$){
+	var init = function init(){
+	    addBodyClass();
+            addSignupBanner();
+            signupClickEventHandler();
+            closeHelloBarEventHandler();
+            resizeScreen();
+	},
+
+	addBodyClass = function addBodyClass(){
+	    jQuery('body').addClass('OP572');
+	},
+        addSignupBanner = function addSignupBanner(){
+            jQuery('.header').prepend(html);
+	},
+        signupClickEventHandler= function signupClickEventHandler(){
+            jQuery( '.blue-signup-btn-secton' ).click(function() {
+              window.location.href='https://booknow.jetstar.com/register.aspx?culture=en-AU';
+            });   
+	},
+        resizeScreen = function resizeScreen() {
+            var screensize = document.documentElement.clientWidth;
+            
+             if (screensize  < 767){ 
+                jQuery('.blue-banner-section').addClass('cursor-pointer');
+                jQuery('.blue-banner-section').click(function(){
+                    window.location.href='https://booknow.jetstar.com/register.aspx?culture=en-AU';
+                });
+             }
+        },
+        closeHelloBarEventHandler= function closeHelloBarEventHandler(){
+            jQuery('.blue-cross-icon').click(function() {
+              jQuery('.blue-banner-section').css('display', 'none');
+            });   
+	};
+	return {
+		init: init
+	};
+}(window,document,jQuery));
+window.jetstarOptimisation.EmailSignup_Hello_Bar_SG.init();
+</script>

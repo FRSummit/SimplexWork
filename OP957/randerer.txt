@@ -1,0 +1,8 @@
+renderer
+    .waitForElement('.grid_11')
+    .done(function () {
+        renderer.runVariantJs();
+    })
+    .fail(function() {
+        console.log('OP957 - failure');
+    });

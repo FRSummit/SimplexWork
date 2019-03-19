@@ -1,0 +1,24 @@
+.mobile-plans__most-popular {
+    display:none;
+}
+.row.justify-content-around.w1024.m-auto{
+    margin: 0 100px !important;
+    margin-top: -5% !important;
+}
+.col-lg-6.col-md-5.offset-md-1.col-xs-12.p-0{
+    margin-left: 0;
+}
+.col-lg-5.col-md-5.col-xs-12.mt-52{
+    margin-right: -30%;
+    margin-top: -3%;
+}
+.mobile-plans__data-container.p-3{
+    padding-top: 12px !important;
+}
+.perple-text{
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+}
